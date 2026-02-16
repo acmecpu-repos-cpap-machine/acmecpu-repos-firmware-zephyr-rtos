@@ -1,0 +1,32 @@
+# Copyright (c) 2020, Acme CPU
+
+include: "base.yaml"
+
+compatible: "menu-item"
+
+description: Virtual Device for User Interface menu driver
+
+properties:
+    label:
+        type: string
+        required: false
+    title:
+        type: string
+        required: true
+        description: Visible title of the menu item
+    message:
+        type: string
+        required: true
+        description: A welcome message
+    font_idx:
+        type: int
+        required: false
+        description: Optional font selector
+    parent_node:
+        type: phandle
+        required: true
+        description: Mount point of the item in the menu tree
+    priority:
+        type: int
+        required: true
+        description: Sets the order of items at the same node

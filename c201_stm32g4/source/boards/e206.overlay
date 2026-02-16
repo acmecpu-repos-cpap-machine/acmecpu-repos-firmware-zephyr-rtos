@@ -1,0 +1,55 @@
+/*
+ * Copyright (c) 2023 Acme CPU
+ *
+ */
+
+/* temporary: 10KB partition used to store device settings */
+/*&flash0 {
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		storage_partition: partition@1FD800 {
+			label = "storage";
+			reg = <0x001FD800 DT_SIZE_K(10)>;
+		};
+	};
+};*/
+/*
+&sram2 {
+	zephyr,memory-attr = < DT_MEM_ARM(ATTR_MPU_RAM_NOCACHE) >;
+};
+*/
+ / {
+	chosen {
+		zephyr,shell-uart = &cdc_acm_uart0;
+		/*zephyr,console = &cdc_acm_uart0;*/
+		/*zephyr,flash-controller = &mt29f2g01abagdwb;*/
+		zephyr,display = &st7789v_st7789v_320x240_spi;
+	};
+	aliases {
+		wifibt-serial = &usart3;
+		bldc-drv-serial = &usart6;
+		charger = &bq25792;
+		ucpd = &stusb4500;
+	};
+};
+
+/ {
+	zephyr,user {
+		dac = <&dac1>;
+		dac-channel-id = <1>;
+		dac-resolution = <12>;
+		
+		io-channels = <&adc1 3>, <&adc1 7>, <&adc1 8>, <&adc1 14>, <&adc1 19>, <&adc3 2>;
+	};
+};
+
+&zephyr_udc0 {
+	cdc_acm_uart0: cdc_acm_uart0 {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "CDC_ACM_0";
+	};
+};
+ 

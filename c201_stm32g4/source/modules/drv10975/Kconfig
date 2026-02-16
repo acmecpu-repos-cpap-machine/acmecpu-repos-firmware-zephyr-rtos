@@ -1,0 +1,25 @@
+# DRV10975 I2C Motor Driver configurations
+# Copyright (c) 2021 Acme CPU
+
+menuconfig DRV10975
+	bool "DRV10975 I2C Motor Driver"
+#	depends on I2C_MGM_PCA95XX
+	depends on I2C
+	help
+	  Enable driver for DRV10975 I2C Motor Driver
+
+if DRV10975
+
+module = DRV10975
+module-str = drv10975
+source "subsys/logging/Kconfig.template.log_config"
+
+config DRV10975_INIT_PRIORITY
+	int "Init Priority"
+	default APPLICATION_INIT_PRIORITY
+	help
+	    Device driver initialization priority.
+
+rsource "Kconfig.drv10975"
+
+endif # DRV10975

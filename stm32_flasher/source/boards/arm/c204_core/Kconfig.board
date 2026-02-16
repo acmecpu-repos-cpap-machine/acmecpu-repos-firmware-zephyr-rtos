@@ -1,0 +1,6 @@
+# C204 CORE board configuration
+# Copyright (c) 2022 Acme CPU
+
+config BOARD_C204_CORE
+	bool "Acme CPU C204 Core Board"
+	depends on SOC_STM32G474XX

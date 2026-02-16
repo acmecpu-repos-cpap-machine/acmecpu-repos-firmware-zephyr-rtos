@@ -1,0 +1,17 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ */
+
+
+/ {
+   sys_fan {
+    compatible = "bsp-fan";
+    status = "okay";
+    pwms =  <&ma2_speed_ctrl 2 65536 PWM_POLARITY_NORMAL>/*,
+            <&ma2_speed_sense 1 65536 (1 << 3)>*/;
+    pwm-names = "speed-ctrl"/*,
+                "speed-feedback"*/;
+    label = "SYS FAN";
+   };
+};

@@ -1,0 +1,7 @@
+# C208t board configuration
+
+# Copyright (c) 2024 Acme CPU
+
+config BOARD_C208T
+	bool "Acme CPU C208t Board"
+	depends on SOC_STM32H753XX

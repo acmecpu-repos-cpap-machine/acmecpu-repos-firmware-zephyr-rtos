@@ -1,0 +1,47 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+/ {
+	zephyr,user {
+		io-channels = <&adc1 6>, <&adc1 7>, <&adc1 8>;
+	};
+};
+
+&adc1 {
+    status = "okay";
+    pinctrl-0 = <&adc1_in6_pc0 &adc1_in7_pc1 &adc1_in8_pc2>;
+    pinctrl-names = "default";
+    st,adc-clock-source = <SYNC>;
+    st,adc-prescaler = <4>;
+    
+	#address-cells = <1>;
+	#size-cells = <0>;
+	
+	vfan: channel@6 {
+		reg = <6>;
+		zephyr,gain = "ADC_GAIN_1";
+		zephyr,reference = "ADC_REF_INTERNAL";
+		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+		zephyr,resolution = <12>;
+		zephyr,vref-mv = <3300>;
+	};
+
+	vbus: channel@7 {
+		reg = <7>;
+		zephyr,gain = "ADC_GAIN_1";
+		zephyr,reference = "ADC_REF_INTERNAL";
+		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+		zephyr,resolution = <12>;
+		zephyr,vref-mv = <3300>;
+	};
+
+	vbatt: channel@8 {
+		reg = <8>;
+		zephyr,gain = "ADC_GAIN_1";
+		zephyr,reference = "ADC_REF_INTERNAL";
+		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+		zephyr,resolution = <12>;
+	};
+};

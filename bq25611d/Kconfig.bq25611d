@@ -1,0 +1,19 @@
+# Copyright (c) 2021 Acme CPU
+# BQ25611D I2C Battery Charger configurations
+
+config BQ25611D_INTERRUPT
+	bool "Interrupt enable"
+	default n
+	depends on BQ25611D
+	help
+	  Enable interrupt to host support in BQ25611D driver.
+	  This is used to get interrupt notifications from the battery charger  
+
+config BQ25611D_HAS_ANALOG
+	bool "Driver has analog voltage read features"
+	default n
+	depends on BQ25611D
+	help
+	  Enable analog voltage read feature of the driver. This is an additional feature
+	  and not a part of the BQ25611D IC. Enabling this will allow the application to 
+	  read VBUS and battery voltages

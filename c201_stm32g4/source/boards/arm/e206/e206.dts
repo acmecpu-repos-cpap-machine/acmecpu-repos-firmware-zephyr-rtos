@@ -1,0 +1,125 @@
+/*
+ * Copyright (c) 2023 Acme CPU
+ *
+ * Author: Rohan Dey (rohan@acmecpu.com)
+ */
+
+/dts-v1/;
+#include <st/h7/stm32h753Xi.dtsi>
+#include <st/h7/e206_stm32h753iik.dtsi>
+#include <st/h7/stm32h753iikx-pinctrl.dtsi>
+#include <e206/e206.dtsi>
+
+/ {
+	model = "Custom STM32H753 E206 board";
+	compatible = "acpu,e206";
+
+	chosen {
+		zephyr,console = &usart1;
+		zephyr,shell-uart = &usart1;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zephyr,dtcm = &dtcm;
+		zephyr,code-partition = &slot0_partition;
+		/*zephyr,canbus = &can1;*/
+	};
+};
+
+&clk_lse {
+	status = "okay";
+};
+
+/*&clk_lsi {
+	status = "okay";
+};*/
+
+&clk_hsi48 {
+	status = "okay";
+};
+
+&clk_hse {
+	hse-bypass;
+	clock-frequency = <DT_FREQ_M(24)>; /* 24MHz clock */
+	status = "okay";
+};
+
+&pll {
+	div-m = <2>;
+	mul-n = <80>;
+	div-p = <2>;
+	div-q = <8>;
+	div-r = <2>;
+	clocks = <&clk_hse>;
+	status = "okay";
+};
+
+&rcc {
+	clocks = <&pll>;
+	clock-frequency = <DT_FREQ_M(480)>;
+	d1cpre = <1>;
+	hpre = <2>;
+	d1ppre = <2>;
+	d2ppre1 = <2>;
+	d2ppre2 = <2>;
+	d3ppre = <2>;
+};
+
+&rtc {
+	clocks = <&rcc STM32_CLOCK_BUS_APB4 0x00010000>,
+		 <&rcc STM32_SRC_LSE RTC_SEL(1)>;
+		 /*<&rcc STM32_SRC_LSI RTC_SEL(2)>;*/
+	status = "okay";
+};
+
+&backup_sram {
+	status = "okay";
+};
+
+&rng {
+	status = "okay";
+};
+
+
+&flash0 {
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		/* 128KB for bootloader */
+		boot_partition: partition@0 {
+			label = "mcuboot";
+			reg = <0x00000000 DT_SIZE_K(128)>;
+			read-only;
+		};
+
+		/* This partition is not required hence commented out.
+		 * Storage is on external flash on the qspi bus, see: dts/e206/e206_quadspi.dtsi 
+		 * storage: 128KB for settings
+		 */
+		/*
+		storage_partition: partition@20000 {
+			label = "storage";
+			reg = <0x00020000 DT_SIZE_K(128)>;
+		};
+		*/
+
+		/* application image slot: 896KB */
+		slot0_partition: partition@20000 {
+			label = "image-0";
+			reg = <0x00020000 DT_SIZE_K(896)>;
+		};
+
+		/* backup slot: 896KB */
+		slot1_partition: partition@100000 {
+			label = "image-1";
+			reg = <0x00100000 DT_SIZE_K(896)>;
+		};
+
+		/* swap slot: 128KB */
+		scratch_partition: partition@1e0000 {
+			label = "image-scratch";
+			reg = <0x001e0000 DT_SIZE_K(128)>;
+		};
+	};
+};

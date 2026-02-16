@@ -1,0 +1,10 @@
+Output: BOM_BG95-M3_Global_OLED
+Type  : BOM
+From  : Variant [BG95-M1_US_TFT_SCREEN] of Project [Control_Board_Model_C201.PrjPcb]
+   Generated File[20211204-SGU-Acme_CPU_Control_Board_C201_001_BG95-M1_US_TFT_SCREEN_BOM.xlsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 7:05:49 PM On 4/12/2021

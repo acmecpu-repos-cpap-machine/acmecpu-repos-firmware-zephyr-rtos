@@ -1,0 +1,12 @@
+# Copyright (c) 2022 Acme CPU
+
+rsource "app_utils/Kconfig"
+rsource "app_audio/Kconfig"
+rsource "app_storage/Kconfig"
+rsource "app_shellcmd/Kconfig"
+rsource "app_sensor/Kconfig"
+rsource "app_analog/Kconfig"
+rsource "app_uart/Kconfig"
+rsource "app_haptic/Kconfig"
+rsource "app_battery/Kconfig"
+rsource "app_push_switch/Kconfig"

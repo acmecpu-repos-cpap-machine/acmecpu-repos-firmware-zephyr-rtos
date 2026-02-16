@@ -1,0 +1,42 @@
+/* Copyright (c) 2021 Acme CPU
+ *
+ * Created on: 19-Oct-2022
+ * Author: Rohan Dey (rohan@acmecpu.cpm)
+ */
+
+&zephyr_udc0 {
+	cdc_acm_uart0: cdc_acm_uart0 {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "CDC_ACM_0";
+	};
+};
+
+/ {
+	chosen {
+		zephyr,shell-uart = &cdc_acm_uart0;
+		/*zephyr,console = &cdc_acm_uart0;*/
+		/*zephyr,flash-controller = &mt25ql256aba1;*/
+	};
+	aliases {
+		wifi-serial = &uart0;
+		audio-codec = &audio_codec_ctrl;
+	};
+};
+
+/ {
+	fstab {
+		compatible = "zephyr,fstab";
+		lfs1: lfs1 {
+			compatible = "zephyr,fstab,littlefs";
+			mount-point = "/lfs1";
+			/*partition = <&lfs1_part>;*/
+			partition = < &storage_partition >;
+			automount;
+			read-size = <16>;
+			prog-size = <16>;
+			cache-size = <64>;
+			lookahead-size = <32>;
+			block-cycles = <512>;
+		};
+	};
+};

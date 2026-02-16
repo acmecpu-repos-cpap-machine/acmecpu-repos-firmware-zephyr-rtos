@@ -1,0 +1,70 @@
+# Copyright (c) 2022 Acme CPU
+# Battery application configurations 
+
+menuconfig APP_BATTERY
+	bool "Device Battery configurations"
+	default y
+	help
+	  Device battery configurations
+	  
+if APP_BATTERY
+
+config APP_BATTERY_MIN_VALUE_MVOLTS
+	int "Battery minimmum value in mili volts"
+	default 3000
+	help
+	  Battery minimmum value in mili volts. This is value at which the  
+	  battery level should be 0% 
+
+config APP_BATTERY_MAX_VALUE_MVOLTS
+	int "Battery maximum value in mili volts"
+	default 4200
+	help
+	  Battery maximum value in mili volts. This is value at which the  
+	  battery level should be 100%
+
+config APP_BATTERY_VALUE_NORMALIZE_COUNT
+	int "Acquired battery value averaging count"
+	default 80
+	help
+		The number of time the battery voltage should be averaged
+		so that there is less or no fluctuations in the reading
+
+config APP_BATTERY_CHARGE_CURRENT_LIMIT
+	int "Battery charging current limit in mA"
+	range 500 5000
+	default 1500
+	help
+		The battery charging current limit to be set into the battery charger chip.
+		This is based on the type of battery attached to the application
+
+config APP_BATTERY_CHARGER_INPUT_CURRENT_LIMIT
+	int "Charger input current limit in mA"
+	range 100 5000
+	default 500
+	help
+		The battery charger input current limit to be set into the battery charger chip.
+		This is based on the type of battery attached to the application
+
+config APP_BATTERY_CHARGE_CURRENT_MAX
+	int "Battery charging current maximum mA"
+	range 500 5000
+	default 3000
+	help
+		The maximum battery charging current possible
+
+config APP_BATTERY_CHARGER_INPUT_CURRENT_MAX
+	int "Charger input current limit in mA"
+	range 100 5000
+	default 3000
+	help
+		The maximum input charging current possible		
+
+config APP_BATTERY_MAX_CAPACITY_MAH
+	int "Maximum battery capacity in mah"
+	range 100 20000
+	default 5000
+	help
+		Maximum battery capacity in mah
+				
+endif # APP_BATTERY

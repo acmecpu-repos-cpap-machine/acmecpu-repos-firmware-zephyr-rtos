@@ -1,0 +1,15 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ */
+
+&c204 {
+	tps22810 {
+		compatible = "ti,tps22810";
+		label = "AUX_3V3_SWITCH";
+		status = "okay";
+
+		/*enable-gpios = <&io_2 15 (GPIO_OUTPUT_INACTIVE | GPIO_PUSH_PULL)>;*/
+		enable-gpios = <&gpioa 15 (GPIO_PUSH_PULL)>;
+		audio-gpios = <&gpiog 9 (GPIO_PUSH_PULL)>;
+	};
+};

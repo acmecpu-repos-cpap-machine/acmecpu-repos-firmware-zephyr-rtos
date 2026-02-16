@@ -1,0 +1,75 @@
+# Copyright (c) 2020, Acme CPU
+
+compatible: "ti,pca9545a"
+
+description: PCA9545A I2C and SMBus Switch with Interrupt Logic and Reset Functions
+
+properties:
+
+  interrupt-gpios:
+    type: phandle-array
+    required: false
+    description: A point where the INT pin of the switch is routed to. The INT pin of PCA9545A is active low.
+
+  reset-gpios:
+    type: phandle-array
+    required: false
+    description: RESET pin. The RESET pin of PCA9545A is active low.
+
+  channel-number:
+    type: int
+    required: true
+    const: 4
+    description: Number of output I2C channels
+
+  "#gpio-cells":
+    type: int
+    required: false
+    const: 2
+    description: Input INT terminal
+
+gpio-cells:
+  - pin
+  - flags
+
+include: [i2c-device.yaml]
+
+child-binding:
+
+  description: I2C Bus Segment Node
+  
+  bus: i2c
+
+  properties:
+    "#address-cells":
+      type: int
+      required: true
+      const: 1
+    "#size-cells":
+      type: int
+      required: true
+      const: 0
+    label:
+      type: string
+      required: true
+      description: Human readable string describing the device (used as device_get_binding() argument)
+    reg:
+      type: array
+      required: true
+
+#
+#
+#  child-binding:
+#
+#    description: I2C Bus Segment
+#    include: [i2c-device.yaml]
+#
+#
+#  "#channel-cells":
+#    type: int
+#    required: true
+#    const: 1
+#    description: Number of items to expect in a I2C Bus Channel specifier
+#
+#channel-cells:
+#    - channel

@@ -1,0 +1,24 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+
+&usart3 {
+    status = "okay";
+    pinctrl-0 = <&usart3_rx_pb11 &usart3_tx_pc10 &usart3_rts_pb14 &usart3_cts_pb13>;
+    pinctrl-names = "default";
+    current-speed = <921600>;
+    hw-flow-control;
+    
+/* Ref:
+		rm0440 pg. 427,
+		zephyr/tests/drivers/uart/uart_async_api/boards/disco_l475_iot1.overlay
+		st,stm32-qspi.yaml
+		stm32_dma.h
+		
+	dmas = 	<&dmamux1 4 29 0x20440 0>,
+			<&dmamux1 5 28 0x20480 0>;
+	dma-names = "tx", "rx";
+*/
+};

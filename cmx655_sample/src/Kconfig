@@ -1,0 +1,9 @@
+# Copyright (c) 2023 Acme CPU
+
+menu "CMX655D Application Configurations"
+
+rsource "app/Kconfig"
+#rsource "bsp/Kconfig"
+rsource "lib/Kconfig"
+
+endmenu

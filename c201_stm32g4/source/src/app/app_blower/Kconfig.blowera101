@@ -1,0 +1,31 @@
+# Copyright (c) 2022 Acme CPU
+# Blower motor A101 configurations
+
+config BLOWER_MOTOR_A101_MVOLTS_MIN
+	int "Minimum voltage in mV for Blower Motor A101"
+	range 8000 14000
+	default 9000
+	help
+		The minimum voltage at which blower motor A101 can function
+		
+config BLOWER_MOTOR_A101_MVOLTS_MAX
+	int "Maximum voltage in mV for Blower Motor A101"
+	range 12000 24000
+	default 24000
+	help
+		The maximum voltage at which blower motor A101 can function 
+		
+config BLOWER_MOTOR_A101_SPEED_RPM_MIN
+	int "Minimum speed in RPM for Blower Motor A101"
+	range 10000 20000
+	default 10000
+	help
+		Minimum speed in RPM for Blower Motor A101
+	
+config BLOWER_MOTOR_A101_SPEED_RPM_MAX
+	int "Maximum speed in RPM for Blower Motor A101"
+	range 20000 50000
+	default 40000
+	help
+		Maximum speed in RPM for Blower Motor A101
+	

@@ -1,0 +1,13 @@
+# Copyright (c) 2021 Acme CPU
+# Shell commands application configurations 
+
+menuconfig APP_SHELLCMD
+	bool "Shell commands"
+	default y
+	depends on SHELL
+	help
+	  Enable / disable shell commands
+
+if APP_SHELLCMD
+
+endif # APP_SHELLCMD

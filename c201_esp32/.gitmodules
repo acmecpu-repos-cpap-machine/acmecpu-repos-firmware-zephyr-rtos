@@ -1,0 +1,3 @@
+[submodule "components/lib/lib_m2m_frame"]
+	path = components/lib/lib_m2m_frame
+	url = git@github.com:acmecpu/lib_m2m_frame.git

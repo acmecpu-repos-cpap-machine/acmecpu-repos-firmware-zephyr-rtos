@@ -1,0 +1,4 @@
+# Copyright (c) 2021 Acme CPU
+
+#rsource "bsp_fs_helper/Kconfig"
+rsource "bsp_membrane_switch/Kconfig"

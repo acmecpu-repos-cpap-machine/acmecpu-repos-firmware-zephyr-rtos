@@ -1,0 +1,13 @@
+# Copyright (c) 2023 Acme CPU
+# Configurations for file STM32 Bootloader Host Library
+
+menuconfig LIB_STM32BL_HOST
+	bool "STM32 Bootloader Host library"
+	default n
+	help
+	  Enable or disable the STM32 Bootloader Host library
+
+if LIB_STM32BL_HOST
+
+
+endif # LIB_STM32BL_HOST

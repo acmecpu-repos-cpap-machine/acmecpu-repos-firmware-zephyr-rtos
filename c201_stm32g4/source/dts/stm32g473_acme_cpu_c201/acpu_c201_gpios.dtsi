@@ -1,0 +1,246 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+
+/*
+ *	This file describes parameters to initialize individual pins of the 
+ *	DIO_1, DIO_2 and DIO_3 port expanders with during the system boots up.
+ *	It is intended to be used by BSP GPIO Device Driver.
+ */
+
+
+&c201 {
+
+  dio_1: gpio-pe-1 {
+    /*compatible = "bsp-gpios";*/
+    compatible = "gpio-keys";
+
+    pin_0 {
+      gpios = <&io_1 0 (GPIO_PUSH_PULL)>;
+      label = "BG95_PS_EN";
+    };
+
+    pin_1 {
+      gpios = <&io_1 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "MICRO_SD_DETECT";
+    };
+
+    pin_2 {
+      gpios = <&io_1 2 (GPIO_PUSH_PULL)>;
+      label = "BG95_UART_MUX_SEL1";
+    };
+
+    pin_3 {
+      gpios = <&io_1 3 (GPIO_PUSH_PULL)>;
+      label = "BG95_UART_MUX_SEL0";
+    };
+
+/*
+ *	This has been moved into blower node (acpu_c201_blower.dtsi)
+ *
+    pin_4 {
+      gpios = <&io_1 4 (GPIO_PUSH_PULL)>;
+      label = "FAN_PS_EN";
+    };
+ *
+ */
+
+    pin_5 {
+      gpios = <&io_1 5 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "TILT_SENS_INT";
+    };
+
+    pin_6 {
+      gpios = <&io_1 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "DIO_2_INT";
+    };
+
+    pin_7 {
+      gpios = <&io_1 7 (GPIO_PUSH_PULL)>;
+      label = "BQ25611_BC_EN";
+    };
+
+    pin_8 {
+      gpios = <&io_1 8 (GPIO_PUSH_PULL)>;
+      label = "BLDC_DIR";
+    };
+
+    vbat_sense_en: pin_9 {
+      gpios = <&io_1 9 (GPIO_PUSH_PULL | GPIO_ACTIVE_HIGH)>;
+      label = "VBAT_SENSE_EN";
+    };
+
+    pin_10 {
+      gpios = <&io_1 10 (GPIO_PUSH_PULL)>;
+      label = "STEP_MTR_STBY";
+    };
+
+    pin_11 {
+      gpios = <&io_1 11 (GPIO_PUSH_PULL)>;
+      label = "STEP_MTR_DRV_EN";
+    };
+
+    pin_12 {
+      gpios = <&io_1 12 (GPIO_PUSH_PULL)>;
+      label = "STEP_MTR_DRV_MOD2";
+    };
+
+    pin_13 {
+      gpios = <&io_1 13 (GPIO_PUSH_PULL)>;
+      label = "STEP_MTR_DRV_MOD1";
+    };
+
+    pin_14 {
+      gpios = <&io_1 14 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "STEP_MTR_FAULT";
+    };
+
+    pin_15 {
+      gpios = <&io_1 15 (GPIO_PUSH_PULL)>;
+      label = "STEP_MTR_DIR";
+    };
+
+  };
+
+
+  dio_2: gpio-pe-2 {
+    /*compatible = "bsp-gpios";*/
+    compatible = "gpio-keys";
+
+    pin_0 {
+      gpios = <&io_2 0 (GPIO_PUSH_PULL)>;
+      label = "BG95_AP_READY";
+    };
+
+    pin_1 {
+      gpios = <&io_2 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "BG95_STATUS";
+    };
+
+    pin_2 {
+      gpios = <&io_2 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "BG95_NET_STATUS";
+    };
+
+    pin_3 {
+      gpios = <&io_2 3 (GPIO_PUSH_PULL)>;
+      label = "BG95_W_DISABLE";
+    };
+
+    pin_4 {
+      gpios = <&io_2 4 (GPIO_PUSH_PULL)>;
+      label = "BG95_M_UART.DTR";
+    };
+
+    pin_5 {
+      gpios = <&io_2 5 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "BG95_M_UART.RI";
+    };
+
+    pin_6 {
+      gpios = <&io_2 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "BG95_M_UART.DCD";
+    };
+
+    pin_7 {
+      gpios = <&io_2 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "BG95_PSM_IND";
+    };
+
+    pin_8 {
+      gpios = <&io_2 8 (GPIO_PUSH_PULL)>;
+      label = "BG95_RESET";
+    };
+
+    pin_9 {
+      gpios = <&io_2 9 (GPIO_PUSH_PULL)>;
+      label = "BG95_PWR_KEY";
+    };
+
+    pin_10 {
+      gpios = <&io_2 10 (GPIO_PUSH_PULL)>;
+      label = "BG95_PON_TRIG";
+    };
+
+    pin_11 {
+      gpios = <&io_2 11 (GPIO_PUSH_PULL)>;
+      label = "BG95_USB_BOOT";
+    };
+
+    pin_12 {
+      gpios = <&io_2 12 (GPIO_PUSH_PULL)>;
+      label = "1V8_PS_EN";
+    };
+
+    pin_13 {
+      gpios = <&io_2 13 (GPIO_PULL_DOWN)>;
+      label = "DIO2_FREE_PIN_13";
+    };
+
+    pin_14 {
+      gpios = <&io_2 14 (GPIO_PULL_DOWN)>;
+      label = "DIO2_FREE_PIN_14";
+    };
+
+    pin_15 {
+      gpios = <&io_2 15 (GPIO_PUSH_PULL)>;
+      label = "3V3_AUX_PS_EN";
+    };
+
+  };
+
+  dio_3: gpio-pe-3 {
+    /*compatible = "bsp-gpios";*/
+    compatible = "gpio-keys";
+
+    pin_0 {
+      gpios = <&io_3 0 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "TCPC_TCPP_FAULT";
+    };
+
+    pin_1 {
+      gpios = <&io_3 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "TCPC_USB_SW_OPN";
+    };
+
+    pin_2 {
+      gpios = <&io_3 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "TCPC_BC_CHG_ALLOWED";
+    };
+
+    usb_mux_sel1: pin_3 {
+      gpios = <&io_3 3 (GPIO_PUSH_PULL)>;
+      label = "TCPC_USB_MUX_SEL1";
+    };
+
+    usb_mux_sel0: pin_4 {
+      gpios = <&io_3 4 (GPIO_PUSH_PULL)>;
+      label = "TCPC_USB_MUX_SEL0";
+    };
+
+    pin_5 {
+      gpios = <&io_3 5 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "BC_INT";
+    };
+
+    pin_6 {
+      gpios = <&io_3 6 (GPIO_PUSH_PULL)>;
+      label = "TCPC_SBU_SW_EN";
+    };
+
+    pin_7 {
+      gpios = <&io_3 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "TCPC_USB_SW_OPN";
+    };
+
+/*
+ *  Remaining pins of the DIO_3 port expander are dedicated for the user keypad switches.
+ *  Description of those pins is presented in acme_cpu_c201_user_interface.dtsi file
+ */
+
+  };
+
+};
+

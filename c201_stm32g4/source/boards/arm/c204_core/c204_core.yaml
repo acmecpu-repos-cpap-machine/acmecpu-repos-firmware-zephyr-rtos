@@ -1,0 +1,15 @@
+identifier: c204_core
+name: Custom STM32G473 Acme CPU C204 CORE
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+ram: 64
+flash: 256
+supported:
+  - i2c
+  - usart
+  - gpio
+  - counter

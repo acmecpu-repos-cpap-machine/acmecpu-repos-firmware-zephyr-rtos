@@ -1,0 +1,78 @@
+/*
+ * Copyright (c) 2024 Acme CPU
+ *
+ * C208T I2C3 bus has
+ *		- Capacitive touch
+ *		- Lidar sensor
+ *		- APDS-9930
+ *		- T3USBCA410 (SBU MUX)
+ *		- PCA9632TK,118 
+ *		- BMP388
+ *		- BMP388
+ */
+
+ &i2c3 {
+	pinctrl-0 = <&i2c3_scl_pa8 &i2c3_sda_ph8>;
+	pinctrl-names = "default";
+	status = "okay";
+	clock-frequency = <I2C_BITRATE_FAST>;
+
+/*
+  	ctp: xxxx@38 {
+		compatible = "abc,xxxx";
+		reg = <0x38>;
+		reset-gpios = <&gpioc 12 (GPIO_ACTIVE_HIGH)>;
+		int-gpios = <&gpiod 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+  	};
+*/
+
+/*
+  	lidar: vl53l4cd@52 {
+		compatible = "st,vl53l4cd";
+		reg = <0x52>;
+  	};
+*/
+
+/*
+	apds9930@39 {
+		compatible = "avago,apds9930";
+		reg = <0x39>;
+		int-gpios = <&gpioi 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+	};
+*/
+
+ 	usbc_sbu_mux: ts3usbca4@5c {
+    	compatible = "ti,ts3usbca4";
+    	reg = <0x5c>;
+    	label = "USBC_SBU_MUX";
+    	oe-gpios = <&gpioh 15 (GPIO_ACTIVE_HIGH)>;
+	};
+	
+	/*
+	led_drv: pca9632@62 {
+    	compatible = "nxp,pca9632";
+    	reg = <0x62>;
+    	label = "UI_LEDS";
+  	};
+	*/
+	
+	p121_ps_ext: bmp388@76 {
+    	compatible = "bosch,bmp388";
+    	reg = <0x76>;
+    	label = "PS_EXT_POS";
+    	odr = "25";			/* data rate = 25Hz */
+   		osr-press = <1>;	/* pressure oversampling = No */
+    	osr-temp = <1>;		/* temperature oversampling = No */
+    	iir-filter = <0>;	/* iir filter = default val */
+	};
+
+	p122_ps_ext: bmp388@77 {
+    	compatible = "bosch,bmp388";
+    	reg = <0x77>;
+    	label = "PS_EXT_NEG";
+    	odr = "25";			/* data rate = 25Hz */
+    	osr-press = <1>;	/* pressure oversampling = No */
+    	osr-temp = <1>;		/* temperature oversampling = No */
+    	iir-filter = <0>;	/* iir filter = default val */
+	};
+};

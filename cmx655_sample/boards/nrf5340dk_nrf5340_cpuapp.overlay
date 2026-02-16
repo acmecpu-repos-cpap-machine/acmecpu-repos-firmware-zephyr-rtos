@@ -1,0 +1,67 @@
+/*
+ * Copyright (c) 2020 Nordic Semiconductor ASA
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+ &pinctrl {
+	i2s0_default_alt: i2s0_default_alt {
+		group1 {
+			psels = <NRF_PSEL(I2S_SCK_M, 1, 15)>,
+				<NRF_PSEL(I2S_LRCK_M, 1, 12)>,
+				<NRF_PSEL(I2S_SDOUT, 1, 13)>,
+				<NRF_PSEL(I2S_SDIN, 1, 14)>;
+		};
+	};
+};
+
+&i2c1 {
+/* 	status = "okay";
+	pinctrl-0 = <&i2c1_default>;
+	pinctrl-1 = <&i2c1_sleep>;
+	pinctrl-names = "default", "sleep";*/
+
+	cmx655d: cmx655d@54 {
+		compatible = "cml,cmx655d";
+		reg = <0x54>;
+		classd-oc-reset-attempts = <5>;
+		reset-gpios = <&gpio0 7 (GPIO_ACTIVE_LOW)>;
+		interrupt-gpios = <&gpio0 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	};
+};
+
+&clock {
+	hfclkaudio-frequency = <11289600>;
+};
+
+i2s_rxtx: &i2s0 {
+	status = "okay";
+	pinctrl-0 = <&i2s0_default_alt>;
+	pinctrl-names = "default";
+	clock-source = "ACLK";
+};
+
+/delete-node/ &storage_partition;
+
+&mx25r64 {
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		storage_partition: partition@0 {
+			label = "storage";
+			reg = <0x00000000 0x00800000>;
+		};
+	};
+};
+
+/ {
+	msc_disk0 {
+		compatible = "zephyr,flash-disk";
+		partition = <&storage_partition>;
+		disk-name = "NAND";
+		cache-size = <4096>;
+	};
+};
+

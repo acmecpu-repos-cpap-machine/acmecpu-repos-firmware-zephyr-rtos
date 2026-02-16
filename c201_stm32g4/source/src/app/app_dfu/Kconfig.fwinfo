@@ -1,0 +1,44 @@
+# Copyright (c) 2024 Acme CPU
+# Author: Rohan Dey (rohan@acmecpu.com)
+# Device Firmware Upgrade 
+
+# Main firmware
+config FW_MAIN_FILE_NAME
+	string "File name for the app processor"
+	default "main.bin"
+	help
+	  File name for the app processor
+
+config FW_MAIN_FILE_MAX_KB
+	int "Max file size in KB for app processor firmware"
+	default 896
+	help
+	  Max file size in KB for app processor firmware
+
+
+# Network firmware
+config FW_NET_FILE_NAME
+	string "File name for the network processor"
+	default "net.bin"
+	help
+	  File name for the network processor 
+
+config FW_NET_FILE_MAX_KB
+	int "Max file size in KB for network processor firmware"
+	default 8192
+	help
+	  Max file size in KB for network processor firmware
+
+
+# BLDC driver firmware
+config FW_BLWDRV_FILE_NAME
+	string "File name for the bldc driver co-processor"
+	default "blwdrv.bin"
+	help
+	  File name for the bldc driver co-processor
+
+config FW_BLWDRV_FILE_MAX_KB
+	int "Max file size in KB for bldc driver co-processor firmware"
+	default 64
+	help
+	  Max file size in KB for bldc driver co-processor firmware

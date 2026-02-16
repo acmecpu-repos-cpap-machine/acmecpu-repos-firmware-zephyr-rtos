@@ -1,0 +1,22 @@
+# Copyright (c) 2022 Acme CPU
+
+description: |
+  Maxim MAX30001 ECG, BioZ Analog Front End
+
+compatible: "maxim,max30001"
+
+include: spi-device.yaml
+
+properties:
+  intb-gpios:
+    type: phandle-array
+    required: false
+    description: |
+      Identifies pin for the INTB signal on the sensor.
+
+  int2b-gpios:
+    type: phandle-array
+    required: false
+    description: |
+      Identifies pin for the INT2B signal on the sensor.
+

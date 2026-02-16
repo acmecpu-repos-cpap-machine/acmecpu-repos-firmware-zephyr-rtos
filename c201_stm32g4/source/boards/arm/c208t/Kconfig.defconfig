@@ -1,0 +1,17 @@
+# C208t board configuration
+
+# Copyright (c) 2024 Acme CPU
+
+if BOARD_C208T
+
+	config BOARD
+		default "c208t"
+
+	#if NETWORKING
+	#
+	#config NET_L2_ETHERNET
+	#	default y
+	#
+	#endif # NETWORKING
+
+endif # BOARD_C208t

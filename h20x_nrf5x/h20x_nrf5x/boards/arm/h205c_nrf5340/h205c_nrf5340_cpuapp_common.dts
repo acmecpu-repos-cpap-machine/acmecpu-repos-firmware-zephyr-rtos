@@ -1,0 +1,191 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ * Created on: 19-Oct-2022
+ * Author: Rohan Dey (rohan@acmecpu.com)
+ *
+ */
+
+#include "h205c_nrf5340_cpuapp_common-pinctrl.dtsi"
+
+/ {
+	chosen {
+		zephyr,console = &uart1;
+		zephyr,shell-uart = &uart1;
+		zephyr,uart-mcumgr = &uart1;
+		zephyr,bt-mon-uart = &uart1;
+		zephyr,bt-c2h-uart = &uart1;
+	};
+};
+
+&adc {
+	status = "okay";
+	label = "ADC_0";
+};
+
+&gpiote {
+	status = "okay";
+};
+
+&gpio0 {
+	status = "okay";
+	label = "GPIO_0";
+};
+
+&gpio1 {
+	status = "okay";
+	label = "GPIO_1";
+};
+
+&i2c2 {
+	compatible = "nordic,nrf-twim";
+	status = "okay";
+	pinctrl-0 = <&i2c2_default>;
+	pinctrl-1 = <&i2c2_sleep>;
+	pinctrl-names = "default", "sleep";
+	/*clock-frequency = <I2C_BITRATE_FAST>;*/
+	zephyr,concat-buf-size = <300>;
+	label = "I2C_2";
+};
+
+&uart0 {
+	status = "okay";
+	current-speed = <115200>;
+	pinctrl-0 = <&uart0_default>;
+	pinctrl-1 = <&uart0_sleep>;
+	pinctrl-names = "default", "sleep";
+	label = "UART_0";
+};
+
+&uart1 {
+	status = "okay";
+	current-speed = <115200>;
+	pinctrl-0 = <&uart1_default>;
+	pinctrl-1 = <&uart1_sleep>;
+	pinctrl-names = "default", "sleep";
+	label = "UART_1";
+};
+
+&spi3 {
+	compatible = "nordic,nrf-spim";
+	status = "okay";
+	pinctrl-0 = <&spi3_default>;
+	pinctrl-1 = <&spi3_sleep>;
+	pinctrl-names = "default", "sleep";
+	label = "SPI_3";
+};
+
+&spi4 {
+	compatible = "nordic,nrf-spim";
+	status = "okay";
+	pinctrl-0 = <&spi4_default>;
+	pinctrl-1 = <&spi4_sleep>;
+	pinctrl-names = "default", "sleep";
+	label = "SPI_4";
+};
+
+&pwm0 {
+	status = "okay";
+	pinctrl-0 = <&pwm0_default>;
+	pinctrl-1 = <&pwm0_sleep>;
+	pinctrl-names = "default", "sleep";
+	label = "PWM_0";
+};
+
+&qspi {
+	status = "okay";
+	pinctrl-0 = <&qspi_default>;
+	pinctrl-1 = <&qspi_sleep>;
+	pinctrl-names = "default", "sleep";
+	label = "QSPI";
+};
+
+&timer0 {
+	status = "okay";
+	label = "TIMER_0";
+};
+
+&timer1 {
+	status = "okay";
+	label = "TIMER_1";
+};
+
+&timer2 {
+	status = "okay";
+	label = "TIMER_2";
+};
+
+&clock {
+	hfclkaudio-frequency = <11289600>;
+	label = "CLOCK";
+};
+
+i2s_rxtx: &i2s0 {
+	status = "okay";
+	pinctrl-0 = <&i2s0_default>;
+	pinctrl-names = "default";
+	clock-source = "ACLK";
+	label = "I2S_0";
+};
+
+&flash0 {
+
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		boot_partition: partition@0 {
+			label = "mcuboot";
+			reg = <0x00000000 0x00010000>;
+		};
+		slot0_partition: partition@10000 {
+			label = "image-0";
+		};
+		slot0_ns_partition: partition@50000 {
+			label = "image-0-nonsecure";
+		};
+		slot1_partition: partition@80000 {
+			label = "image-1";
+		};
+		slot1_ns_partition: partition@c0000 {
+			label = "image-1-nonsecure";
+		};
+		scratch_partition: partition@f0000 {
+			label = "image-scratch";
+			reg = <0x000f0000 0xa000>;
+		};
+		storage_partition: partition@fa000 {
+			label = "storage";
+			reg = <0x000fa000 0x00006000>;
+		};
+		/*storage_partition: partition@50000 {
+			label = "storage";
+			reg = <0x00050000 DT_SIZE_K(700)>;
+		};*/
+	};
+};
+
+/ {
+
+	reserved-memory {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		ranges;
+
+		sram0_image: image@20000000 {
+			/* Zephyr image(s) memory */
+		};
+
+		sram0_s: image_s@20000000 {
+			/* Secure image memory */
+		};
+
+		sram0_ns: image_ns@20040000 {
+			/* Non-Secure image memory */
+		};
+	};
+};
+
+/* Include partition configuration file */
+#include "h205c_nrf5340_cpuapp_partition_conf.dts"

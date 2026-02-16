@@ -1,0 +1,13 @@
+# Copyright (c) 2022 Acme CPU
+# UART based Wi-Fi & BT module communication application configuration
+
+menuconfig APP_WIFI_BT
+	bool "UART based Wi-Fi & BT module communication application configuration"
+	default y
+	help
+	  UART based Wi-Fi & BT module communication application configuration 
+
+if APP_WIFI_BT
+
+
+endif # APP_WIFI_BT

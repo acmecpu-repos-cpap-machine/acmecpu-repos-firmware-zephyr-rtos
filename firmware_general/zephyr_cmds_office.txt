@@ -1,0 +1,207 @@
+-----------------------------------------------------------------------------------------------------------------
+source ~/zephyrproject_360/.venv/bin/activate
+source ~/zephyrproject_360/zephyr/zephyr-env.sh
+-----------------------------------------------------------------------------------------------------------------
+source ~/zephyrproject_main/.venv/bin/activate
+source ~/zephyrproject_main/zephyr/zephyr-env.sh
+-----------------------------------------------------------------------------------------------------------------
+source ~/zephyrproject_350/.venv/bin/activate
+source ~/zephyrproject_350/zephyr/zephyr-env.sh
+-----------------------------------------------------------------------------------------------------------------
+source ~/zephyrproject_330rc2/.venv/bin/activate
+source ~/zephyrproject_330rc2/zephyr/zephyr-env.sh
+-----------------------------------------------------------------------------------------------------------------
+west build -p always -d build/ source/ -G"Eclipse CDT4 - Ninja"
+west build -p auto -d build/ source/ -G"Eclipse CDT4 - Ninja"
+west build -d build/ -t menuconfig
+west flash --runner pyocd
+
+west build -p always -d build/ source/ -b nucleo_g474re -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b stm32g473_acme_cpu_c201 -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b b_g474e_dpow1 -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b b_g474e_dpow1 --sysbuild -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b stm32g473_acme_cpu_c201_oled -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b native_posix_64 -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b nucleo_f070rb -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b nucleo_f103rb -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b tscb_f302rc -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b stm32f3_disco -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b stm32g473_acme_cpu_c201_oled -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b stm32g473_acme_cpu_c201 -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b c204_core -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b c205 -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b e206 -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b custom_f411re -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b nrf5340dk_nrf5340_cpuapp -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b nucleo_h753zi -G"Eclipse CDT4 - Ninja"
+west build -p always -d build/ source/ -b esp32_devkitc_wroom -G"Eclipse CDT4 - Ninja"
+
+west build -p always -d build/ source/ -b e206 -- -DSOC_ROOT=/home/acpuvm001/zephyr_workspace/trials/cmx655_sample/source/soc
+west build -p always -d build/ source/ -b e206 -- -DBOARD_ROOT=/home/acpuvm001/zephyr_workspace/trials/hello_world
+
+west build -p always -d build/ source/ -b stm32g473_acme_cpu_c201_oled -G"Eclipse CDT4 - Ninja" -- -DZEPHYR_SCA_VARIANT=sparse
+west build -b nucleo_g474re -- -DZEPHYR_SCA_VARIANT=sparse
+
+west build -t rom_report
+west build -t ram_report
+-----------------------------------------------------------------------------------------------------------------
+west build -b nucleo_g474re
+west build -b tscb_f302rc
+west build -b nrf52dk_nrf52832
+west build -b nrf52840dk_nrf52840
+west build -b nrf5340dk_nrf5340_cpuapp
+west build -b nrf52840dk_nrf52840 -- -DSHIELD=adafruit_2_8_tft_touch_v2
+west build -b qemu_x86
+west build -b stm32g474re_disco
+west build -b stm32g474re_disco -t menuconfig
+west build -b native_posix_64
+west build -b b_g474e_dpow1
+west build -b stm32l562e_dk
+west build -b c204_core
+west build -b nucleo_f070rb
+west build -b b_g474e_dpow1 --sysbuild
+west build -p always -d build/ -b e206
+west build -p always -d build/ -b custom_f411re
+west build -p always -d build/ -b nucleo_h743zi
+west build -p always -d build/ -b nucleo_h753zi
+west build -p always -d build/ -b stm32f3_disco
+
+west build -t clean
+west build -t pristine
+west flash
+cmake -DBOARD=stm32g474re_disco ..
+make
+cmake -DBOARD=qemu_x86 ..
+/home/rohan-ubuntu/STMicroelectronics/STM32Cube/STM32CubeProgrammer
+-----------------------------------------------------------------------------------------------------------------
+ESP32
+export ESP_IDF_PATH="/home/iq-ubuntu-04/esp/esp-idf"
+export ZEPHYR_TOOLCHAIN_VARIANT="espressif"
+export ESPRESSIF_TOOLCHAIN_PATH="/home/iq-ubuntu-04/esp/xtensa-esp32-elf"
+west build -b esp32
+west flash --esp-device /dev/ttyUSB1
+-----------------------------------------------------------------------------------------------------------------
+cd $HOME/zephyrproject/zephyr/
+
+scripts/twister --board-root <full_path_to_boards_directory> --device-testing --device-serial /dev/ttyACM0 -p stm32g474re_disco -T <full_path_to_project_source_directory>/tests/<test_name> -O <path_to_output_directory>
+
+scripts/twister --board-root $HOME/zephyr-workspace2/zephyr-snippets/ztest_trial/source/boards/ --device-testing --device-serial /dev/ttyACM0 -p stm32g474re_disco -T $HOME/zephyr-workspace2/zephyr-snippets/ztest_trial/source/tests/integration
+
+scripts/twister --board-root $HOME/zephyr-workspace2/zephyr-snippets/ztest_trial/source/boards/ --device-testing --device-serial /dev/ttyACM0 -p stm32g473_acme_cpu_c201 -T $HOME/zephyr-workspace2/zephyr-snippets/ztest_trial/source/tests/integration
+
+scripts/twister --board-root $HOME/zephyr-workspace2/zephyr-snippets/ztest_trial/source/boards/ --device-testing --device-serial /dev/ttyACM0 -p stm32g473_acme_cpu_c201 -T $HOME/zephyr-workspace2/zephyr-snippets/ztest_trial/source/tests/stack_random -O $HOME/zephyr-workspace2/zephyr-snippets/ztest_trial/source/tests/testoutdir
+
+-----------------------------------------------------------------------------------------------------------------
+git clone --single-branch --branch <branchname> <remote-repo>
+git clone --single-branch --branch main git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch sprint1 git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch pca9539_interrupt_wrapper git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch stspin220_stepper git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch blower_driver git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch bq25611d_driver git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch spi_dma git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch app_logger git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch blower_a2 git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch app_settings git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch usb_mux git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch esp32_comm git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch app_battery git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch app_switch git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch dev_cmd git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch battery git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch pca9632 git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch system_events git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch app_time git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch battery_soc git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch usb_log git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch firmware_update git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch app_stepper git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch usb_pd git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch mem_test git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch fw_update git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch usb_shell git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch zephyr3_2 --recurse-submodules git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch re_settings --recurse-submodules git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch pid_enhance --recurse-submodules git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch update_zephyr_350rc2 --recurse-submodules git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch 73-update-to-zephyr-350 --recurse-submodules git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch settings_sort --recurse-submodules git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch webpage --recurse-submodules git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch 108-device-settings --recurse-submodules git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch heap_relocate --recurse-submodules git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch experimental_uart_time --recurse-submodules git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch settings_file --recurse-submodules git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch fw-update --recurse-submodules git@github.com:acmecpu/c201_stm32g4.git
+git clone --single-branch --branch multisettings --recurse-submodules git@github.com:acmecpu/c201_stm32g4.git
+-----------------------------------------------------------------------------------------------------------------
+git clone --single-branch --branch eclipse --recurse-submodules git@github.com:acmecpu/cmx655_sample.git
+-----------------------------------------------------------------------------------------------------------------
+git pull origin main
+west update
+west init -m git@github.com:macronix/zephyr.git --mr macronix_spi_nand_v1 zp_nand (clone a specific zephyr branch)
+west init -m https://github.com/zephyrproject-rtos/zephyr.git --mr v3.3.0-rc2 ~/zephyrproject_330rc2 (clone a specific zephyr tag)
+west init -m https://github.com/zephyrproject-rtos/zephyr.git --mr v3.5.0-rc2 ~/zephyrproject_350rc2 (clone a specific zephyr tag)
+west init -m https://github.com/zephyrproject-rtos/zephyr.git --mr zephyr-v3.5.0 ~/zephyrproject_350 (clone a specific zephyr release)
+west init -m https://github.com/zephyrproject-rtos/zephyr.git --mr 10c0b86f83639535aaeedf3d90fe46e9dd779b9c ~/zephyrproject_10c0b86f83 (clone a specific zephyr commit id)
+west init -m https://github.com/zephyrproject-rtos/zephyr.git --mr v3.6.0 ~/zephyrproject_360 (clone a specific zephyr release)
+-----------------------------------------------------------------------------------------------------------------
+sudo apt install --no-install-recommends git cmake ninja-build gperf ccache dfu-util device-tree-compiler wget python3-dev python3-pip python3-setuptools python3-tk python3-wheel xz-utils file make gcc gcc-multilib g++-multilib libsdl2-dev
+
+-----------------------------------------------------------------------------------------------------------------
+colordiff -y --width=200 c201_stm32g4_main/source/modules/bq25611d/bq25611d.h c201_stm32g4_battery_soc/source/modules/bq25611d/bq25611d.h
+-----------------------------------------------------------------------------------------------------------------
+
+git reset --hard HEAD
+git pull
+git submodule update --init --recursive
+git pull --recurse-submodules
+https://stackoverflow.com/questions/1030169/pull-latest-changes-for-all-git-submodules
+
+-----------------------------------------------------------------------------------------------------------------
+Finding precise data bus error
+export PATH=$PATH:/home/rohan-ubuntu/zephyr-sdk-0.16.5-1/arm-zephyr-eabi/bin
+arm-zephyr-eabi-addr2line -e build/zephyr/zephyr.elf 0x08059a94
+
+-----------------------------------------------------------------------------------------------------------------
+number of files: 		find DIR_NAME -type f | wc -l
+number of lines of a file type: find DIR_NAME -name '*.c' | xargs wc -l
+number of lines of any file:	find DIR_NAME -type f | xargs wc -l
+
+-----------------------------------------------------------------------------------------------------------------
+OPENOCD (no need to start openocd separately from terminal as done for esp32, eclipse does that internally)
+-------
+runners.openocd: /home/rohan-ubuntu/zephyr-sdk-0.15.2/sysroots/x86_64-pokysdk-linux/usr/bin/openocd -s /home/rohan-ubuntu/zephyrproject2/zephyr/boards/arm/b_g474e_dpow1/support -s /home/rohan-ubuntu/zephyr-sdk-0.15.2/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts -f /home/rohan-ubuntu/zephyrproject2/zephyr/boards/arm/b_g474e_dpow1/support/openocd.cfg -c 'tcl_port 6333' -c 'telnet_port 4444' -c 'gdb_port 3333' '-c init' '-c targets' '-c halt'
+runners.openocd: /home/rohan-ubuntu/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb-py -ex 'target extended-remote :3333' /home/rohan-ubuntu/rd_wksp/trials/alarm/build/zephyr/zephyr.elf -ex load
+
+-s /home/rohan-ubuntu/zephyrproject2/zephyr/boards/arm/b_g474e_dpow1/support
+-s /home/rohan-ubuntu/zephyr-sdk-0.15.2/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
+-f /home/rohan-ubuntu/zephyrproject2/zephyr/boards/arm/b_g474e_dpow1/support/openocd.cfg
+
+-s /home/rohan-ubuntu/rd_wksp/tscb/source/boards/arm/tscb_f302rc/support
+-s /home/rohan-ubuntu/zephyr-sdk-0.15.2/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
+-f /home/rohan-ubuntu/rd_wksp/tscb/source/boards/arm/tscb_f302rc/support/openocd.cfg
+
+-s /home/rohan-ubuntu/rd_wksp/trials/alarm/source/boards/arm/tscb_f302rc/support
+-s /home/rohan-ubuntu/zephyr-sdk-0.15.2/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
+-f /home/rohan-ubuntu/rd_wksp/trials/alarm/source/boards/arm/tscb_f302rc/support/openocd.cfg
+
+E206
+Executable path: /home/rohan-ubuntu/zephyr-sdk-0.16.0/sysroots/x86_64-pokysdk-linux/usr/bin/openocd
+-s /home/acpuvm001/zephyr_workspace/c20x_fw/c201_stm32g4_main/source/boards/arm/e206/support
+-s /home/rohan-ubuntu/zephyr-sdk-0.16.0/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
+-f /home/acpuvm001/zephyr_workspace/c20x_fw/c201_stm32g4_main/source/boards/arm/e206/support/openocd.cfg
+
+'-c init' '-c targets' '-c halt'
+-----------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------
+MCUBOOT
+-----------------------------------------------------------------------------------------------------------------
+Build mcuboot for a custom board:
+west build -p always -d build/ -b e206 -- -DBOARD_ROOT=/home/acpuvm001/zephyrproject_360/bootloader/mcuboot/boot/zephyr
+
+$ZEPHYR_BASE/../bootloader/mcuboot/scripts/imgtool.py sign --key $ZEPHYR_BASE/../bootloader/mcuboot/root-rsa-2048.pem --header-size 0x200 --align 8 --version 1.2 --slot-size 0x3A000 build/zephyr/zephyr.bin build/zephyr/signed-hello1.bin
+
+$ZEPHYR_BASE/../bootloader/mcuboot/scripts/imgtool.py sign --key $ZEPHYR_BASE/../bootloader/mcuboot/root-rsa-2048.pem --header-size 0x200 --align 8 --version 1.3 --slot-size 0x3A000 --pad build/zephyr/zephyr.bin build/zephyr/signed-hello2.bin
+
+

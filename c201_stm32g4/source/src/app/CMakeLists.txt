@@ -1,0 +1,35 @@
+# Copyright (c) 2021 Acme CPU
+
+add_subdirectory(app_battery)
+add_subdirectory(app_blower)
+#add_subdirectory(app_data_recorder)
+add_subdirectory(app_display)
+add_subdirectory(app_error_handler)
+#add_subdirectory(app_events)
+add_subdirectory(app_led)
+add_subdirectory(app_logger)
+add_subdirectory(app_membrane_switch)
+add_subdirectory(app_devcmd)
+add_subdirectory(app_storage)
+add_subdirectory(app_sensor)
+add_subdirectory(app_settings)
+add_subdirectory(app_time)
+add_subdirectory(app_stepper)
+add_subdirectory(app_shellcmd)
+add_subdirectory(app_uart_m2m_com)
+add_subdirectory(app_push_switch)
+add_subdirectory(app_ucpd)
+add_subdirectory(app_utils)
+add_subdirectory(app_analog)
+add_subdirectory(app_net)
+add_subdirectory(app_matrix_keypad)
+add_subdirectory(app_heater)
+add_subdirectory(app_fluid_level)
+add_subdirectory(app_dfu)
+add_subdirectory(app_imu_algo)
+
+list(APPEND app_sources 
+			acpu_c201_application.c
+	)
+	
+target_sources(app PRIVATE ${app_sources})

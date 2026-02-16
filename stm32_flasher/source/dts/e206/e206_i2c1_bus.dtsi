@@ -1,0 +1,111 @@
+/*
+ * Copyright (c) 2023 Acme CPU
+ *
+ * E206 I2C1 bus has
+ *		- BQ25792
+ *		- LTC2944
+ *		- PN5120
+ *		- removed xxxx PCAL9539 (main board)
+ *		- PCAL9539 (LTE board)
+ *		- BMA253
+ *		- CMX655D
+ *		- STUSB4500
+ *		- STSPIN32F0A (not used)
+ */
+
+ &i2c1 {
+	pinctrl-0 = <&i2c1_scl_pb8 &i2c1_sda_pb9>;
+	pinctrl-names = "default";
+	status = "okay";
+	clock-frequency = <I2C_BITRATE_FAST>;
+	
+	bq25792: bq25792@6b {
+    	compatible = "ti,bq25792";
+    	reg = <0x6b>;
+    	
+    	/*status-gpios = <&gpiof 11 (GPIO_PUSH_PULL)>;*/
+    	interrupt-gpios = <&gpioe 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    	charge-enable-gpios = <&gpiof 11 (GPIO_PUSH_PULL)>;
+    	
+        watchdog-timer = <0>;						/* disable watchdog timer */
+        input-voltage-limit-microvolt = <22000000>;	/* 22 V */
+        input-current-limit-microamp = <3300000>;	/* 3.3 Amp */
+	};
+
+  	fuelgauge: ltc2944@64 {
+		compatible = "lltc,ltc294x";
+		reg = <0x64>;
+		resistor-sense = <10>;
+		prescaler-exponent = <6>; 	/* for Qbat=1500 mAh, Rsense=10 mOhm [(4096 * 1500 * 10)/(2^16 * 0.340 * 50)] */
+		device-id = <4>;			/* LTC2941 = 1, LTC2942 = 2, LTC2943 = 3, LTC2944 = 4 */
+		/*interrupt-gpios = <&gpioc 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;*/
+		label = "FG";
+	};
+
+/*
+  	nfc: pn5120@2f {
+		compatible = "nxp,pn5120";
+		reg = <0x2f>;
+		interrupt-gpios = <&gpiog 5 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+		reset-gpios = <&gpioh 7 (GPIO_PUSH_PULL)>;
+		ea-gpios = <&gpiog 8 (GPIO_PUSH_PULL)>;
+  	};
+*/
+/*
+	io_mb: pcal9539@76 {
+		compatible = "nxp,pcal9539a";
+		reg = <0x76>;
+		gpio-controller;
+		has-pud;
+		interrupt-gpios = <&gpiod 0 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+		reset-gpios = <&gpioc 11 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+		#gpio-cells = <2>;
+		ngpios = <16>;
+		label = "IO_MB";
+	};
+*/
+	io_bb: pcal9539@74 {
+		compatible = "nxp,pcal9539a";
+		reg = <0x74>;
+		gpio-controller;
+		has-pud;
+		interrupt-gpios = <&gpioi 4 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+		reset-gpios = <&gpioc 11 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>; /* common reset pin for 2 io expanders */
+		#gpio-cells = <2>;
+		ngpios = <16>;
+		label = "IO_BB";
+	};
+
+	bma253@18 {
+		compatible = "bosch,bma253";
+		reg = <0x18>;
+		label = "TILT_SENSOR";
+		int1-gpios = <&gpioi 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	};
+
+	audio_codec_ctrl: cmx655d@54 {
+		compatible = "cml,cmx655d";
+    	reg = <0x54>;
+    	label = "AUDIO_CODEC_CTRL";
+    	classd-oc-reset-attempts = <5>;
+    	reset-gpios = <&gpioi 5 (GPIO_ACTIVE_LOW)>;
+    	interrupt-gpios = <&gpioi 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	};
+	
+  	stusb4500: stusb4500@28 {
+		compatible = "st,stusb4500";
+		reg = <0x28>;
+    	reset-gpios = <&gpioa 1 (GPIO_ACTIVE_LOW)>;
+    	alert-gpios = <&gpioa 0 (GPIO_PULL_UP)>;
+    	abside-gpios = <&gpiof 14 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+  	};
+
+/*	
+	bldc_driver: stspin32f0a@10 {
+		compatible = "st,stspin32f0a";
+		reg = <0x10>
+		label = "BLDC_DRIVER"
+	}
+*/
+
+};

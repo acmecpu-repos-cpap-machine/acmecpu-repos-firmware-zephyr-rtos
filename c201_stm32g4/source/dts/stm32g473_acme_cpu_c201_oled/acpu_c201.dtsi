@@ -1,0 +1,68 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+
+/{ c201: acpu-c201-board {
+
+	mcu_gpios: mcu-gpio-signals {
+		/*compatible = "bsp-gpios";*/
+		compatible = "gpio-keys";
+
+	};
+
+	dio3_gpios: pe-gpio-3 {
+		/*compatible = "bsp-gpios";*/
+		compatible = "gpio-keys";
+
+	};
+	
+   };
+   
+ };
+
+#include "gpio_dt_defines.dtsi"
+
+
+#include "acpu_c201_adc1.dtsi"
+#include "acpu_c201_dac1.dtsi"
+#include "acpu_c201_exti_ctrl.dtsi"
+#include "acpu_c201_dma.dtsi"
+#include "acpu_c201_i2c3_bus.dtsi"
+#include "acpu_c201_i2c3_bus_seg0.dtsi"
+#include "acpu_c201_i2c3_bus_seg1.dtsi"
+#include "acpu_c201_i2c3_bus_seg2.dtsi"
+#include "acpu_c201_i2c3_bus_seg3.dtsi"
+#include "acpu_c201_qspi1_bus.dtsi"
+#include "acpu_c201_rtc.dtsi"
+#include "acpu_c201_spi2_bus.dtsi"
+/*#include "acpu_c201_spi3_bus.dtsi"*/
+#include "acpu_c201_stepper.dtsi"
+#include "acpu_c201_timers2.dtsi"
+#include "acpu_c201_timers3.dtsi"
+#include "acpu_c201_timers17.dtsi"
+#include "acpu_c201_timers20.dtsi"
+#include "acpu_c201_usart1.dtsi"
+#include "acpu_c201_usart3.dtsi"
+#include "acpu_c201_usb.dtsi"
+#include "acpu_c201_load_switch.dtsi"
+#include "acpu_c201_ucpd.dtsi"
+
+/*
+ *	In this section we collect compound-type devices which may rely on several
+ *	different nodes in the devicetree
+ */
+
+#include "acpu_c201_gpios.dtsi"	
+#include "acpu_c201_blower.dtsi"
+#include "acpu_c201_user_interface.dtsi"
+#include "acpu_c201_boost_converter.dtsi"
+
+/*
+ *	Virtual devices which benefit from the devicetree
+ */
+
+/*#include "acpu_c201_menu.dtsi"*/
+#include "acpu_c201_stm32_flash_ob.dtsi"
+

@@ -1,0 +1,15 @@
+Change Net Name : Old Net Name=NetC15_1 New Net Name=USIM_VDD
+Change Net Name : Old Net Name=NetR43_2 New Net Name=USIM_CLK
+Change Net Name : Old Net Name=NetU9_2 New Net Name=CLK
+Added Pin To Net: NetName=DIO Pin=U9-3
+Added Pin To Net: NetName=DIO Pin=U10-S6
+Added Net: Name=DIO
+Added Pin To Net: NetName=RST Pin=U9-1
+Added Pin To Net: NetName=RST Pin=U10-S2
+Added Net: Name=RST
+Added Pin To Net: NetName=USIM_DATA Pin=R42-2
+Added Pin To Net: NetName=USIM_DATA Pin=U9-6
+Added Net: Name=USIM_DATA
+Added Pin To Net: NetName=USIM_RST Pin=R44-2
+Added Pin To Net: NetName=USIM_RST Pin=U9-8
+Added Net: Name=USIM_RST

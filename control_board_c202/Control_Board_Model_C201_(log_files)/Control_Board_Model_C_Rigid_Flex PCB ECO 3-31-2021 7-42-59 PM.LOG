@@ -1,0 +1,279 @@
+Removed Pin From Net: NetName=GND Pin=C140-1
+Removed Pin From Net: NetName=GND Pin=C141-1
+Removed Pin From Net: NetName=+3V3 Pin=C141-2
+Removed Pin From Net: NetName=CONN_SBU2 Pin=U40-A1
+Removed Pin From Net: NetName=CONN_CC1 Pin=U40-A2
+Removed Pin From Net: NetName=CONN_CC2 Pin=U40-A3
+Removed Pin From Net: NetName=CONN_SBU1 Pin=U40-B1
+Removed Pin From Net: NetName=CONN_CC1 Pin=U40-B2
+Removed Pin From Net: NetName=CONN_CC2 Pin=U40-B3
+Removed Pin From Net: NetName=PB5 Pin=U40-B4
+Removed Pin From Net: NetName=GND Pin=U40-C1
+Removed Pin From Net: NetName=GND Pin=U40-C2
+Removed Pin From Net: NetName=GND Pin=U40-C3
+Removed Pin From Net: NetName=+3V3 Pin=U40-C4
+Removed Pin From Net: NetName=SBU1 Pin=U40-D1
+Removed Pin From Net: NetName=SBU2 Pin=U40-D2
+Removed Pin From Net: NetName=PB6 Pin=U40-D3
+Removed Pin From Net: NetName=PB4 Pin=U40-D4
+Removed Member From Class: ClassName=STM32G473CETx Member=R21
+Removed Member From Class: ClassName=P109 Member=R31
+Removed Member From Class: ClassName=UART_MUX Member=R31
+Removed Member From Class: ClassName=P109 Member=R41
+Removed Member From Class: ClassName=P109 Member=R42
+Removed Member From Class: ClassName=U_ESP32-WROOM32D_Module Member=R48
+Removed Member From Class: ClassName=TCPP Member=R78
+Removed Member From Class: ClassName=USB_MUX Member=R85
+Removed Member From Class: ClassName=USB_MUX Member=R86
+Removed Member From Class: ClassName=P26 Member=R96
+Removed Member From Class: ClassName=P103 Member=R97
+Removed Member From Class: ClassName=CODEC Member=R112
+Removed Member From Class: ClassName=CODEC Member=R113
+Removed Member From Class: ClassName=FLASH Member=R117
+Removed Member From Class: ClassName=FLASH Member=R118
+Removed Member From Class: ClassName=STM32G473QETx Member=R118
+Removed Member From Class: ClassName=U_TPS22810 2 Member=R121
+Removed Member From Class: ClassName=USB-to-UART_Bridge Member=R126
+Removed Member From Class: ClassName=MIC1 Member=R130
+Removed Member From Class: ClassName=+3V3_PS Member=R131
+Change Component Designator: OldDesignator=C142 NewDesignator=C140
+Change Component Designator: OldDesignator=C143 NewDesignator=C141
+Change Component Designator: OldDesignator=C144 NewDesignator=C142
+Change Component Designator: OldDesignator=C145 NewDesignator=C143
+Change Component Designator: OldDesignator=C146 NewDesignator=C144
+Change Component Designator: OldDesignator=C147 NewDesignator=C145
+Change Component Designator: OldDesignator=C148 NewDesignator=C146
+Change Component Designator: OldDesignator=U41 NewDesignator=U40
+Change component parameters: Designator = "U25"; Footprint = "SOT-23-5"; UniqueID = "\NHYMYXVF\KYKOCHXX\YBPPWNCT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Bandwidth"; Value = "3MHz"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case/Package"; Value = "SOT-23-5"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Common Mode Rejection Ratio"; Value = "104dB"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.ti.com/lit/ds/symlink/opa171.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.ti.com/lit/ds/symlink/opa171.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Gain Bandwidth Product"; Value = "3MHz"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Input Bias Current"; Value = "15pA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Input Offset Voltage (Vos)"; Value = "250uV"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "OPA171AIDBVR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Dual Supply Voltage"; Value = "18V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max I/O Voltage"; Value = "1.8mV"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "125°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Supply Voltage"; Value = "36V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Dual Supply Voltage"; Value = "1.35V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Supply Voltage"; Value = "2.7V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Nominal Gain Bandwidth Product"; Value = "3MHz"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Nominal Supply Current"; Value = "475uA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Amplifiers"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Channels"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Circuits"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Elements"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Pins"; Value = "5"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Supply Current"; Value = "475uA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Supply Voltage"; Value = "18V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Output Current"; Value = "25mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Output Current per Channel"; Value = "35mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "3000"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power Supply Rejection Ratio (PSRR)"; Value = "120dB"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=1.36, 10=1.215, 100=0.9476, 500=0.7828, 1000=0.618 (USD)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Slew Rate"; Value = "1.5V/µs"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "126525"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "296-37698-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Unity Gain Bandwidth Product"; Value = "3MHz"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Gain"; Value = "130dB"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "497-TSB711AILTCT-ND"; VariantName = "No_Broadband_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "No_Broadband_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "2874"; VariantName = "No_Broadband_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=1.59, 10=1.431, 25=1.3496, 100=1.0798, 250=0.9448, 500=0.9178, 1000=0.7289 (USD)"; VariantName = "No_Broadband_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "No_Broadband_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "TSB711AILT"; VariantName = "No_Broadband_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "STMicroelectronics"; VariantName = "No_Broadband_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "497-TSB711AILTCT-ND"; VariantName = "BG95-M1_US_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "BG95-M1_US_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "2874"; VariantName = "BG95-M1_US_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=1.59, 10=1.431, 25=1.3496, 100=1.0798, 250=0.9448, 500=0.9178, 1000=0.7289 (USD)"; VariantName = "BG95-M1_US_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "BG95-M1_US_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "TSB711AILT"; VariantName = "BG95-M1_US_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "STMicroelectronics"; VariantName = "BG95-M1_US_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "497-TSB711AILTCT-ND"; VariantName = "BG95-M3_Global_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "BG95-M3_Global_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "2874"; VariantName = "BG95-M3_Global_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=1.59, 10=1.431, 25=1.3496, 100=1.0798, 250=0.9448, 500=0.9178, 1000=0.7289 (USD)"; VariantName = "BG95-M3_Global_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "BG95-M3_Global_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "TSB711AILT"; VariantName = "BG95-M3_Global_TFT_SCREEN"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "STMicroelectronics"; VariantName = "BG95-M3_Global_TFT_SCREEN"
+Added Component: Designator=C147(C0402)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Capacitance"; Value = "1uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "1005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.yageo.com/documents/recent/UPY-GPHC_X5R_4V-to-50V_12.pdf?src-supplier=Avnet+Europe"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.yageo.com/documents/recent/UPY-GPHC_X5R_4V-to-50V_12.pdf?src-supplier=Avnet+Europe"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Composition"; Value = "Ceramic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "0.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dielectric"; Value = "X5R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Halogen Free"; Value = "Halogen Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "CC0402KRX5R7BB105"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0.4, 10=0.278, 100=0.167, 500=0.1253, 1000=0.1058, 2500=0.1002, 5000=0.0947 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "1114963"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "311-1691-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Thickness"; Value = "0.022inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "16V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "16V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Weight"; Value = "2.3E-05oz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.02inch"; VariantName = "[No Variations]"
+Added Component: Designator=C148(C0402)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Capacitance"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "1005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_automotive_general_midvoltage_en.pdf?src-supplier=Future+Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlccspec_automotive_general_midvoltage_en.pdf?src-supplier=Future+Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "http://www.farnell.com/datasheets/1807242.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.farnell.com/datasheets/1807242.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "http://www.mouser.com/ds/2/400/lcc_automotive_general_en-843974.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.mouser.com/ds/2/400/lcc_automotive_general_en-843974.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4Description"; Value = "http://www.farnell.com/datasheets/1936565.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4URL"; Value = "http://www.farnell.com/datasheets/1936565.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink5Description"; Value = "http://www.farnell.com/datasheets/1735392.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink5URL"; Value = "http://www.farnell.com/datasheets/1735392.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Composition"; Value = "Ceramic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "0.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dielectric"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "CGA2B3X7R1H104K050BB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0.17, 10=0.118, 50=0.0668, 100=0.0553, 500=0.0388, 1000=0.0321, 2500=0.0299, 5000=0.0273 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ratings"; Value = "AEC-Q200"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "2925303"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "445-6899-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Thickness"; Value = "0.022inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Weight"; Value = "2.3E-05oz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.02inch"; VariantName = "[No Variations]"
+Added Component: Designator=U41(WQFN20_RUK_TEX)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Brand"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "USB Interface IC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Data Rate"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ESD Protection"; Value = "ESD Protection"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Interface Type"; Value = "USB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "TPD6S300ARUKR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Operating Temperature"; Value = "+ 85 C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum Operating Temperature"; Value = "- 40 C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum Order Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Moisture Sensitive"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Style"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Supply Current"; Value = "600 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Supply Voltage"; Value = "3.3 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package / Case"; Value = "WQFN-20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Cut Tape"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1.31, 10=1.11, 100=0.852, 500=0.753, 1000=0.594, 3000=0.555, 6000=0.527, 9000=0.507 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product"; Value = "USB Protectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Type"; Value = "USB Interface IC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reeling"; Value = "True"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS - Mouser"; Value = "Y"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "TPD6S300A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Speed"; Value = "Super Speed"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Standard"; Value = "USB-C 2.0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Standard Pack Qty"; Value = "3000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "6078"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Subcategory"; Value = "Interface ICs"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "595-TPD6S300ARUKR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 2"; Value = "296-51856-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supply Voltage - Max"; Value = "3.6 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supply Voltage - Min"; Value = "2.7 V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C147-1
+Added Pin To Net: NetName=+3V3 Pin=C147-2
+Added Pin To Net: NetName=GND Pin=C148-1
+Added Pin To Net: NetName=CONN_SBU1 Pin=U41-1
+Added Pin To Net: NetName=CONN_SBU2 Pin=U41-2
+Added Pin To Net: NetName=CONN_CC1 Pin=U41-4
+Added Pin To Net: NetName=CONN_CC2 Pin=U41-5
+Added Pin To Net: NetName=CONN_CC2 Pin=U41-6
+Added Pin To Net: NetName=CONN_CC1 Pin=U41-7
+Added Pin To Net: NetName=GND Pin=U41-8
+Added Pin To Net: NetName=PB5 Pin=U41-9
+Added Pin To Net: NetName=+3V3 Pin=U41-10
+Added Pin To Net: NetName=PB4 Pin=U41-11
+Added Pin To Net: NetName=PB6 Pin=U41-12
+Added Pin To Net: NetName=GND Pin=U41-13
+Added Pin To Net: NetName=SBU2 Pin=U41-14
+Added Pin To Net: NetName=SBU1 Pin=U41-15
+Added Pin To Net: NetName=GND Pin=U41-16
+Added Pin To Net: NetName=GND Pin=U41-17
+Added Pin To Net: NetName=GND Pin=U41-18
+Added Pin To Net: NetName=GND Pin=U41-21
+Change Net Name : Old Net Name=NetC144_1 New Net Name=NetC142_1
+Added Pin To Net: NetName=NetC148_2 Pin=C148-2
+Added Pin To Net: NetName=NetC148_2 Pin=U41-3
+Added Net: Name=NetC148_2
+Added Pin To Net: NetName=NetU41_19 Pin=U41-19
+Added Net: Name=NetU41_19
+Added Pin To Net: NetName=NetU41_20 Pin=U41-20
+Added Net: Name=NetU41_20
+Added Member To Class: ClassName=TCPP Member=Component C147 (C1) CAP CER 1UF 16V X5R 0402
+Added Member To Class: ClassName=TCPP Member=Component C148 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component R23 (R34) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=P109 Member=Component R33 (R70) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=UART_MUX Member=Component R33 (R70) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P109 Member=Component R43 (R76) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=P109 Member=Component R44 (R77) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=U_ESP32-WROOM32D_Module Member=Component R52 (R64) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=TCPP Member=Component R80 (R3) RES SMD 100K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=USB_MUX Member=Component R87 (R10) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=USB_MUX Member=Component R88 (R11) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P26 Member=Component R98 (R2) RES SMD 402 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P103 Member=Component R101 (R2) RES SMD 1.2K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=CODEC Member=Component R114 (R58) RES SMD 63.4K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=CODEC Member=Component R115 (R59) RES SMD 100K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=FLASH Member=Component R119 (R1) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=FLASH Member=Component R120 (R2) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component R122 (R1) RES SMD 100 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_TPS22810 2 Member=Component R123 (R1) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=USB-to-UART_Bridge Member=Component R128 (R1) RES SMD 23.7K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=MIC1 Member=Component R132 (R61) RES SMD 100 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=+3V3_PS Member=Component R133 (R1) RES SMD 910K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=TCPP Member=Component U41 (U1) TPD6S300ARUKR

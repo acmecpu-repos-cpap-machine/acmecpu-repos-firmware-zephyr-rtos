@@ -1,0 +1,89 @@
+# Copyright (c) 2022, Acme CPU
+# Ref: https://elixir.bootlin.com/linux/v4.2/source/Documentation/devicetree/bindings/power/bq25890.txt
+
+description: BQ25890 I2C Controlled 1-cell Battery Charger
+
+include: i2c-device.yaml
+
+compatible: "ti,bq25890"
+
+properties:
+
+    status-gpios:
+        required: false
+        type: phandle-array
+        description: Charge status output to indicate various charger operations
+        
+    dsel-gpios:
+        required: false
+        type: phandle-array
+        description: D+ / D- multiplexer selection output
+        
+    interrupt-gpios:
+        required: false
+        type: phandle-array
+        description: Interrupt output
+
+    otg-gpios:
+        required: false
+        type: phandle-array
+        description: Active high enable pin during boost mode
+        
+    charge-enable-gpios:
+        required: false
+        type: phandle-array
+        description: Active low charge enable pin
+        
+    battery-regulation-voltage:
+        required: true
+        type: int
+        description: maximum charging voltage (in uV)
+        
+    charge-current:
+        required: true
+        type: int
+        description: maximum charging current (in uA)
+        
+    termination-current:
+        required: true
+        type: int
+        description: charge will be terminated when current in constant-voltage phase drops below this value (in uA)
+        
+    precharge-current:
+        required: true
+        type: int
+        description: maximum charge current during precharge phase (in uA)
+        
+    minimum-sys-voltage:
+        required: true
+        type: int
+        description: when battery is charging and it is below minimum system voltage, 
+                     the system will be regulated above minimum-sys-voltage setting (in uV)
+
+    boost-voltage:
+        required: true
+        type: int
+        description: VBUS voltage level in boost mode (in uV)
+        
+    boost-max-current:
+        required: true
+        type: int
+        description: maximum allowed current draw in boost mode (in uA)
+        
+    boost-low-freq:
+        required: false
+        type: boolean
+        description: if present boost mode frequency will be 500kHz, otherwise 1.5MHz
+        
+    use-ilim-pin:
+        required: false
+        type: boolean
+        description: if present the ILIM resistor will be used and the input current will be 
+                     the lower between the resistor setting and the IINLIM register setting
+                     
+    thermal-regulation-threshold:
+        required: false
+        type: int
+        description: temperature above which the charge current is lowered, to avoid overheating (in degrees Celsius). 
+                     If omitted, the default setting will be used (120 degrees)
+                     

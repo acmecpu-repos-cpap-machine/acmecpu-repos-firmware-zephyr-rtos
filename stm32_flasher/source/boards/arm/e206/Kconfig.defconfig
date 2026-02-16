@@ -1,0 +1,17 @@
+# E206 board configuration
+
+# Copyright (c) 2023 Acme CPU
+
+if BOARD_E206
+
+	config BOARD
+		default "e206"
+
+	#if NETWORKING
+	#
+	#config NET_L2_ETHERNET
+	#	default y
+	#
+	#endif # NETWORKING
+
+endif # BOARD_E206

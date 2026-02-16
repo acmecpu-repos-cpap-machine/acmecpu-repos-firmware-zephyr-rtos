@@ -1,0 +1,34 @@
+# Copyright (c) 2020, Acme CPU
+
+description: BQ25611D I2C Controlled 1-cell Buck Battery Charger
+
+include: i2c-device.yaml
+
+compatible: "ti,bq25611d"
+
+properties:
+
+  interrupt-gpios:
+    required: false
+    type: phandle-array
+
+  enable-gpios:
+    required: false
+    type: phandle-array
+
+  pwms:
+    required: false
+    type: phandle-array
+
+  pwm-names:
+    required: false
+    type: string-array
+    
+  io-channels:
+    type: phandle-array
+    required: false
+    description: Analog battery voltage
+
+  batsense-enable-gpios:
+    required: false
+    type: phandle-array

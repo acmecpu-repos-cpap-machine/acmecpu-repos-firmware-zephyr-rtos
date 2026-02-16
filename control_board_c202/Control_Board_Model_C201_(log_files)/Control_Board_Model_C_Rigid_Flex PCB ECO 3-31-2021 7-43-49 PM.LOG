@@ -1,0 +1,14 @@
+Removed Member From Class: ClassName=P02 Member=C144
+Added Member To Class: ClassName=TCPP Member=Component C61 (C1) CAP CER 220PF 50V X7R 0402
+Added Member To Class: ClassName=TCPP Member=Component C63 (C3) CAP CER 220PF 50V X7R 0402
+Added Member To Class: ClassName=+3V3_PS Member=Component C143 (C4) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=+3V3_PS Member=Component C144 (C5) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=P01 Member=Component C145 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=P02 Member=Component C146 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=TCPP Member=Component C147 (C1) CAP CER 1UF 16V X5R 0402
+Added Member To Class: ClassName=TCPP Member=Component C148 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=TCPP Member=Component Q7 (Q1A) DMN32D2LV-7
+Added Member To Class: ClassName=TCPP Member=Component R80 (R3) RES SMD 100K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=TCPP Member=Component R81 (R4) RES SMD 100K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=+3V3_PS Member=Component U40 (U1) TPSM82822SILR
+Added Member To Class: ClassName=TCPP Member=Component U41 (U1) TPD6S300ARUKR

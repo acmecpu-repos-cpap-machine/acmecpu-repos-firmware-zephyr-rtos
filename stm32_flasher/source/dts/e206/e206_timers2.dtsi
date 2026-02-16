@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) 2023 Acme CPU
+ * - stepper motor 1 Vref PWM
+ * - LCD backlight PWM
+ */
+
+&timers2 {
+	status = "okay";
+   	st,prescaler = <239>;	/* The counter clock frequency (CK_CNT) is equal to fCK_PSC / (PSC[15:0] + 1). */
+	
+	stp1_vref_pwm: pwm {
+		status = "okay";
+    	pinctrl-0 = <&tim2_ch4_pa3>;
+    	pinctrl-names = "default";
+	};
+
+	disp_bl_pwm: pwm {
+    	status = "okay";
+    	pinctrl-0 = <&tim2_ch1_pa15>;
+    	pinctrl-names = "default";
+	};
+};

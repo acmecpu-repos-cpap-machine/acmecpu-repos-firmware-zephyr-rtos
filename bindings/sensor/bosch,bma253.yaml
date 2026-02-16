@@ -1,0 +1,18 @@
+# Copyright (c) 2022 Acme CPU
+
+description: |
+  Bosch BMA253 triaxial acceleration sensor.  See more info at:
+  https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bma253-ds000.pdf
+
+compatible: "bosch,bma253"
+
+include: i2c-device.yaml
+
+properties:
+  int1-gpios:
+    type: phandle-array
+    required: false
+    description: |
+      Identifies pin for the INT1 signal on the sensor.  The sensor
+      INT2 signal is not supported by the driver.
+

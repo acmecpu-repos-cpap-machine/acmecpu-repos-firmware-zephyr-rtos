@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 10:31:33 PM On 12/7/2020
+
+Output: BOM_No_Variations
+Type  : BOM
+From  : Project [Sensor_PCB_S201.PrjPcb]
+   Generated File[20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_No Variations_DFM_BOM.xlsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 10:31:41 PM On 12/7/2020

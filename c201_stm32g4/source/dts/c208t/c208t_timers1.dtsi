@@ -1,0 +1,27 @@
+/*
+ * Copyright (c) 2024 Acme CPU
+ * - Stepper motor
+ */
+
+&timers1 {
+	status = "okay";
+   	st,prescaler = <239>;	/* The counter clock frequency (CK_CNT) is equal to fCK_PSC / (PSC[15:0] + 1). */
+	
+	step_a: pwm {
+		status = "okay";
+    	pinctrl-0 = <&tim1_ch1_pe9>;
+    	pinctrl-names = "default";
+	};
+
+	step_b: pwm {
+		status = "okay";
+    	pinctrl-0 = <&tim1_ch2_pe11>;
+    	pinctrl-names = "default";
+	};
+	
+	step_c: pwm {
+		status = "okay";
+    	pinctrl-0 = <&tim1_ch3_pe13>;
+    	pinctrl-names = "default";
+	};
+};

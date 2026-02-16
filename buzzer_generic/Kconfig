@@ -1,0 +1,22 @@
+# Generic buzzer configurations
+# Copyright (c) 2021 Acme CPU
+
+menuconfig BUZZER_GENERIC
+	bool "Generic PWM Buzzer"
+	default n
+	help
+	  Enable driver for a generic pwm buzzer
+
+if BUZZER_GENERIC
+
+module = BUZZER_GENERIC
+module-str = buzzer_generic
+source "subsys/logging/Kconfig.template.log_config"
+
+config BUZZER_GENERIC_INIT_PRIORITY
+	int "Init Priority"
+	default APPLICATION_INIT_PRIORITY
+	help
+	    Device driver initialization priority.
+
+endif # BUZZER_GENERIC

@@ -1,0 +1,66 @@
+# Copyright (c) 2023 Acme CPU
+# Configurations for matrix keypad library 
+
+menuconfig LIB_MATRIX_KEYPAD
+	bool "Matrix Keypad library"
+	default y
+	help
+	  Enable or disable the matrix keypad library 
+
+if LIB_MATRIX_KEYPAD
+	config MATRIX_KEYPAD_MAX_ROWS
+		int "Maximum number of rows to be supported by the library"
+		range 1 20
+		default 4
+		help
+			Maximum number of rows to be supported by the library
+	
+	config MATRIX_KEYPAD_MAX_COLS
+		int "Maximum number of columns to be supported by the library"
+		range 1 20
+		default 4
+		help
+			Maximum number of columns to be supported by the library
+
+	choice
+		prompt "Select whether row or column is output"
+		default MATRIX_KEYPAD_COL_OUTPUT
+	config MATRIX_KEYPAD_ROW_OUTPUT
+		bool "Keypad rows are output"
+		help
+		  Keypad rows will be set as output and columns will be scanned
+	config MATRIX_KEYPAD_COL_OUTPUT
+		bool "Keypad cols are output"
+		help
+		  Keypad columns will be set as output and rows will be scanned
+	endchoice
+	
+	choice
+		prompt "Select whether drive signal is HIGH or LOW"
+		default MATRIX_KEYPAD_OUTPUT_DRIVE_HIGH
+	config MATRIX_KEYPAD_OUTPUT_DRIVE_HIGH
+		bool "Drive signal will be high"
+		help
+		  Drive signal will be high
+	config MATRIX_KEYPAD_OUTPUT_DRIVE_LOW
+		bool "Drive signal will be low"
+		help
+		  Drive signal will be low
+	endchoice
+		
+	config KEY_PRESS_DURATION_MS_MIN
+		int "Minimum time in milli seconds a key must stay asserted for a normal press detection"
+		range 50 500
+		default 150
+		help
+		    A normal key press is considered valid if the time (in milli seconds) from the moment an interrupt is detected is
+		    more than this time
+	
+	config KEY_PRESS_DURATION_MS_MAX
+		int "Maximum time in milli seconds a key can stay asserted for normal press detection"
+		range 100 2000
+		default 800
+		help
+		    The maximum time helps to rule out incorrect data.
+
+endif # LIB_MATRIX_KEYPAD

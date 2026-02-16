@@ -1,0 +1,54 @@
+Removed Member From Class: ClassName=P109 Member=C31
+Removed Member From Class: ClassName=P109 Member=C33
+Removed Member From Class: ClassName=P110 Member=C49
+Removed Member From Class: ClassName=+4V2_PS Member=C53
+Removed Member From Class: ClassName=+1V8_VLT2 Member=C57
+Removed Member From Class: ClassName=TCPP Member=C64
+Removed Member From Class: ClassName=STM32G473CETx Member=C67
+Removed Member From Class: ClassName=P105 Member=C68
+Removed Member From Class: ClassName=P26 Member=C71
+Removed Member From Class: ClassName=P103 Member=C83
+Removed Member From Class: ClassName=+1V8_PS Member=C87
+Removed Member From Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=C94
+Removed Member From Class: ClassName=P128 Member=C97
+Removed Member From Class: ClassName=CODEC Member=C101
+Removed Member From Class: ClassName=FLASH Member=C107
+Removed Member From Class: ClassName=MCU Member=C107
+Removed Member From Class: ClassName=RTC_XTAL Member=C107
+Removed Member From Class: ClassName=STM32G473QETx Member=C122
+Removed Member From Class: ClassName=U_TPS22810 2 Member=C126
+Removed Member From Class: ClassName=+3V3_AUDIO_PS Member=C130
+Removed Member From Class: ClassName=USB-to-UART_Bridge Member=C135
+Removed Member From Class: ClassName=DISP_PS Member=C142
+Removed Member From Class: ClassName=MIC1 Member=C142
+Removed Member From Class: ClassName=+3V3_PS Member=C148
+Removed Member From Class: ClassName=P01 Member=C149
+Added Member To Class: ClassName=P109 Member=Component C17 (C42) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=P109 Member=Component C32 (C54) CAP CER 10nF 25V X7R 10% 0402
+Added Member To Class: ClassName=P110 Member=Component C43 (C1) CAP CER 10nF 25V X7R 10% 0402
+Added Member To Class: ClassName=+4V2_PS Member=Component C49 (C1) CAP CER 10uF X7R 10% 0805
+Added Member To Class: ClassName=+1V8_VLT2 Member=Component C55 (C28) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+1V8_VLT1 Member=Component C57 (C28) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+1V8_VLT1 Member=Component C58 (C30) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=TCPP Member=Component C61 (C1) CAP CER 220PF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component C64 (C13) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=P105 Member=Component C67 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=P26 Member=Component C68 (C1) CAP CER 0.1UF 16V X7R 0402
+Added Member To Class: ClassName=P103 Member=Component C71 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+1V8_PS Member=Component C84 (C1) CAP CER 2.2UF 6.3V X5R 0402
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component C86 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=P128 Member=Component C94 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=CODEC Member=Component C96 (C28) CAP CER 10nF 25V X7R 10% 0402
+Added Member To Class: ClassName=FLASH Member=Component C105 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=MCU Member=Component C106 (C12) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=RTC_XTAL Member=Component C106 (C12) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C107 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=U_TPS22810 2 Member=Component C122 (C1) CAP CER 2.2UF 35V X5R 0603
+Added Member To Class: ClassName=+3V3_AUDIO_PS Member=Component C125 (C1) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=USB-to-UART_Bridge Member=Component C130 (C1) CAP CER 1UF 16V X5R 0402
+Added Member To Class: ClassName=DISP_PS Member=Component C135 (C1) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=MIC1 Member=Component C140 (C33) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+3V3_PS Member=Component C143 (C1) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=P01 Member=Component C148 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+1V8_VLT1 Member=Component U19 (U9) TXB0108DQSR
+Added Member To Class: ClassName=BG95_PWR Member=Wire NetC19_1

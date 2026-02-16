@@ -1,0 +1,29 @@
+# Copyright (c) 2022 Acme CPU
+# CMX655D audio codec configurations
+
+menuconfig CMX655D
+	bool "CMX655D audio codec"
+	depends on I2C
+	help
+	  Enable driver for CMX655D audio codec
+
+if CMX655D
+
+module = CMX655D
+module-str = cmx655d
+source "subsys/logging/Kconfig.template.log_config"
+
+config CMX655D_INIT_PRIORITY
+	int "CMX655D Init Priority"
+	default APPLICATION_INIT_PRIORITY
+	help
+	    Device driver initialization priority.
+
+config CMX655D_INTERRUPT
+	bool "Interrupt enable"
+	default n
+	depends on CMX655D
+	help
+	  Enable interrupt support in CMX655D driver.
+
+endif # CMX655D

@@ -1,0 +1,24 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ * Created on: 19-Oct-2022
+ * Author: Rohan Dey (rohan@acmecpu.cpm)
+ *
+ */
+
+ /*
+ /{ h205c: acpu-h205c-board {
+
+	
+   };
+ };*/
+
+#include "gpio_dt_defines.dtsi"
+
+#include "h205c_nrf5340_i2c.dtsi"
+#include "h205c_nrf5340_gpios.dtsi"
+#include "h205c_nrf5340_power.dtsi"
+#include "h205c_nrf5340_spi4.dtsi"
+#include "h205c_nrf5340_adc.dtsi"
+#include "h205c_nrf5340_uart0.dtsi"
+#include "h205c_nrf5340_pwm0.dtsi"

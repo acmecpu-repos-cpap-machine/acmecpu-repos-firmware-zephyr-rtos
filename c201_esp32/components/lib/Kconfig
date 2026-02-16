@@ -1,0 +1,7 @@
+# Copyright (c) 2024 Acme CPU
+# Lib C20x configurations
+
+menu "Lib C20x Configurations"
+
+rsource "lib_m2m_frame/Kconfig"
+endmenu

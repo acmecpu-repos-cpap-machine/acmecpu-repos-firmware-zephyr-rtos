@@ -1,0 +1,71 @@
+# Copyright (c) 2021, Acme CPU
+
+description: General representation of a Blower Motor Driver
+
+include: "base.yaml"
+
+compatible: "acpu,blower"
+
+properties:
+  label:
+    required: false
+    type: string
+    description: Human readable string describing the device (used as device_get_binding() argument)
+  pwms:
+    type: phandle-array
+    required: false
+    description: PWM control signal for a DC Blower Motor or DRV10975 BLDC driver chip
+  pwm-names:
+    type: string-array
+    required: false
+    description: PWM control signal for a DC Blower Motor or DRV10975 BLDC driver chip
+
+child-binding:
+
+  description: Adjustable DC-DC SEPIC Converter
+
+  properties:
+    label:
+      required: true
+      type: string
+      description: Human readable string describing the device (used as device_get_binding() argument)
+    enable-gpios:
+      type: phandle-array
+      required: false
+      description: Enable signal for the DC-DC Converter
+    direction-gpios:
+      type: phandle-array
+      required: false
+      description: Direction signal for the DRV10975 BLDC Motor Driver
+    io-channels:
+      type: phandle-array
+      required: false
+      description: Analog control signal for the adjustable DC-DC converter
+    io-channel-names:
+      type: string-array
+      required: false
+      description: Analog control signal name for the adjustable DC-DC converter
+    vref:
+      type: int
+      required: true
+      description: Reference voltage in millivolts for the DAC
+    vfb:
+      type: int
+      required: true
+      description: Voltage in millivolts on the FB pin in regulation
+    v-i-conv-shunt:
+      type: int
+      required: true
+      description: Resistance of the current sense resistor of the V-to-I converter
+    vdiv-bot-resistor:
+      type: int
+      required: true
+      description: Resistance of the bottom resistor in the voltage divider in the feedback loop
+    vdiv-top-resistor:
+      type: int
+      required: true
+      description: Resistance of the top resistor in the voltage divider in the feedback loop
+    vdiv-aux-resistor:
+      type: int
+      required: true
+      description: Resistance of the auxiliary resistor in the voltage divider in the feedback loop

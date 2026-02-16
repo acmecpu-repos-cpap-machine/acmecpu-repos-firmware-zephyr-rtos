@@ -1,0 +1,18 @@
+# Copyright (c) 2021 Acme CPU
+# USB C Power Delivery configurations 
+
+menuconfig APP_USBC_PD
+	bool "USB Type-C Power Delivery"
+	help
+	  USB Type-C Power Delivery configurations
+	  
+if APP_USBC_PD
+
+config USBPD_PORT_COUNT
+	int "Number of USB C Power Delivery Ports"
+	range 1 2
+	default 1
+	help
+		Number of USB C Power Delivery Ports
+				
+endif # APP_USBC_PD

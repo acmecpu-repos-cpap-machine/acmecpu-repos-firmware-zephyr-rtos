@@ -1,0 +1,21 @@
+# Copyright (c) 2021 Acme CPU
+# Application Time configurations
+
+menuconfig APP_TIME
+	bool "Application Time Configurations"
+	default y
+	help
+	  Application time module is always enabled. Disabling it has no effect 
+
+if APP_TIME
+
+config TIME_MIN_VALUE_SECONDS
+	int "Current time should never be less than this time measured in seconds"
+	default 1619827200
+	help
+	    Current time should never be less than this time measured in seconds
+	    If the acquired time from the RTC is less than this time, then
+	    user must be prompted to setup the time. If user does not setup the time
+	    then the system will use this time as a default value
+
+endif # APP_TIME

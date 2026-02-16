@@ -1,0 +1,6 @@
+# C205 board configuration
+# Copyright (c) 2023 Acme CPU
+
+config BOARD_C205
+	bool "Acme CPU C205 Board"
+	depends on SOC_STM32G473XX

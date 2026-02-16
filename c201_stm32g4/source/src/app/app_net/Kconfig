@@ -1,0 +1,24 @@
+# Copyright (c) 2023 Acme CPU
+# App Network configurations 
+
+menuconfig APP_NET
+	bool "App Network configurations"
+	default n
+	help
+	  App Network configurations
+	  
+if APP_NET
+
+config APP_HAS_HTML_GEN
+	bool "Application has HTML generater"
+	default n
+	help
+	  Application has HTML generater (y/n)
+	  
+config APP_HTML_MENU_SORT
+	bool "The HTML generater will sort the menu based on display order"
+	default n
+	help
+	  Whether the HTML generater will sort the menu based on display order
+
+endif # APP_NET

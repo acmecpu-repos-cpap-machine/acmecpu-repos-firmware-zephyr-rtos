@@ -1,0 +1,31 @@
+# Copyright (c) 2021 Acme CPU
+# Data Recorder configuration options
+
+menuconfig APP_DATA_RECORDER
+#	bool
+	bool "Application Data Recorder Configurations"
+	default n
+#	depends on DISK_ACCESS_SDHC(=y) && CONFIG_FS_FATFS_LFN(=y)
+	help
+	  Enable or disable the Application Data Recorder.
+	  The application saves pre-formatted data in the SD Card
+
+if APP_DATA_RECORDER
+
+config APP_DATA_RECORDER_MAX_CURR_FILESIZE_MB
+	int "Current data file maximum size in Mbytes"
+	range 1 1000
+	default 10
+	help
+	    Current data file maximum size in Mbytes. If this size is reached, then the current file is
+	    renamed with timestamp, and a new current file is opened for writing
+
+config APP_DATA_RECORDER_MAX_FILE_COUNT
+	int "Max number of data files that can exist"
+	range 1 100
+	default 10
+	help
+	    The maximum number of files that can exist in the data directory. Once the max file count is reached
+	    the oldest file is deleted.
+
+endif # APP_DATA_RECORDER

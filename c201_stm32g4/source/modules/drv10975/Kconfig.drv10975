@@ -1,0 +1,50 @@
+# DRV10975 I2C Motor Driver configurations
+
+config DRV10975_MOTOR_PARAMS1
+	hex
+	default 0x48
+
+config DRV10975_MOTOR_PARAMS2
+	hex
+	default 0x01
+
+config DRV10975_MOTOR_PARAMS3
+	hex
+	default 0x07
+	
+config DRV10975_SYSTEM_OPTION1
+	hex
+	default 0x00
+
+config DRV10975_SYSTEM_OPTION2
+	hex
+	default 0x80
+	
+config DRV10975_SYSTEM_OPTION3
+	hex
+	default 0x38
+	
+config DRV10975_SYSTEM_OPTION4
+	hex
+	default 0xf9
+	
+config DRV10975_SYSTEM_OPTION5
+	hex
+	default 0x00
+	
+config DRV10975_SYSTEM_OPTION6
+	hex
+	default 0x99
+	
+config DRV10975_SYSTEM_OPTION7
+	hex
+	default 0x78
+
+config DRV10975_SYSTEM_OPTION8
+	hex
+	default 0x00
+
+config DRV10975_SYSTEM_OPTION9
+	hex
+	default 0x0d
+	

@@ -1,0 +1,39 @@
+# Copyright (c) 2023 Acme CPU
+# Author Rohan Dey (rohan@acmecpu.com)
+
+description: Power control driver
+
+include: "base.yaml"
+
+compatible: "acpu,pwrctrldrv"
+
+properties:
+    label:
+        required: false
+        type: string
+
+    ps1-gpios:
+        type: phandle-array
+        required: true
+        description: enable / disable gpio for power supply 1
+
+    ps2-gpios:
+        type: phandle-array
+        required: false
+        description: enable / disable gpio for power supply 2
+
+    ps3-gpios:
+        type: phandle-array
+        required: false
+        description: enable / disable gpio for power supply 3
+
+    ps4-gpios:
+        type: phandle-array
+        required: false
+        description: enable / disable gpio for power supply 4
+
+    ps5-gpios:
+        type: phandle-array
+        required: false
+        description: enable / disable gpio for power supply 5
+

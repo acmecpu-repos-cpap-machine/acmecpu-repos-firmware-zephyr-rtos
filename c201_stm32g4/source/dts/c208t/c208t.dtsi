@@ -1,0 +1,43 @@
+/*
+ * Copyright (c) 2024 Acme CPU
+ *
+ */
+
+#include "c208t_adc1.dtsi"
+#include "c208t_adc2.dtsi"
+#include "c208t_adc3.dtsi"
+#include "c208t_dac1.dtsi"
+#include "c208t_dma.dtsi"
+#include "c208t_i2c1_bus.dtsi"
+#include "c208t_i2c2_bus.dtsi"
+#include "c208t_i2c3_bus.dtsi"
+#include "c208t_i2c4_bus.dtsi"
+#include "c208t_quadspi.dtsi"
+#include "c208t_spi4.dtsi"
+#include "c208t_spi5.dtsi"
+#include "c208t_timers1.dtsi"
+#include "c208t_timers2.dtsi"
+#include "c208t_timers3.dtsi"
+#include "c208t_timers4.dtsi"
+#include "c208t_timers15.dtsi"
+#include "c208t_usart1.dtsi"
+#include "c208t_usart3.dtsi"
+#include "c208t_usart6.dtsi"
+#include "c208t_usb1.dtsi"
+#include "c208t_usb2.dtsi"
+#include "c208t_gpios.dtsi"
+#include "c208t_i2s2.dtsi"		
+
+/*
+ *	In this section we collect compound-type devices which may rely on several
+ *	different nodes in the devicetree
+ */
+
+#include "c208t_user_interface.dtsi"
+#include "c208t_boost_converter.dtsi"
+#include "c208t_power_control.dtsi"
+#include "c208t_thermistor.dtsi"
+/*
+ *	Virtual devices which benefit from the devicetree
+ */
+ 

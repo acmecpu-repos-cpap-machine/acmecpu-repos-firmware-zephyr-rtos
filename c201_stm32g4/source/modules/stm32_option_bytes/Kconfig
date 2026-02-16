@@ -1,0 +1,24 @@
+# Copyright (c) 2021 Acme CPU
+# STM32 Flash Option Bytes driver configurations
+
+menuconfig STM32_OPTION_BYTES_DRIVER
+	bool "STM32 Option Bytes read write driver"
+	default n
+	select USE_STM32_HAL_FLASH
+	select USE_STM32_HAL_FLASH_EX
+	help
+	  Enable STM32 Option Bytes read write driver
+
+if STM32_OPTION_BYTES_DRIVER
+
+module = STM32_OPTION_BYTES_DRIVER
+module-str = stm32_ob_drv
+source "subsys/logging/Kconfig.template.log_config"
+
+config STM32_OB_DRIVER_INIT_PRIORITY
+	int "Init Priority"
+	default APPLICATION_INIT_PRIORITY
+	help
+	    Device driver initialization priority.
+
+endif # STM32_OPTION_BYTES_DRIVER

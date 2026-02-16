@@ -1,0 +1,63 @@
+/*
+ * Copyright (c) 2023 Acme CPU
+ *
+ */
+
+/*
+/{ c204: acpu-c204-board {
+
+	mcu_gpios: mcu-gpio-signals {
+		compatible = "bsp-gpios";
+
+	};
+
+	dio3_gpios: pe-gpio-3 {
+		compatible = "bsp-gpios";
+
+	};
+	
+   };
+   
+ };
+*/
+
+/*#include "gpio_dt_defines.dtsi"*/
+
+
+#include "c205_adc1.dtsi"
+#include "c205_dac1.dtsi"
+#include "c205_dma.dtsi"
+#include "c205_i2c2_bus.dtsi"
+#include "c205_i2c3_bus.dtsi"
+#include "c205_i2c4_bus.dtsi"
+#include "c205_qspi1_bus.dtsi"
+#include "c205_spi2_bus.dtsi"
+#include "c205_timers2.dtsi"
+#include "c205_timers4.dtsi"
+#include "c205_timers5.dtsi"
+#include "c205_timers17.dtsi"
+#include "c205_uart4.dtsi"
+#include "c205_usart1.dtsi"
+#include "c205_usart2.dtsi"
+#include "c205_usart3.dtsi"
+#include "c205_usb.dtsi"
+#include "c205_ucpd.dtsi"
+
+/*
+ *	In this section we collect compound-type devices which may rely on several
+ *	different nodes in the devicetree
+ */
+
+#include "c205_gpios.dtsi"	
+/*#include "c205_motor_a2.dtsi"*/
+#include "c205_stepper.dtsi"
+#include "c205_user_interface.dtsi"
+/*#include "c205_boost_converter.dtsi"*/
+#include "c205_load_switch.dtsi"
+
+/*
+ *	Virtual devices which benefit from the devicetree
+ */
+
+#include "c205_stm32_flash_ob.dtsi"
+

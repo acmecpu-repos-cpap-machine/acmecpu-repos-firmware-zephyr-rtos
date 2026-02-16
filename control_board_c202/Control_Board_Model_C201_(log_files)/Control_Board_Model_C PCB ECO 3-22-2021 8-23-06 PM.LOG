@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=\STM32_RST Pin=BTN1-1
+Removed Pin From Net: NetName=\STM32_RST Pin=BTN1-1
+Removed Pin From Net: NetName=GND Pin=BTN1-2
+Removed Pin From Net: NetName=GND Pin=BTN1-2
+Removed Pin From Net: NetName=PB8 Pin=BTN2-2
+Removed Pin From Net: NetName=PB8 Pin=BTN2-2
+Removed Pin From Net: NetName=+3V3 Pin=R11-1
+Removed Member From Class: ClassName=STM32G473CETx Member=R11

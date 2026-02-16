@@ -1,0 +1,27 @@
+# Copyright (c) 2021 Acme CPU
+
+# Top-level configuration file for LED drivers.
+
+menuconfig PCA9632
+	bool "PCA9632 LED driver"
+#	depends on I2C_MGM_PCA95XX
+	depends on I2C
+	help
+	  Enable LED driver for PCA9632.
+
+	  PCA9632 LED driver has 4 channels each with multi-programmable
+	  states. Each channel can drive up to 25 mA per LED.
+	  
+if PCA9632
+
+module = PCA9632
+module-str = pca9632
+source "subsys/logging/Kconfig.template.log_config"
+
+config PCA9632_INIT_PRIORITY
+	int "PCA9632 initialization priority"
+	default 90
+	help
+	  System initialization priority for LED drivers.
+
+endif # PCA9632

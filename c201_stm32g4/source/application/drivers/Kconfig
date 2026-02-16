@@ -1,0 +1,27 @@
+# Anthem Power BSP Drivers configuration options
+# Copyright (c) 2021 Acme CPU
+# SPDX-License-Identifier: Apache-2.0
+
+config ACPU_C201_BSP_DRIVER
+#	bool
+	bool "Enable Acme CPU BSP Driver"
+	default y
+	help
+	    Enables Acme CPU C201 Board Support Package Driver
+
+if ACPU_C201_BSP_DRIVER
+
+config ACPU_C201_BSP_INIT_PRIORITY
+	int
+	default 80
+	help
+	    Board Support Package Drivers Initialization Priority
+
+endif # ACPU_C201_BSP_DRIVER
+
+module = ACPU_C201_BSP_DRIVER
+module-str = acpu_c201_bsp_driver
+source "subsys/logging/Kconfig.template.log_config"
+
+
+

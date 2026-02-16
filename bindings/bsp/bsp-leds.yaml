@@ -1,0 +1,17 @@
+# Copyright (c) 2020, Acme CPU
+
+description: General representation of LEDs
+
+compatible: "bsp-leds"
+
+child-binding:
+    description: A LED name and number
+    properties:
+       pwms:
+          type: phandle-array
+          required: true
+       label:
+          required: false
+          type: string
+          description: Human readable string describing the signal (used as device_get_binding() argument)
+          

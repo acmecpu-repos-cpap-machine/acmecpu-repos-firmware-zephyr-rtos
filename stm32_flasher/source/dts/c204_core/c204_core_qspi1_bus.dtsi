@@ -1,0 +1,86 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ */
+
+&pinctrl {
+	quadspi_clk_pe10: quadspi_clk_pe10 {
+		pinmux = <STM32_PINMUX('E', 10, AF10)>;
+		slew-rate = "very-high-speed";
+	};
+
+	quadspi_bk1_ncs_pe11: quadspi_bk1_ncs_pe11 {
+		pinmux = <STM32_PINMUX('E', 11, AF10)>;
+                slew-rate = "very-high-speed";
+	};
+
+	quadspi_bk1_io0_pe12: quadspi_bk1_io0_pe12 {
+		pinmux = <STM32_PINMUX('E', 12, AF10)>;
+		slew-rate = "very-high-speed";
+	};
+
+	quadspi_bk1_io1_pe13: quadspi_bk1_io1_pe13 {
+		pinmux = <STM32_PINMUX('E', 13, AF10)>;
+		slew-rate = "very-high-speed";
+	};
+
+	quadspi_bk1_io2_pe14: quadspi_bk1_io2_pe14 {
+		pinmux = <STM32_PINMUX('E', 14, AF10)>;
+		slew-rate = "very-high-speed";
+	};
+
+	quadspi_bk1_io3_pe15: quadspi_bk1_io3_pe15 {
+		pinmux = <STM32_PINMUX('E', 15, AF10)>;
+		slew-rate = "very-high-speed";
+	};
+};
+
+&quadspi {
+    status = "okay";
+    pinctrl-0 = <&quadspi_clk_pe10 &quadspi_bk1_ncs_pe11
+                 &quadspi_bk1_io0_pe12 &quadspi_bk1_io1_pe13
+                 &quadspi_bk1_io2_pe14 &quadspi_bk1_io3_pe15>;
+    pinctrl-names = "default";
+                   
+/* Ref:
+		rm0440 pg. 426,
+		zephyr/tests/drivers/spi/spi_loopback/boards/nucleo_g474re.overlay
+		st,stm32-qspi.yaml
+		stm32_dma.h
+	
+	dmas = <&dmamux1 2 40 0x30000 0x00>;
+	dma-names = "tx_rx";
+	
+*/
+	dmas = <&dmamux1 15 40 0x0000>;
+	dma-names = "tx_rx";
+
+	
+	mt29f2g01abagdwb: mt29f2g01abagdwb@0 {
+		compatible = "st,stm32-qspi-nor";
+        label = "MT29F2G01ABAGDWB";
+        reg = <0>;
+        qspi-max-frequency = <170000000>;
+        size = <DT_SIZE_M(250*8)>;
+        /*jedec-id = [20 BA 19];*/
+        spi-bus-width = <4>;
+        status = "okay";
+        
+		partitions {
+			compatible = "fixed-partitions";
+			#address-cells = <1>;
+			#size-cells = <1>;
+			
+			settings_partition: partition@0 {
+				label = "test";
+				reg = <0x00000000 DT_SIZE_M(4)>;
+			};
+
+			data_partition: partition@400000 {
+				label = "data";
+				reg = <0x00400000 DT_SIZE_M(246)>;
+			};
+		};
+	};
+};
+

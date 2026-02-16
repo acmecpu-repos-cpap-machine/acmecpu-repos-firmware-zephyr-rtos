@@ -1,0 +1,72 @@
+# Copyright (c) 2021 Acme CPU
+# ACPU Host (Application) Processor Interface Configurations
+
+menu "ACPU Host (Application) Processor Interface Configurations"
+
+config HOST_IF_UART_NUMBER
+	int "Connected UART Interface Number"
+	range 0 2
+	default 2
+	help
+	    The UART interface connected with the host processor
+	    
+choice HOST_IF_UART_HW_FLOW_CTRL
+    prompt "Choose the type of flow control to use"
+    default HW_FLOWCTRL_CTS_RTS
+    
+    config HW_FLOWCTRL_DISABLE
+        bool "Do not use HW flow control"
+    config HW_FLOWCTRL_RTS
+        bool "enable RX hardware flow control (rts)"
+    config HW_FLOWCTRL_CTS
+        bool "enable TX hardware flow control (cts)"
+    config HW_FLOWCTRL_CTS_RTS
+        bool "enable hardware flow control"
+endchoice
+
+config HOST_IF_UART_RX_PIN
+	int "Connected UART Rx Pin"
+	default 16
+	help
+	    The Rx pin of the UART interface connected with the host processor
+	    
+config HOST_IF_UART_TX_PIN
+	int "Connected UART Tx Pin"
+	default 17
+	help
+	    The Tx pin of the UART interface connected with the host processor
+	    
+config HOST_IF_UART_RTS_PIN
+	int "Connected UART RTS Pin"
+	default 33
+	help
+	    The RTS pin of the UART interface connected with the host processor
+	    
+config HOST_IF_UART_CTS_PIN
+	int "Connected UART CTS Pin"
+	default 35
+	help
+	    The CTS pin of the UART interface connected with the host processor
+	    
+config HOST_IF_UART_RX_BUF_SIZE_BYTES
+	int "Specify the RX buffer size"
+	range 32 4096
+	default 2048
+	help
+	    The Rx buffer size to use in the application
+	    
+config HOST_IF_UART_RETRY_MAX_COUNT
+	int "Command sending to the host retry count"
+	range 1 100
+	default 10
+	help
+		Number of times a command sending action should be retried.
+		
+config UART_M2M_BUFFER_SIZE
+	int
+	default 512
+	help
+	    UART M2M storage of received characters or characters to send
+	    
+endmenu
+

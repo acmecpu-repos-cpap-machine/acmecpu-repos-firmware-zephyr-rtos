@@ -1,0 +1,28 @@
+Removed Member From Class: ClassName=DISP_PS Member=D3
+Removed Member From Class: ClassName=P01 Member=D3
+Removed Member From Class: ClassName=P103 Member=D3
+Removed Member From Class: ClassName=P109 Member=D3
+Removed Member From Class: ClassName=DISP_PS Member=D6
+Removed Member From Class: ClassName=P02 Member=D6
+Removed Member From Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=D6
+Removed Member From Class: ClassName=Net Tie Member=NT3
+Removed Member From Class: ClassName=STM32G473CETx Member=NT5
+Removed Member From Class: ClassName=Net Tie Member=NT7
+Removed Member From Class: ClassName=BG95_PWR Member=NetC25_1
+Added Member To Class: ClassName=+1V8_PS Member=Component C84 (C1) CAP CER 2.2UF 6.3V X5R 0402
+Added Member To Class: ClassName=+1V8_PS Member=Component C85 (C2) CAP CER 2.2UF 6.3V X5R 0402
+Added Member To Class: ClassName=P109 Member=Component D4 (D5) MM3Z5V1C
+Added Member To Class: ClassName=P109 Member=Component D5 (D6) ESDA7P120-1U1M
+Added Member To Class: ClassName=P103 Member=Component D7 (D1) PMEG4050EP,115
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component D8 (D1) Zener Diode 6.2V 2.5W ±5% Surface Mount SOD-123FL
+Added Member To Class: ClassName=DISP_PS Member=Component D9 (D1) STPS120MF
+Added Member To Class: ClassName=DISP_PS Member=Component D10 (D2) MMSZ5226B-7-F
+Added Member To Class: ClassName=P01 Member=Component D11 (D1) SMF05CT1G
+Added Member To Class: ClassName=P02 Member=Component D12 (D1) SMF05CT1G
+Added Member To Class: ClassName=Net Tie Member=Component NT1 (NT2) Net Tie
+Added Member To Class: ClassName=STM32G473CETx Member=Component NT2 (NT3) Net Tie
+Added Member To Class: ClassName=Net Tie Member=Component NT4 (NT1) Net Tie
+Added Member To Class: ClassName=P128 Member=Component NT7 Net Tie
+Added Member To Class: ClassName=+1V8_PS Member=Component R114 (R2) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=+1V8_PS Member=Component U27 (U1) LDLN025PU18R
+Added Member To Class: ClassName=BG95_PWR Member=Wire NetC19_1

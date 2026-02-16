@@ -1,0 +1,84 @@
+# Copyright (c) 2022 Acme CPU
+# Sensors application configurations 
+
+menuconfig APP_SENSOR
+	bool "Sensor configurations"
+	default y
+	help
+	  Enable / disable sensor module
+
+if APP_SENSOR
+
+config APP_HAS_PRESSURE_SENSOR
+	bool "Application has pressure sensor"
+	default n
+	help
+	  Application has pressure sensor (y/n)
+
+#	if APP_HAS_PRESSURE_SENSOR
+#		config APP_PRESSURE_SENSOR_COUNT
+#			int "Number of pressure sensors in the system"
+#			default 1
+#			range 1 20
+#			help
+#			  Number of pressure sensors in the system
+#	endif # APP_HAS_PRESSURE_SENSOR
+
+config APP_HAS_TEMPERATURE_SENSOR
+	bool "Application has temperature sensor"
+	default n
+	help
+	  Application has temperature sensor (y/n)
+
+#	if APP_HAS_TEMPERATURE_SENSOR
+#		config APP_TEMPERATURE_SENSOR_COUNT
+#			int "Number of temperature sensors in the system"
+#			default 1
+#			range 1 20
+#			help
+#			  Number of temperature sensors in the system
+#	endif # APP_HAS_TEMPERATURE_SENSOR
+
+config APP_HAS_ACCELEROMETER_SENSOR
+	bool "Application has accelerometer sensor"
+	default n
+	help
+	  Application has accelerometer sensor (y/n)
+
+#	if APP_HAS_ACCELEROMETER_SENSOR
+#		config APP_ACCELEROMETER_SENSOR_COUNT
+#			int "Number of accelerometer sensors in the system"
+#			default 1
+#			range 1 20
+#			help
+#			  Number of accelerometer sensors in the system
+#	endif # APP_HAS_ACCELEROMETER_SENSOR
+
+config APP_HAS_IMU_SENSOR
+	bool "Application has IMU sensor"
+	default n
+	help
+	  Application has IMU sensor (y/n)
+
+#	if APP_HAS_IMU_SENSOR
+#		config APP_ACCELEROMETER_SENSOR_COUNT
+#			int "Number of IMU sensors in the system"
+#			default 1
+#			range 1 20
+#			help
+#			  Number of IMU sensors in the system
+#	endif # APP_HAS_IMU_SENSOR
+
+config APP_HAS_PPG_SENSOR
+	bool "Application has PPG sensor"
+	default n
+	help
+	  Application has PPG sensor (y/n)
+
+config APP_HAS_EKG_SENSOR
+	bool "Application has EKG sensor"
+	default n
+	help
+	  Application has EKG sensor (y/n)
+
+endif # APP_SENSOR

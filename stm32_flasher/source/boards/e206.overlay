@@ -1,0 +1,43 @@
+/*
+ * Copyright (c) 2023 Acme CPU
+ *
+ */
+
+/ {
+	msc_disk0 {
+		compatible = "zephyr,flash-disk";
+		partition = <&data_partition>;
+		disk-name = "NAND";
+		cache-size = <4096>;
+	};
+};
+
+ / {
+	chosen {
+		zephyr,shell-uart = &cdc_acm_uart0;
+		/*zephyr,console = &cdc_acm_uart0;*/
+		/*zephyr,flash-controller = &mt29f2g01abagdwb;*/
+		/*zephyr,display = &st7789v_st7789v_320x240_spi;*/
+	};
+	aliases {
+		stm32-dev = &usart6;
+	};
+};
+
+/ {
+	zephyr,user {
+		dac = <&dac1>;
+		dac-channel-id = <1>;
+		dac-resolution = <12>;
+		
+		io-channels = <&adc1 3>, <&adc1 7>, <&adc1 8>, <&adc1 14>, <&adc1 19>, <&adc3 2>;
+	};
+};
+
+&zephyr_udc0 {
+	cdc_acm_uart0: cdc_acm_uart0 {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "CDC_ACM_0";
+	};
+};
+

@@ -1,0 +1,20 @@
+# Copyright (c) 2020, Acme CPU
+
+description: PCAL9632 4-bit Fm+ I2C Controlled low power LED driver
+
+include: i2c-device.yaml
+
+compatible: "nxp,pca9632"
+
+properties:
+
+  label:
+    required: false
+
+  "#pwm-cells":
+    type: int
+    required: true
+    const: 1
+
+pwm-cells:
+  - channel

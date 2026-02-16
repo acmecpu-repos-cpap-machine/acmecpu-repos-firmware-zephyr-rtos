@@ -1,0 +1,18 @@
+# Copyright (c) 2023 Acme CPU
+# Application UART configurations
+
+menuconfig APP_UART
+	bool "Application UART Configurations"
+	default n
+	help
+	  Application UART module 
+
+if APP_UART
+
+config UART_RX_BUFFER_SIZE
+	int "Size of UART rx buffer in bytes"
+	default 512
+	help
+	  Size of UART rx buffer in bytes
+
+endif # APP_UART

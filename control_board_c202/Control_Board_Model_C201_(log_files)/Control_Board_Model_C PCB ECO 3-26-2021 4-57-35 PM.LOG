@@ -1,0 +1,73 @@
+Removed Pin From Net: NetName=GND Pin=C66-2
+Removed Pin From Net: NetName=GND Pin=C67-2
+Removed Pin From Net: NetName=PB1 Pin=D12-2
+Removed Pin From Net: NetName=PB10 Pin=R95-1
+Removed Pin From Net: NetName=PB11 Pin=R96-1
+Removed Pin From Net: NetName=VBUS Pin=R97-1
+Removed Pin From Net: NetName=PE8 Pin=R100-1
+Removed Pin From Net: NetName=+3V3 Pin=R101-2
+Removed Pin From Net: NetName=PB10 Pin=U18-1
+Removed Pin From Net: NetName=PB11 Pin=U18-2
+Removed Pin From Net: NetName=PB0 Pin=U22-1
+Removed Pin From Net: NetName=D_N Pin=U22-2
+Removed Pin From Net: NetName=D_P Pin=U22-3
+Removed Pin From Net: NetName=PB3 Pin=U22-4
+Removed Pin From Net: NetName=GND Pin=U22-6
+Removed Pin From Net: NetName=CONN_SBU1 Pin=U23-1
+Removed Pin From Net: NetName=CONN_SBU2 Pin=U23-2
+Removed Pin From Net: NetName=NetC69_2 Pin=U23-3
+Removed Pin From Net: NetName=CONN_CC1 Pin=U23-4
+Removed Pin From Net: NetName=CONN_CC2 Pin=U23-5
+Removed Pin From Net: NetName=CONN_CC2 Pin=U23-6
+Removed Pin From Net: NetName=CONN_CC1 Pin=U23-7
+Removed Pin From Net: NetName=GND Pin=U23-8
+Removed Pin From Net: NetName=PB5 Pin=U23-9
+Removed Pin From Net: NetName=+3V3 Pin=U23-10
+Removed Pin From Net: NetName=PB4 Pin=U23-11
+Removed Pin From Net: NetName=PB6 Pin=U23-12
+Removed Pin From Net: NetName=GND Pin=U23-13
+Removed Pin From Net: NetName=SBU2 Pin=U23-14
+Removed Pin From Net: NetName=SBU1 Pin=U23-15
+Removed Pin From Net: NetName=GND Pin=U23-16
+Removed Pin From Net: NetName=GND Pin=U23-17
+Removed Pin From Net: NetName=GND Pin=U23-18
+Removed Pin From Net: NetName=GND Pin=U23-21
+Change Component DesignItemId : Designator=U23 Old DesignItemId=IC TPD6S300A USB-C ESD PROTECTION New DesignItemId=IC TPD4S311 USB TYPE C PORT PROTECTOR
+Change Component Footprint: Designator=U23 Old Footprint=WQFN20_RUK_TEX New Footprint=DSBGA16_1P69X1P69_TEX
+Change Component Comment : Designator=U23 Old Comment=TPD6S300ARUKR New Comment=TPD4S311YBFR
+Change Component Description : Designator=U23 Old Description=USB Type-C™ Port Protector: Short-to-VBUS Overvoltage  and IEC ESD Protection New Description=Overvoltage Protection Controller 16-DSBGA (1.69x1.69)
+Change component parameters: Designator = "U23"; Footprint = "DSBGA16_1P69X1P69_TEX"; UniqueID = "\IYPESPDM\JKDVHXUN\YNSYHACX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "TPD4S311YBFR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "3000=0.825 (USD)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "0"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "296-TPD4S311YBFRTR-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=PB0 Pin=R95-1
+Added Pin To Net: NetName=PB1 Pin=R96-1
+Added Pin To Net: NetName=PB3 Pin=R100-1
+Added Pin To Net: NetName=PB0 Pin=U18-1
+Added Pin To Net: NetName=PB1 Pin=U18-2
+Added Pin To Net: NetName=CONN_SBU2 Pin=U23-A1
+Added Pin To Net: NetName=CONN_CC1 Pin=U23-A2
+Added Pin To Net: NetName=CONN_CC2 Pin=U23-A3
+Added Pin To Net: NetName=NetC69_2 Pin=U23-A4
+Added Pin To Net: NetName=CONN_SBU1 Pin=U23-B1
+Added Pin To Net: NetName=CONN_CC1 Pin=U23-B2
+Added Pin To Net: NetName=CONN_CC2 Pin=U23-B3
+Added Pin To Net: NetName=PB5 Pin=U23-B4
+Added Pin To Net: NetName=GND Pin=U23-C1
+Added Pin To Net: NetName=GND Pin=U23-C2
+Added Pin To Net: NetName=GND Pin=U23-C3
+Added Pin To Net: NetName=+3V3 Pin=U23-C4
+Added Pin To Net: NetName=SBU1 Pin=U23-D1
+Added Pin To Net: NetName=SBU2 Pin=U23-D2
+Added Pin To Net: NetName=PB6 Pin=U23-D3
+Added Pin To Net: NetName=PB4 Pin=U23-D4
+Added Pin To Net: NetName=D_N Pin=U24-1
+Added Pin To Net: NetName=D_P Pin=U24-2
+Added Member To Class: ClassName=TCPP Member=Component C68 (C1) CAP CER 1UF 16V X5R 0402
+Added Member To Class: ClassName=TCPP Member=Component C69 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=TCPP Member=Component U23 (U1) TPD4S311YBFR
+Added Room: Name=TCPP

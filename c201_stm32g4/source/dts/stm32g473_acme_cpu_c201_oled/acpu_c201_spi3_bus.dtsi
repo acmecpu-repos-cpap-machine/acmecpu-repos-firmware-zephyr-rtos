@@ -1,0 +1,34 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+&pinctrl {
+  spi3_nss_pd2: spi3_nss_pd2 {
+    pinmux = <STM32_PINMUX('D', 2, AF6)>;
+    bias-pull-up;
+  };
+};
+
+&spi3 {
+    status = "okay";
+    pinctrl-0 = <&spi3_sck_pb3 &spi3_mosi_pb5 &spi3_miso_pc11 &spi3_nss_pd2>;
+    pinctrl-names = "default";
+    
+/* Ref:
+		rm0440 pg. 426,
+		zephyr/tests/drivers/spi/spi_loopback/boards/nucleo_g474re.overlay
+		st,stm32-qspi.yaml
+*/
+	dmas = <&dmamux1 2 15 0x20440
+			&dmamux1 3 14 0x20480>;
+	dma-names = "tx", "rx";
+
+	sdhc0: sdhc@0 {
+        compatible = "zephyr,mmc-spi-slot";
+        reg = <0>;
+        status = "okay";
+        label = "SDHC0";
+        spi-max-frequency = <16000000>;
+	};
+};

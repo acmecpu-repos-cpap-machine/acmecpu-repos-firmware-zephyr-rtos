@@ -1,0 +1,16 @@
+# Copyright (c) 2020, Acme CPU
+
+description: General representation of GPIO signals
+
+compatible: "bsp-gpios"
+
+child-binding:
+    description: GPIO Port's Pin node
+    properties:
+       gpios:
+          type: phandle-array
+          required: true
+       label:
+          required: false
+          type: string
+          description: Human readable string describing the signal (used as device_get_binding() argument)

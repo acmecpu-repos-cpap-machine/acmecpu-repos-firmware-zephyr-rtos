@@ -1,0 +1,3 @@
+source "Kconfig"
+rsource "src/Kconfig"
+rsource "application/Kconfig"

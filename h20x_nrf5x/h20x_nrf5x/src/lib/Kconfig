@@ -1,0 +1,4 @@
+# Copyright (c) 2022 Acme CPU
+
+rsource "lib_push_switch/Kconfig"
+rsource "lib_audio/Kconfig"

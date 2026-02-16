@@ -1,0 +1,72 @@
+# Copyright (c) 2021 Acme CPU
+# SPDX-License-Identifier: Apache-2.0
+
+description: STSPIN220 stepper motor driver
+
+include: "base.yaml"
+
+compatible: "st,stspin220"
+
+properties:
+
+    label:
+        required: false
+        type: string
+    
+    pwms:
+        type: phandle-array
+        required: true
+        description: Step clock input, reference voltage pwm
+    
+    pwm-names:
+        type: string-array
+        required: true
+        description: Step clock input, reference voltage pwm name
+
+    step-clock-gpios:
+        type: phandle-array
+        required: true
+        description: Step clock
+        
+    step-mode1-gpios:
+        type: phandle-array
+        required: true
+        description: Step mode selection input 1
+        
+    step-mode2-gpios:
+        type: phandle-array
+        required: true
+        description: Step mode selection input 2
+              
+    direction-gpios:
+        type: phandle-array
+        required: true
+        description: Direction input
+
+    enable-gpios:
+        type: phandle-array
+        required: true
+        description: This is the power stage enable (when low, the power stage is turned off)
+            
+    standby-gpios:
+        type: phandle-array
+        required: true
+        description: When forced low, the device is forced into low consumption mode
+    
+    fault-gpios:
+        type: phandle-array
+        required: true
+        description: This is forced low through the integrated open-drain MOSFET when a failure occurs.
+        
+    vref-pwm-duty:
+      type: int
+      required: true
+      description: Duty cycle of Vref PWM signal to be entered depending on hardware resistor configuration 
+
+    vref-gpios:
+        type: phandle-array
+        required: false
+        description: Vref gpio
+            
+
+   

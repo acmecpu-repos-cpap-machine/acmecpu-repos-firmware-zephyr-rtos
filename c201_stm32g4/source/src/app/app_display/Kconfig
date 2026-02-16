@@ -1,0 +1,54 @@
+# Copyright (c) 2021 Acme CPU
+# Display application configurations 
+
+menuconfig APP_DISPLAY
+	bool "App Display Configurations"
+	default y
+	help
+	  Display application level configurations
+	  
+if APP_DISPLAY
+
+#module = APP_DISPLAY
+#module-str = app_display
+#source "subsys/logging/Kconfig.template.log_config"
+
+config C20X_SCREENS_TFT
+	bool
+	default n
+	help
+	  Enable/disable C20x TFT Display screens
+
+config C20X_SCREENS_OLED
+	bool
+	default n
+	help
+	  Enable/disable C20x OLED Display screens
+	  
+rsource "Kconfig.displaytype"
+
+config APP_DISPLAY_BRIGHTNESS_LEVEL
+	int "Display default brightness in percentage"
+	range 1 100
+	default 100
+	help
+		Display default brightness in percentage
+
+config APP_DISPLAY_DIMMED_LEVEL
+	int "Brightness level as a percentage when dimmed due to no activity"
+	range 1 100
+	default 20
+	help
+		Brightness level as a percentage when dimmed due to no activity
+
+config APP_DISPLAY_SLEEP_TM
+	int "Display sleep time in seconds"
+	range 1 100000
+	default 30
+	help
+		Display sleep time in seconds
+
+rsource "c20x_screens/Kconfig"
+
+endif # APP_DISPLAY
+

@@ -1,0 +1,20 @@
+/*
+ * Copyright (c) 2023 Acme CPU
+ *
+ * Motor Driver USART Interface
+ *
+ */
+
+
+&usart6 {
+    status = "okay";
+    pinctrl-0 = <&usart6_rx_pg9 &usart6_tx_pg14>;
+    pinctrl-names = "default";
+    current-speed = <57600>;
+
+/*  
+    dmas = 	<&dmamux1 4 29 0x20440 0>,
+			<&dmamux1 5 28 0x20480 0>;
+	dma-names = "tx", "rx";
+*/
+};

@@ -1,0 +1,21 @@
+# Generic buzzer configurations
+# Copyright (c) 2021 Acme CPU
+
+menuconfig TPS61169
+	bool "TPS61169 sepic led driver"
+	help
+	  Enable driver for TPS61169 sepic led driver
+
+if TPS61169
+
+module = TPS61169
+module-str = tps61169
+source "subsys/logging/Kconfig.template.log_config"
+
+config TPS61169_INIT_PRIORITY
+	int "Init Priority"
+	default APPLICATION_INIT_PRIORITY
+	help
+	    Device driver initialization priority.
+
+endif # TPS61169

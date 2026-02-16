@@ -1,0 +1,21 @@
+/*
+ * Copyright (c) 2023 Acme CPU
+ *
+ * LTE modem USART Interface
+ *
+ */
+
+
+&usart2 {
+    status = "okay";
+    pinctrl-0 = <&usart2_rx_pd6 &usart2_tx_pd5 &usart2_rts_pd4 &usart2_cts_pd3>;
+    pinctrl-names = "default";
+    current-speed = <921600>;
+    hw-flow-control;
+
+/*  
+    dmas = 	<&dmamux1 4 29 0x20440 0>,
+			<&dmamux1 5 28 0x20480 0>;
+	dma-names = "tx", "rx";
+*/
+};

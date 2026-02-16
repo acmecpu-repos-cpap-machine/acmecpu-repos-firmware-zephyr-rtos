@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=D_N Pin=U21-1
+Removed Pin From Net: NetName=D_P Pin=U21-2
+Removed Pin From Net: NetName=CONN_D_P Pin=U21-5
+Removed Pin From Net: NetName=CONN_D_N Pin=U21-6
+Change Component Description : Designator=X6 Old Description=6-pin Edge-Connect™ connector to 6-pin 0.1" pitch female IDC. New Description=6-pin Edge-Connect™ connector to 6-pin 0.1" pitch female IDC.
+Change Component Description : Designator=X7 Old Description=6-pin Edge-Connect™ connector to 6-pin 0.1" pitch female IDC. New Description=6-pin Edge-Connect™ connector to 6-pin 0.1" pitch female IDC.
+Added Pin To Net: NetName=D_P Pin=U21-1
+Added Pin To Net: NetName=D_N Pin=U21-2
+Added Pin To Net: NetName=CONN_D_N Pin=U21-5
+Added Pin To Net: NetName=CONN_D_P Pin=U21-6

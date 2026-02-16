@@ -1,0 +1,191 @@
+Removed Pin From Net: NetName=PB2 Pin=X3-9
+Removed Pin From Net: NetName=LCD_BL_A Pin=X3-11
+Removed Pin From Net: NetName=LCD_BL_K Pin=X3-12
+Removed Pin From Net: NetName=+3V3 Pin=X3-22
+Removed Pin From Net: NetName=GND Pin=X3-23
+Removed Pin From Net: NetName=GND Pin=X3-24
+Removed Member From Class: ClassName=P26 Member=C74
+Removed Member From Class: ClassName=P103 Member=C74
+Removed Member From Class: ClassName=P103 Member=C75
+Removed Member From Class: ClassName=P103 Member=C78
+Removed Member From Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=C83
+Removed Member From Class: ClassName=+1V8_PS Member=C87
+Removed Member From Class: ClassName=+1V8_PS Member=C88
+Removed Member From Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=C88
+Removed Member From Class: ClassName=P128 Member=C97
+Removed Member From Class: ClassName=CODEC Member=C99
+Removed Member From Class: ClassName=CODEC Member=C101
+Removed Member From Class: ClassName=U_ESP32-WROOM32D_Module Member=C104
+Removed Member From Class: ClassName=MIC1 Member=C108
+Removed Member From Class: ClassName=MIC2 Member=C109
+Removed Member From Class: ClassName=MCU Member=C111
+Removed Member From Class: ClassName=RTC_XTAL Member=C111
+Removed Member From Class: ClassName=STM32G473QETx Member=C113
+Removed Member From Class: ClassName=STM32G473QETx Member=C116
+Removed Member From Class: ClassName=+3V3_AUDIO_PS Member=C131
+Removed Member From Class: ClassName=+3V3_AUDIO_PS Member=C133
+Removed Member From Class: ClassName=USB-to-UART_Bridge Member=C133
+Removed Member From Class: ClassName=+3V3_AUDIO_PS Member=C134
+Removed Member From Class: ClassName=USB-to-UART_Bridge Member=C138
+Removed Member From Class: ClassName=DISP_PS Member=C141
+Removed Member From Class: ClassName=P26 Member=C148
+Removed Member From Class: ClassName=TCPC Member=C148
+Removed Member From Class: ClassName=TCPP Member=C148
+Removed Member From Class: ClassName=STM32G473CETx Member=C149
+Removed Member From Class: ClassName=DISP_PS Member=D11
+Removed Member From Class: ClassName=P103 Member=D11
+Removed Member From Class: ClassName=DISP_PS Member=D14
+Removed Member From Class: ClassName=MIC1 Member=FB4
+Removed Member From Class: ClassName=STM32G473QETx Member=FB6
+Removed Member From Class: ClassName=P103 Member=L5
+Removed Member From Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=R92
+Removed Member From Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=R93
+Removed Member From Class: ClassName=USB_SW Member=R96
+Removed Member From Class: ClassName=USB_SW Member=R97
+Removed Member From Class: ClassName=P26 Member=R109
+Removed Member From Class: ClassName=P26 Member=R110
+Removed Member From Class: ClassName=CODEC Member=R125
+Removed Member From Class: ClassName=CODEC Member=R126
+Removed Member From Class: ClassName=FLASH Member=R132
+Removed Member From Class: ClassName=MIC2 Member=R132
+Removed Member From Class: ClassName=FLASH Member=R133
+Removed Member From Class: ClassName=U_TPS22810 2 Member=R137
+Removed Member From Class: ClassName=+3V3_AUDIO_PS Member=R140
+Removed Member From Class: ClassName=DISP_PS Member=R145
+Removed Member From Class: ClassName=P26 Member=U25
+Removed Member From Class: ClassName=+1V8_PS Member=U28
+Removed Member From Class: ClassName=P128 Member=U29
+Removed Member From Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=U29
+Removed Member From Class: ClassName=CODEC Member=U32
+Removed Member From Class: ClassName=MIC2 Member=U32
+Removed Member From Class: ClassName=FLASH Member=U35
+Removed Member From Class: ClassName=+3V3_AUDIO_PS Member=U39
+Change Component DesignItemId : Designator=X3 Old DesignItemId=CONN 0524352271 FFC TOP 22POS 0.50MM R/A New DesignItemId=CONN 0525592253 FFC VERT 22POS 0.50MM SMD
+Change Component Footprint: Designator=X3 Old Footprint=CONN_0524352271 New Footprint=CONN_0525592253
+Change Component Description : Designator=X3 Old Description=22 Position FFC, FPC Connector Contacts, Top 0.020" (0.50mm) Surface Mount, Right Angle New Description=22 Position FFC, FPC Connector Contacts, Vertical - 1 Sided 0.020" (0.50mm) Surface Mount
+Change Component Library : Designator=X3 Old Library=BLDC_Motor_Driver.SCHLIB New Library=connectors_ffc.SchLib
+Change component parameters: Designator = "X3"; Footprint = "CONN_0525592253"; UniqueID = "\MYECOBQK\OPRPTMYO"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.farnell.com/datasheets/1896633.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.farnell.com/datasheets/1896633.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://www.mouser.com/ds/2/276/0525592253_FFC_FPC_CONNECTORS-229826.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.mouser.com/ds/2/276/0525592253_FFC_FPC_CONNECTORS-229826.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Material"; Value = "Bronze"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current Rating"; Value = "500mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Gender"; Value = "Receptacle"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Housing Material"; Value = "Nylon"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Molex"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "52559-2253"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Circuits"; Value = "22"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Contacts"; Value = "22"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Positions"; Value = "22"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Rows"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Orientation"; Value = "Vertical"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "1000"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_1"; Value = "ROW_1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_2"; Value = "ROW_2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_3"; Value = "ROW_3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_4"; Value = "COL_1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_5"; Value = "COL_2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_6"; Value = "COL_3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_7"; Value = "PWR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_8"; Value = "GND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_9"; Value = "VDD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_10"; Value = "LED_A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_11"; Value = "LED_K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_12"; Value = "GND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_13"; Value = "RESET"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_14"; Value = "GND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_15"; Value = "WR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_16"; Value = "GND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_17"; Value = "CS"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_18"; Value = "GND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_19"; Value = "SDA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_20"; Value = "GND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_21"; Value = "RS"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_22"; Value = "GND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_23"; Value = "MNT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_24"; Value = "MNT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pitch"; Value = "0.5mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=2.66, 10=2.267, 100=1.8728 (USD)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "REACH SVHC"; Value = "Unknown"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Series"; Value = "52559"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "4369"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "WM10988CT-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "50V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=PE9 Pin=R129-1
+Added Pin To Net: NetName=PA2 Pin=R130-1
+Added Pin To Net: NetName=PE9 Pin=U34-9
+Added Pin To Net: NetName=PA2 Pin=U34-18
+Added Pin To Net: NetName=+3V3 Pin=X3-9
+Added Pin To Net: NetName=LCD_BL_A Pin=X3-10
+Added Pin To Net: NetName=LCD_BL_K Pin=X3-11
+Added Pin To Net: NetName=GND Pin=X3-12
+Added Pin To Net: NetName=GND Pin=X3-22
+Added Pin To Net: NetName=GND Pin=X3-S1
+Added Pin To Net: NetName=GND Pin=X3-S1
+Added Pin To Net: NetName=GND Pin=X3-S2
+Added Pin To Net: NetName=GND Pin=X3-S2
+Added Member To Class: ClassName=TCPC Member=Component C72 (C3) CAP CER 220PF 50V X7R 0402
+Added Member To Class: ClassName=TCPP Member=Component C72 (C3) CAP CER 220PF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component C73 (C13) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=P26 Member=Component C77 (C1) CAP CER 0.1UF 16V X7R 0402
+Added Member To Class: ClassName=P26 Member=Component C79 (C3) CAP 11MF 3.3V SURFACE MNT
+Added Member To Class: ClassName=P103 Member=Component C80 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=P103 Member=Component C82 (C3) CAP CER 22UF 25V X5R 0805
+Added Member To Class: ClassName=P103 Member=Component C84 (C5) CAP CER 1800PF 50V X7R 0402
+Added Member To Class: ClassName=P103 Member=Component C85 (C6) CAP CER 1UF 16V X5R 0402
+Added Member To Class: ClassName=+1V8_PS Member=Component C93 (C1) CAP CER 2.2UF 6.3V X5R 0402
+Added Member To Class: ClassName=+1V8_PS Member=Component C94 (C2) CAP CER 2.2UF 6.3V X5R 0402
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component C95 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component C100 (C6) CAP CER 10uF X7R 10% 0805
+Added Member To Class: ClassName=P128 Member=Component C103 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=CODEC Member=Component C105 (C28) CAP CER 10nF 25V X7R 10% 0402
+Added Member To Class: ClassName=CODEC Member=Component C107 (C30) C 100pF 50V C0G, NP0 0402
+Added Member To Class: ClassName=U_ESP32-WROOM32D_Module Member=Component C110 (C1) CAP CER 1UF 16V X5R 0402
+Added Member To Class: ClassName=MIC1 Member=Component C114 (C33) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=MIC2 Member=Component C115 (C33) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=MCU Member=Component C117 (C12) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=RTC_XTAL Member=Component C117 (C12) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C119 (C7) CAP CER 10uF X7R 10% 0805
+Added Member To Class: ClassName=STM32G473QETx Member=Component C122 (C4) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+3V3_AUDIO_PS Member=Component C137 (C2) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=+3V3_AUDIO_PS Member=Component C139 (C4) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=+3V3_AUDIO_PS Member=Component C140 (C5) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=USB-to-UART_Bridge Member=Component C144 (C4) CAP CER 1UF 16V X5R 0402
+Added Member To Class: ClassName=USB-to-UART_Bridge Member=Component C145 (C5) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=DISP_PS Member=Component C147 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=P103 Member=Component D13 (D1) PMEG4050EP,115
+Added Member To Class: ClassName=DISP_PS Member=Component D15 (D1) STPS120MF
+Added Member To Class: ClassName=DISP_PS Member=Component D16 (D2) MMSZ5226B-7-F
+Added Member To Class: ClassName=MIC1 Member=Component FB5 (FB1) FERRITE BEAD 1 KOHM 0402 1LN
+Added Member To Class: ClassName=STM32G473QETx Member=Component FB7 (FB1) FERRITE BEAD 1 KOHM 0402 1LN
+Added Member To Class: ClassName=P103 Member=Component L4 (L1A) FIXED IND COUIPLED 2.2UH 3.2A 22 MOHM SMD
+Added Member To Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=Component R94 (R10) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=Component R95 (R11) DNP*
+Added Member To Class: ClassName=USB_SW Member=Component R98 (R14) RES SMD 2.2 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=USB_SW Member=Component R99 (R15) RES SMD 2.2 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P26 Member=Component R111 (R1) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P26 Member=Component R112 (R2) RES SMD 402 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=CODEC Member=Component R128 (R68) RES SMD 63.4K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=CODEC Member=Component R129 (R69) RES SMD 100K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=MIC2 Member=Component R134 (R71) RES SMD 100 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=FLASH Member=Component R135 (R1) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=FLASH Member=Component R136 (R2) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_TPS22810 2 Member=Component R139 (R1) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=+3V3_AUDIO_PS Member=Component R142 (R2) RES SMD 390K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=DISP_PS Member=Component R147 (R1) RES SMD 2.26 OHM 1% 1/10W 0603
+Added Member To Class: ClassName=P26 Member=Component U26 (U1) RV-3028-C7 32.768KHZ 1PPM-TA-QC
+Added Member To Class: ClassName=P103 Member=Component U27 (U1) TPS55340RTET
+Added Member To Class: ClassName=+1V8_PS Member=Component U30 (U1) LDLN025PU18R
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component U31 (U1) DRV10975ZRHFR
+Added Member To Class: ClassName=P128 Member=Component U33 (U1) BMI270
+Added Member To Class: ClassName=CODEC Member=Component U34 (U7) CMX655DQ6
+Added Member To Class: ClassName=MIC2 Member=Component U36 (U8) IM69D130V01XTSA1
+Added Member To Class: ClassName=FLASH Member=Component U37 (U1) MT29F1G01ABAFDWB-IT:F TR
+Added Member To Class: ClassName=+3V3_AUDIO_PS Member=Component U41 (U1) TPSM82822SILR

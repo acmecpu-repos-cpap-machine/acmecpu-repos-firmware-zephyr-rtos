@@ -1,0 +1,14 @@
+# Copyright (c) 2020, Acme CPU
+
+include: "base.yaml"
+
+compatible: "menu-entry"
+
+description: Defines entry point of the menu
+
+properties:
+  label:
+    required: false
+  menu:
+    type: phandle
+    required: true

@@ -1,0 +1,9 @@
+# C205 board configuration
+# Copyright (c) 2023 Acme CPU
+
+if BOARD_C205
+
+config BOARD
+	default "c205"
+
+endif # BOARD_C205

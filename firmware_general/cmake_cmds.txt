@@ -1,0 +1,6 @@
+cmake -Ssource -Bbuild -DCMAKE_BUILD_TYPE=Debug -G"Eclipse CDT4 - Ninja"
+cmake --build build/
+
+kconfig-mconf KConfig
+
+/home/acpuvm001/pc_workspace/sample_flow_rate_data.csv

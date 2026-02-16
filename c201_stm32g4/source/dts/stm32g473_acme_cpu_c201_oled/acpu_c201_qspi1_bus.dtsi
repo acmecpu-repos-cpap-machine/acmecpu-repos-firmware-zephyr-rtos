@@ -1,0 +1,98 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+
+&pinctrl {
+	quadspi_bk1_ncs_pa2: quadspi_bk1_ncs_pa2 {
+		pinmux = <STM32_PINMUX('A', 2, AF10)>;
+                slew-rate = "very-high-speed";
+	};
+
+	quadspi_clk_pa3: quadspi_clk_pa3 {
+		pinmux = <STM32_PINMUX('A', 3, AF10)>;
+		slew-rate = "very-high-speed";
+	};
+
+	quadspi_bk1_io3_pa6: quadspi_bk1_io3_pa6 {
+		pinmux = <STM32_PINMUX('A', 6, AF10)>;
+		slew-rate = "very-high-speed";
+	};
+
+	quadspi_bk1_io2_pa7: quadspi_bk1_io2_pa7 {
+		pinmux = <STM32_PINMUX('A', 7, AF10)>;
+		slew-rate = "very-high-speed";
+	};
+
+	quadspi_bk1_io1_pb0: quadspi_bk1_io1_pb0 {
+		pinmux = <STM32_PINMUX('B', 0, AF10)>;
+		slew-rate = "very-high-speed";
+	};
+
+	quadspi_bk1_io0_pb1: quadspi_bk1_io0_pb1 {
+		pinmux = <STM32_PINMUX('B', 1, AF10)>;
+		slew-rate = "very-high-speed";
+	};
+
+	quadspi_clk_pb10: quadspi_clk_pb10 {
+		pinmux = <STM32_PINMUX('B', 10, AF10)>;
+		slew-rate = "very-high-speed";
+	};
+
+	quadspi_bk1_ncs_pb11: quadspi_bk1_ncs_pb11 {
+		pinmux = <STM32_PINMUX('B', 11, AF10)>;
+		slew-rate = "very-high-speed";
+	};
+};
+
+&quadspi {
+    status = "okay";
+    pinctrl-0 = <&quadspi_clk_pa3 &quadspi_bk1_ncs_pa2
+                 &quadspi_bk1_io0_pb1 &quadspi_bk1_io1_pb0
+                 &quadspi_bk1_io2_pa7 &quadspi_bk1_io3_pa6>;
+    pinctrl-names = "default";
+    flash-id = <1>;
+                   
+/* Ref:
+		rm0440 pg. 426,
+		zephyr/tests/drivers/spi/spi_loopback/boards/nucleo_g474re.overlay
+		st,stm32-qspi.yaml
+		stm32_dma.h
+	
+	dmas = <&dmamux1 2 40 0x30000 0x00>;
+	dma-names = "tx_rx";
+	
+*/
+	dmas = <&dmamux1 15 40 0x0000>;
+	dma-names = "tx_rx";
+
+	
+	mt25ql256aba1: mt25ql256aba1@0 {
+		compatible = "st,stm32-qspi-nor";
+        /*label = "MT25QL256ABA1";*/
+        reg = <0>;
+        qspi-max-frequency = <90000000>;
+        
+        size = <DT_SIZE_M(256)>;	/* size in mega bits */
+        
+        /*jedec-id = [20 BA 19];*/
+        
+        spi-bus-width = <4>;
+        reset-cmd;
+        
+        status = "okay";
+        
+		partitions {
+			   compatible = "fixed-partitions";
+			   #address-cells = <1>;
+			   #size-cells = <1>;
+
+			   data_partition: partition@0 {
+			       label = "data";
+			       reg = <0 DT_SIZE_M(32)>;
+			   };
+		};
+	};
+};
+

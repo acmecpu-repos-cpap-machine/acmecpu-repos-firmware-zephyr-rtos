@@ -1,0 +1,18 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 11:15:53 AM On 12/22/2020
+
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [Control_Board_Model_C201_FFC_Sens_Conn.PcbDoc]
+   Generated File[20201215-SGU-Acme_CPU_Control_Board_C201_001_NC_Drill-RoundHoles-Plated.TXT]
+   Generated File[20201215-SGU-Acme_CPU_Control_Board_C201_001_NC_Drill-RoundHoles-NonPlated.TXT]
+   Generated File[20201215-SGU-Acme_CPU_Control_Board_C201_001_NC_Drill-SlotHoles-Plated.TXT]
+   Generated File[20201215-SGU-Acme_CPU_Control_Board_C201_001_NC_Drill.LDP]
+   Generated File[20201215-SGU-Acme_CPU_Control_Board_C201_001_NC_Drill.DRR]
+
+
+Files Generated   : 5
+Documents Printed : 0
+
+Finished Output Generation At 11:15:56 AM On 12/22/2020

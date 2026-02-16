@@ -1,0 +1,28 @@
+Altium Designer Pick and Place Locations
+G:\github-acme\Sensor_PCB_Model_S201_(HW_Package)\Assembly\Pick_n_Place\20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Pick_and_Place.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       07/12/20
+Time:       22:39
+Revision:   bb94d3b1072e15b165e766c451a9d98c0905d068
+Variant:    No variations
+Units used: mil
+
+Designator Comment                           Layer       Footprint                            Center-X(mil) Center-Y(mil) Rotation Description                                                                                          
+C1         "CAP CER 0.1UF 50V X7R 0402"      TopLayer    C0402                                496.063       -39.370       0        "0.1µF ±10% 50V Ceramic Capacitor X7R 0402 (1005 Metric)"                                            
+C3         "CAP CER 0.1UF 16V X7R 0402"      BottomLayer C0402                                3169.291      -39.370       180      "0.1µF ±10% 16V Ceramic Capacitor X7R 0402 (1005 Metric)"                                            
+C4         "CAP CER 0.1UF 16V X7R 0402"      BottomLayer C0402                                3169.291      39.370        360      "0.1µF ±10% 16V Ceramic Capacitor X7R 0402 (1005 Metric)"                                            
+C5         "CAP CER 0.1UF 16V X7R 0402"      BottomLayer C0402                                3897.638      -39.370       360      "0.1µF ±10% 16V Ceramic Capacitor X7R 0402 (1005 Metric)"                                            
+C6         "CAP CER 0.1UF 16V X7R 0402"      BottomLayer C0402                                3897.638      39.370        180      "0.1µF ±10% 16V Ceramic Capacitor X7R 0402 (1005 Metric)"                                            
+C2         "CAP CER 1UF 6.3V X5R 0402"       TopLayer    C0402                                562.992       -19.685       90       "1µF ±10% 6.3V Ceramic Capacitor X5R 0402 (1005 Metric)"                                             
+P20        S201                              BottomLayer 5-PIN_FPC_BOARD_EDGE_CONNECTOR_0.5MM 68.898        0.000         0        "Connector Header Through Hole, Right Angle 5 position 0.059" (1.50mm)"                              
+R1         "RES SMD 0 OHM JUMPER 1/16W 0402" TopLayer    R0402                                314.961       -11.811       180      "0 Ohms Jumper 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Moisture Resistant Thick Film"         
+R2         DNP*                              TopLayer    R0402                                496.063       0.000         360      "Placeholder for a 0402 resistor"                                                                    
+U1         TPD3F303DPVR                      TopLayer    DPV8_1P7X0P4                         413.386       0.000         0        "RC (Pi) EMI Filter 2nd Order Low Pass 3 Channel R = 47Ohms, 100Ohms, C = 20pF  8-UFDFN Exposed Pad" 
+Logo1      "Logo ACME_CPU"                   BottomLayer LOGO_ACME_CPU                        -4447.047     -9555.512     180      ""                                                                                                   
+FB1        "FERRITE BEAD 1 KOHM 0402 1LN"    BottomLayer L0402                                3169.291      0.000         180      "1 kOhms @ 100MHz 1  Ferrite Bead 0402 (1005 Metric) 350mA 490mOhm"                                  
+FB2        "FERRITE BEAD 1 KOHM 0402 1LN"    BottomLayer L0402                                3897.638      0.000         360      "1 kOhms @ 100MHz 1  Ferrite Bead 0402 (1005 Metric) 350mA 490mOhm"                                  
+P121       BMP388                            TopLayer    QFN_BMP388_BOS                       3149.606      0.000         90       "Pressure Sensor 4.35PSI ~ 18.13PSI (30kPa ~ 125kPa) Absolute   10-WFLGA"                            
+P122       BMP388                            TopLayer    QFN_BMP388_BOS                       3937.008      0.000         180      "Pressure Sensor 4.35PSI ~ 18.13PSI (30kPa ~ 125kPa) Absolute   10-WFLGA"                            

@@ -1,0 +1,697 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+        td, th {
+            padding: 0.5em;
+            text-align : left;
+        }
+        th {
+            background-color : #EEEEEE;
+        
+        }
+        th.column1, td.column1 {
+            width : 10em;
+        }
+
+        th.column2, td.column2 {
+            width : 30em;
+        }
+
+        table {
+            width : 100%;
+            font-size: 0.9em;
+        }
+
+		.header_holder {
+			Width = 100%;
+			border = 0px solid green;
+			padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+        }
+
+        .front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+        }
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+        .total_column1, .total_column {
+            font-weight : bold;
+        }
+        .total_column1 {
+            text-align : left;
+        }
+        .warning, .error {
+            color : red;
+            font-weight : bold;
+        }
+        tr.onmouseout_odd {
+            background-color : #white;
+        }
+        tr.onmouseout_even { 
+            background-color : #FAFAFA;
+        }
+        tr.onmouseover_odd, tr.onmouseover_even { 
+            background-color : #EEEEEE;
+        } 
+        a:link, a:visited, .q a:link,.q a:active,.q {
+            color: #21489e; 
+        }
+        a:link.callback, a:visited.callback { 
+            color: #21489e;
+        }
+        p.contents_level1 {
+            font-weight : bold;
+            font-size : 110%;
+            margin : 0.5em;
+        }
+        p.contents_level2 {
+            position : relative;
+            left : 20px;
+            margin : 0.5em;
+        }
+    </style><script type="text/javascript">
+        function coordToMils(coord) {
+            var number = coord / 10000;
+            
+            if (number != number.toFixed(3))
+                number = number.toFixed(3);
+            
+            return number + 'mil'
+        }
+
+        function coordToMM(coord) {
+            var number = 0.0254 * coord / 10000;
+            
+            if (number != number.toFixed(4))
+                number = number.toFixed(4);
+            
+            return number + 'mm'
+        }
+    
+        function convertCoord(coordNode, units) {
+            for (var i = 0; i < coordNode.childNodes.length; i++) {
+                coordNode.removeChild(coordNode.childNodes[i]);
+            }
+
+            var coord = coordNode.getAttribute('value');
+            if (coord != null) {
+                if (units == 'mm') {
+                    textNode = document.createTextNode(coordToMM(coord));
+                    coordNode.appendChild(textNode);
+                } else if (units == 'mil') {
+                    textNode = document.createTextNode(coordToMils(coord));
+                    coordNode.appendChild(textNode);
+                }
+            }
+        }
+    
+        function convertUnits(unitNode, units) {
+            for (var i = 0; i < unitNode.childNodes.length; i++) {
+                unitNode.removeChild(unitNode.childNodes[i]);
+            }
+        
+            textNode = document.createTextNode(units); 
+            unitNode.appendChild(textNode);
+        }
+    
+        function changeUnits(radio_input, units) {
+            if (radio_input.checked) {
+            
+                var elements = document.getElementsByName('coordinate');
+                if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                        convertCoord(elements[i], units);
+                    }
+                }
+    
+                var elements = document.getElementsByName('units');
+                if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                        convertUnits(elements[i], units);
+                    }
+                }
+            }
+        }
+    </script></head>
+<body onload=""><img ALT="Altium" src="
+            file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+        "><h1>Electrical Rule Check Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12/22/2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11:21:43 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///G:\github-acme\Control_Board_Model_C_(HW_Package)\20201215\Design\Verification Reports\ERC\20201215-SGU-Acme_CPU_Control_Board_C201_001_Design_Verification_Report.html" class="file"><acronym title="G:\github-acme\Control_Board_Model_C_(HW_Package)\20201215\Design\Verification Reports\ERC\20201215-SGU-Acme_CPU_Control_Board_C201_001_Design_Verification_Report.html">G:\github-acme\Control_Board_Model_C_(HW_Package)\20201215\Design\Verification Reports\ERC\20201215-SGU-Acme_CPU_Control_Board_C201_001_Design_Verification_Report.html</acronym></a></td>
+</tr>
+</table><a name="IDB2HTR4DQCGYWBWOEIKIII0X0MKABX5Z3TY0ESN4W215BVYXJNOB"><table>
+<tr>
+<th class="column1">Class</th>
+<th class="column2">Document</th>
+<th class="column3">Message</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">Top_Control_Board_Model_C201.SchDoc</td>
+<td class="column3">DIO_1_1 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry P104-uSD_C_DET(Output), Sheet Entry IO-DIO_1_[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">Top_Control_Board_Model_C201.SchDoc</td>
+<td class="column3">DIO_1_5 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry TLT_SENS-\INT1(Output), Sheet Entry IO-DIO_1_[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">Logic_IO_Unit_V2.SchDoc</td>
+<td class="column3">DIO_1_6 contains Bidirectional Port and Output Sheet Entry objects (Port DIO_1_[0..15], Sheet Entry 16xIO_2-\INT(Output)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">Logic_IO_Unit_V2.SchDoc</td>
+<td class="column3">DIO_1_6 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry 16xIO_2-\INT(Output), Sheet Entry 16xIO_1-GPIO[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">Top_Control_Board_Model_C201.SchDoc</td>
+<td class="column3">DIO_1_14 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry P16_P25-STP_DRV_FLT(Output), Sheet Entry IO-DIO_1_[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">Top_Control_Board_Model_C201.SchDoc</td>
+<td class="column3">DIO_2_1 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry P109-STATUS(Output), Sheet Entry IO-DIO_2_[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">Top_Control_Board_Model_C201.SchDoc</td>
+<td class="column3">DIO_2_2 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry P109-NET_STATUS(Output), Sheet Entry IO-DIO_2_[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">Top_Control_Board_Model_C201.SchDoc</td>
+<td class="column3">DIO_2_5 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry P109-M_UART.RI(Output), Sheet Entry IO-DIO_2_[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">Top_Control_Board_Model_C201.SchDoc</td>
+<td class="column3">DIO_2_6 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry P109-M_UART.DCD(Output), Sheet Entry IO-DIO_2_[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">Top_Control_Board_Model_C201.SchDoc</td>
+<td class="column3">DIO_2_7 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry P109-PSM_IND(Output), Sheet Entry IO-DIO_2_[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">Top_Control_Board_Model_C201.SchDoc</td>
+<td class="column3">DIO_3_0 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry TCPC-\TCPP_FLT(Output), Sheet Entry IO-DIO_3_[0..7](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">Top_Control_Board_Model_C201.SchDoc</td>
+<td class="column3">DIO_3_1 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry TCPC-BC_CHG_DET(Output), Sheet Entry IO-DIO_3_[0..7](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">Top_Control_Board_Model_C201.SchDoc</td>
+<td class="column3">DIO_3_2 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry TCPC-\BC_CHG__AL(Output), Sheet Entry IO-DIO_3_[0..7](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">Top_Control_Board_Model_C201.SchDoc</td>
+<td class="column3">DIO_3_5 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry BC-\INT(Output), Sheet Entry IO-DIO_3_[0..7](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">Top_Control_Board_Model_C201.SchDoc</td>
+<td class="column3">DIO_3_7 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry TCPC-USB_SW_OPN(Output), Sheet Entry IO-DIO_3_[0..7](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PA0 contains Input Port and Bidirectional Sheet Entry objects (Port \UI_INT, Sheet Entry STM32G473CETx-PA[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PA1 contains Output Port and Bidirectional Sheet Entry objects (Port SPEED_CTRL, Sheet Entry STM32G473CETx-PA[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PA4 contains Output Port and Bidirectional Sheet Entry objects (Port FAN_PS_VREF, Sheet Entry STM32G473CETx-PA[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PA5 contains Output Port and Bidirectional Sheet Entry objects (Port FRS_TX1, Sheet Entry STM32G473CETx-PA[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PA8 contains Output Port and Bidirectional Sheet Entry objects (Port \IO_PE_RST, Sheet Entry STM32G473CETx-PA[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PA15 contains Input Port and Bidirectional Sheet Entry objects (Port SPEED_SENSE, Sheet Entry STM32G473CETx-PA[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PB2 contains Output Port and Bidirectional Sheet Entry objects (Port BUZZ, Sheet Entry STM32G473CETx-PB[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PB9 contains Output Port and Bidirectional Sheet Entry objects (Port STP_CLK, Sheet Entry STM32G473CETx-PB[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PB10 contains Input Port and Bidirectional Sheet Entry objects (Port BC_STAT, Sheet Entry STM32G473CETx-PB[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PC0 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry AN_IO-VFAN_ADC(Output), Sheet Entry STM32G473CETx-PC[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PC1 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry AN_IO-VBUS_ADC(Output), Sheet Entry STM32G473CETx-PC[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PC2 contains Output Sheet Entry and Bidirectional Sheet Entry objects (Sheet Entry AN_IO-VBAT_ADC(Output), Sheet Entry STM32G473CETx-PC[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PC3 contains Input Port and Bidirectional Sheet Entry objects (Port \SENSE_INT, Sheet Entry STM32G473CETx-PC[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PC6 contains Output Port and Bidirectional Sheet Entry objects (Port LCD_BL_PWM, Sheet Entry STM32G473CETx-PC[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PC7 contains Output Port and Bidirectional Sheet Entry objects (Port STP_VREF_PWM, Sheet Entry STM32G473CETx-PC[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PC12 contains Output Port and Bidirectional Sheet Entry objects (Port FRS_TX2, Sheet Entry STM32G473CETx-PC[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PC13 contains Input Port and Bidirectional Sheet Entry objects (Port TAMP_DET, Sheet Entry STM32G473CETx-PC[0..15](I/O)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A0_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT1-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A0_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT2-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A1_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT1-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A1_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT2-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A2_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT1-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A2_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT2-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A3_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT1-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A3_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT2-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A4_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT1-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A4_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT2-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A5_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT1-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A5_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT2-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A6_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT1-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A6_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT2-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A7_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT1-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">A7_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port A[0..7], Sheet Entry +1V8_VLT2-A[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">Sensor Connection.SchDoc</td>
+<td class="column3">Adding items to hidden net GND</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B0_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT1-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B0_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT2-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B1_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT1-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B1_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT2-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B2_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT1-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B2_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT2-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B3_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT1-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B3_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT2-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B4_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT1-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B4_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT2-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B5_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT1-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B5_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT2-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B6_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT1-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B6_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT2-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B7_+1V8_VLT1 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT1-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">TXB0108 Voltage_Level_Translator.SchDoc</td>
+<td class="column3">B7_+1V8_VLT2 contains Bidirectional Port and Unspecified Sheet Entry objects (Port B[0..7], Sheet Entry +1V8_VLT2-B[0..7](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO0 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-25, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO1 contains Output Pin and Unspecified Port objects (Pin ESP32_MOD-35, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32_Module.SchDoc</td>
+<td class="column3">GPIO2 contains Input Port and Unspecified Sheet Entry objects (Port \SENS_INT, Sheet Entry U_ESP32-WROOM32D_Module-GPIO[0..19](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO2 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-24, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO3 contains Input Pin and Unspecified Port objects (Pin ESP32_MOD-34, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO4 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-26, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32_Module.SchDoc</td>
+<td class="column3">GPIO5 contains Input Port and Unspecified Sheet Entry objects (Port \PERIPH_INT, Sheet Entry U_ESP32-WROOM32D_Module-GPIO[0..19](Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO5 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-29, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO6 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-20, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO7 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-21, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO8 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-22, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO9 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-17, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO10 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-18, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO11 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-19, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO12 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-14, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO13 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-16, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO14 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-13, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO15 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-23, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO16 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-27, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO17 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-28, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO18 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-30, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO19 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-31, Port GPIO[0..19]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO21 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-33, Port GPIO[21..23]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO22 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-36, Port GPIO[21..23]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO23 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-37, Port GPIO[21..23]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32_Module.SchDoc</td>
+<td class="column3">GPIO25 contains Bidirectional Port and Unspecified Sheet Entry objects (Port UART1.DTR, Sheet Entry U_ESP32-WROOM32D_Module-GPIO[25..27](Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO25 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-10, Port GPIO[25..27]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO26 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-11, Port GPIO[25..27]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO27 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-12, Port GPIO[25..27]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO32 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-8, Port GPIO[32..33]).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">ESP32-WROOM32D_Module.SchDoc</td>
+<td class="column3">GPIO33 contains IO Pin and Unspecified Port objects (Pin ESP32_MOD-9, Port GPIO[32..33]).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">BMA253_Triaxial_Acceleration_Sensor.SchDoc</td>
+<td class="column3">NetNT4_1 contains Output Port and Unspecified Sheet Entry objects (Port SDO/SA0, Sheet Entry P128-SDO/SA0(Passive)).</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PC14 contains Bidirectional Sheet Entry and Unspecified Sheet Entry objects (Sheet Entry STM32G473CETx-PC[0..15](I/O), Sheet Entry RTC_XTAL-OSC32_IN(Passive)).</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">MCU_Module.SchDoc</td>
+<td class="column3">PC15 contains Bidirectional Sheet Entry and Unspecified Sheet Entry objects (Sheet Entry STM32G473CETx-PC[0..15](I/O), Sheet Entry RTC_XTAL-OSC32_OUT(Passive)).</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

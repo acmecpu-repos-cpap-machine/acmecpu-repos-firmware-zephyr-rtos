@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2024 Acme CPU
+ *
+ * Created on: 30-Jun-2023
+ * Author: Rohan Dey (rohan@acmecpu.com)
+ *
+ * GPIO devices used
+ *		- PS1 --> uv led controlled via PWM_UV_LED3 signal
+ */
+
+/ {
+    pwr_ctrl_gpios: pwr_ctrl_gpios {
+		compatible = "acpu,pwrctrldrv";
+		status = "okay";
+
+        ps1-gpios = <&gpioe 5 (GPIO_PUSH_PULL)>;
+    };
+};

@@ -1,0 +1,33 @@
+Altium Designer Pick and Place Locations
+C:\Users\Volodymyr\Google Drive (voldymyr_at_acmecpu.com)\Volodymyr\acmeCPU\Motor_Driver_Model_D_(HW_Package)\Assembly\Pick_n_Place\20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Pick_and_Place.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       05/11/20
+Time:       15:18
+Revision:   7
+Variant:    No variations
+Units used: mil
+
+Designator Comment                                             Layer    Footprint           Center-X(mil) Center-Y(mil) Rotation Description                                                                                          
+R4         "RES SMD 39 OHM 1% 1/4W 1206"                       TopLayer R1206               525.000       150.000       270      "39 Ohms ±5% 0.25W, 1/4W Chip Resistor 1206 (3216 Metric) Moisture Resistant Thick Film"             
+C7         "CAP ALUM 68 UF 20% 25 V SMD"                       TopLayer WCAP-ASLI_6.3X5.5   225.000       350.000       180      "WCAP-ASLI Aluminum Electrolytic Capacitor, V-Chip, SMT, D6.3xH5.5mm, 68uF, 25V"                     
+U3         TXS0102DQMR                                         TopLayer DQM8                820.000       200.000       90       "2-Bit Bidirectional Voltage-Level Translator for Open-Drain Application"                            
+U2         TPD3F303DPVR                                        TopLayer DPV8_1P7X0P4        875.000       425.000       360      "RC (Pi) EMI Filter 2nd Order Low Pass 3 Channel R = 47Ohms, 100Ohms, C = 20pF  8-UFDFN Exposed Pad" 
+U1         DRV10975ZRHFR                                       TopLayer RHF24_2P65X3P65     650.000       350.000       90       "Multiphase Motor Driver Power MOSFET Analog, I²C, PWM 24-VQFN (5x4)"                                
+R3         "RES SMD 4.75K OHM 1% 1/16W 0402"                   TopLayer R0402               825.000       340.000       180      "4.75 kOhms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Moisture Resistant Thick Film"        
+P402       I2C                                                 TopLayer CONN_S5B-ZR(LF)(SN) 1002.323      395.000       90       "Connector Header Through Hole, Right Angle 5 position 0.059" (1.50mm)"                              
+P401       PWR_IN                                              TopLayer CONN_S4B-ZR(LF)(SN) 365.000       607.323       180      "Connector Header Through Hole, Right Angle 4 position 0.059" (1.50mm)"                              
+P17        "BLDC Motor"                                        TopLayer CONN_S5B-ZR(LF)(SN) 725.000       607.323       180      "Connector Header Through Hole, Right Angle 5 position 0.059" (1.50mm)"                              
+D1         "Zener Diode 6.2V 2.5W ±5% Surface Mount SOD-123FL" TopLayer SOD-123FL           375.000       99.994        180      "Zener Diode 6.2V 2.5W ±5% Surface Mount SOD-123FL"                                                  
+C10        CGA2B3X7R1H104K050BB                                TopLayer C0402               745.000       200.000       90       "0.1µF ±10% 50V Ceramic Capacitor X7R 0402 (1005 Metric)"                                            
+C9         CGA2B3X7R1H104K050BB                                TopLayer C0402               765.000       125.000       180      "0.1µF ±10% 50V Ceramic Capacitor X7R 0402 (1005 Metric)"                                            
+C8         "CAP CER 1UF 6.3V X5R 0402"                         TopLayer C0402               900.000       320.000       90       "1µF ±10% 6.3V Ceramic Capacitor X5R 0402 (1005 Metric)"                                             
+C6         "CAP CER 10uF X7R 10% 0805"                         TopLayer C0805               650.000       100.000       360      Capacitor,10uF,10V,X7R,10%,0805,Murata                                                               
+C5         "CAP CER 22UF 25V X5R 0805"                         TopLayer C0805               475.000       450.000       90       "22µF ±20% 25V Ceramic Capacitor X5R 0805 (2012 Metric)"                                             
+C4         "CAP CER 0.1UF 50V X7R 0402"                        TopLayer C0402               480.000       350.000       180      "0.1µF ±10% 50V Ceramic Capacitor X7R 0402 (1005 Metric)"                                            
+C3         "CAP CER 1UF 6.3V X5R 0402"                         TopLayer C0402               625.000       200.000       90       "1µF ±10% 6.3V Ceramic Capacitor X5R 0402 (1005 Metric)"                                             
+C2         "CAP CER 1UF 6.3V X5R 0402"                         TopLayer C0402               665.000       200.000       90       "1µF ±10% 6.3V Ceramic Capacitor X5R 0402 (1005 Metric)"                                             
+C1         "CAP CER 0.1UF 50V X7R 0402"                        TopLayer C0402               500.000       290.000       270      "0.1µF ±10% 50V Ceramic Capacitor X7R 0402 (1005 Metric)"                                            
+D2         ESDA7P120-1U1M                                      TopLayer ST_QFN_1610         150.000       535.000       180      "11.5V Clamp 120A (8/20µs) Ipp Tvs Diode Surface Mount 1610"                                         

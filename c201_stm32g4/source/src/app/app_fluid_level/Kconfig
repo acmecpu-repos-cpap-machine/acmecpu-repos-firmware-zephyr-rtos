@@ -1,0 +1,8 @@
+# Copyright (c) 2024 Acme CPU
+# Application fluid level configuration option
+
+config APP_HAS_FLUID_LEVEL
+	bool "Application fluid level configurations"
+	default n
+	help
+	  Enable or disable the fluid_level

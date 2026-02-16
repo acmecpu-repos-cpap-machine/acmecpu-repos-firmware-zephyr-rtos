@@ -1,0 +1,52 @@
+# Copyright (c) 2021 Acme CPU
+# Application Settings configuration options
+
+menuconfig APP_SETTINGS
+#	bool
+	bool "Application Settings Configurations"
+	default y
+	help
+	  Application Settings Configurations 
+
+if APP_SETTINGS
+
+config APP_SETTINGS_DEVELOPER_MODE
+	bool "Enable developer mode settings" 
+	default n
+	help
+	  Enable developer mode settings 
+
+config APP_SETTINGS_LOG_DIR_NAME
+	string "Settings log directory name" 
+	default "settings"
+	help
+	  Settings log directory name 
+
+config APP_SETTINGS_LOG_CURR_FILE_NAME
+	string "Settings current log file name"
+	default "settings.dat"
+	help
+	  Settings current log file name 
+
+config APP_SETTINGS_LOG_CURR_FILE_SIZE_MAX_MB
+	int "Settings current log file max size in MB"
+	default 1
+	help
+	  Settings current log file max size in MB 
+
+config APP_SETTINGS_LOG_MAX_FILE_COUNT
+	int "Settings log max file count for log rotation"
+	default 3
+	help
+	  Settings log max file count for log rotation
+	  
+config APP_SETTINGS_DISPVAL_LOAD_TO_RAM
+	bool "All settings values will be loaded to ram if enabled" 
+	default n
+	help
+	  All settings values will be loaded to ram if enabled.
+	  This consumes more heap memory. This feature will offer better performance. 
+
+rsource "Kconfig.settings"
+
+endif # APP_SETTINGS

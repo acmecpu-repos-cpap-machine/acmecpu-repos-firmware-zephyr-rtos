@@ -1,0 +1,99 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ * 
+ * GPIO device list
+ * 	- keypad
+ * 	- load switch enable (may consier to remove dedicated tps22810 driver)
+ *  - audio ps enable
+ * 	- reed switches
+ * 	- network processor (esp32) reset and wakeup
+ *  - bldc driver reset and boot
+ *  - tcpp fault
+ *  - usb mux
+ */
+
+&c204 {
+	aux_enable {
+		compatible = "gpio-keys";
+		
+	    aux_ps_en: aux_ps_en {
+	      gpios = <&gpioa 15 (GPIO_PUSH_PULL)>;
+	      label = "3V3_AUX_PS_EN";
+	    };
+	    
+	    audio_ps_en: audio_ps_en {
+	      gpios = <&gpiog 9 (GPIO_PUSH_PULL)>;
+	      label = "AUDIO_PS_EN";
+	    };
+	};
+	
+	reed_switches {
+		compatible = "gpio-keys";
+
+	    reed_switch_1 {
+	      gpios = <&gpioc 0 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      label = "REED_1";
+	    };
+	    
+	    reed_switch_2 {
+	      gpios = <&gpiod 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      label = "REED_2";
+	    };
+	};
+	
+	net_proc_gpios {
+		compatible = "gpio-keys";
+		
+	    wifibt_rst: wifibt_rst {
+	      gpios = <&gpiof 2 (GPIO_PUSH_PULL)>;
+	      label = "ESP32_RST";
+	    };
+	    
+	    wifibt_wake: wifibt_wake {
+	      gpios = <&gpiof 3 (GPIO_PUSH_PULL)>;
+	      label = "ESP32_WU";
+	    };
+	};
+	
+	bldc_drv_gpios {
+		compatible = "gpio-leds";
+		
+	    bldc_rst: bldc_rst {
+	      gpios = <&gpiod 14 (GPIO_PUSH_PULL)>;
+	      label = "BLDC_RST";
+	    };
+	    
+	    bldc_boot {
+	      gpios = <&gpiob 11 (GPIO_PUSH_PULL)>;
+	      label = "BLDC_BOOT";
+	    };
+	};
+	
+	usb_mux_gpios {
+		compatible = "gpio-keys";
+
+	    usb_mux_sel0: usb_mux_sel0 {
+	      gpios = <&gpiob 0 (GPIO_PUSH_PULL)>;
+	      label = "USB_MUX_SEL0";
+	    };
+
+	    usb_mux_sel1: usb_mux_sel1 {
+	      gpios = <&gpiob 1 (GPIO_PUSH_PULL)>;
+	      label = "USB_MUX_SEL1";
+	    };
+	};
+
+	other_gpios {
+		compatible = "gpio-keys";
+
+	    tcpp_flt {
+	      gpios = <&gpiob 5 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      label = "TCPP_FLT";
+	    };
+	    
+	    vbat_sense_en: vbat_sense_en {
+	      gpios = <&gpiof 1 GPIO_ACTIVE_HIGH>;
+	      label = "VBAT_SENSE_EN";
+	    };
+	};
+};

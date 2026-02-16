@@ -1,0 +1,28 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+
+&mcu_gpios {
+
+      dio3_int: gpioa-0 {
+            gpios = <&gpioa 0 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "UI INT";
+      };
+
+      sensor_int: gpioc-3 {
+            gpios = <&gpioc 3 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "SENSOR INT";
+      };
+
+      tamp_det: gpioc-13 {
+            gpios = <&gpioc 13 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "TAMP DET";
+      };
+
+      periph_reset: gpioa-8 {
+            gpios = <&gpioa 8 (GPIO_PUSH_PULL)>;
+            label = "PERIPH RST";
+      };
+};

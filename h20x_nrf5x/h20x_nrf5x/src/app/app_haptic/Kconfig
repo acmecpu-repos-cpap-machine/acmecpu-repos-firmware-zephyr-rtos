@@ -1,0 +1,27 @@
+# Copyright (c) 2022 Acme CPU
+# Haptic feedback configurations 
+
+menuconfig APP_HAPTIC_FB
+	bool "Haptic feedback configurations"
+	default y
+	help
+	  Enable / disable Haptic feedback
+
+if APP_HAPTIC_FB
+
+choice
+	prompt "Haptic feedback actuator drive"
+	default APP_HAPTIC_FB_DRIVE_GPIO
+
+	config APP_HAPTIC_FB_DRIVE_PWM
+		bool "The haptic feedback actuator is driven by PWM"
+		help
+			The haptic feedback actuator is driven by PWM
+
+	config APP_HAPTIC_FB_DRIVE_GPIO
+		bool "The haptic feedback actuator is driven by GPIO"
+		help
+			The haptic feedback actuator is driven by GPIO
+endchoice
+
+endif # APP_HAPTIC_FB

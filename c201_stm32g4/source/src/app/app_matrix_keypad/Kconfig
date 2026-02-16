@@ -1,0 +1,8 @@
+# Copyright (c) 2023 Acme CPU
+# App matrix keypad configurations
+
+menuconfig APP_MATRIX_KEYPAD
+	bool "App matrix keypad configurations"
+	default n
+	help
+	  Enable / disable App matrix keypad

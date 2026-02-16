@@ -1,0 +1,25 @@
+# Copyright (c) 2021 Acme CPU
+# PCAL9539A I2C based GPIO Expander
+
+menuconfig GPIO_PCAL9539A
+	bool "PCAL9539A I2C based GPIO Expander"
+	depends on I2C
+	help
+	  Enable driver for PCAL9539A I2C based GPIO Expander
+
+if GPIO_PCAL9539A
+
+module = GPIO_PCAL9539A
+module-str = gpio_pcal9539a
+source "subsys/logging/Kconfig.template.log_config"
+
+config GPIO_PCAL9539A_INIT_PRIORITY
+	int "GPIO_PCAL9539A Init Priority"
+	#default 66
+	default 86
+	help
+	    Device driver initialization priority.
+
+rsource "Kconfig.pcal9539a"
+
+endif # GPIO_PCAL9539A

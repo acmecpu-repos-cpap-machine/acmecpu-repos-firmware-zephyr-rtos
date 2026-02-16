@@ -1,0 +1,20 @@
+Added Component: Designator=U41(SIL0010D)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "https://octopart.com/click/track?ai=10049&ct=datasheets&sig=01db677&at=physicalpart&sid=370&ppid=108054084&hlid=30259078&src-supplier=TI+store"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://octopart.com/click/track?ai=10049&ct=datasheets&sig=01db677&at=physicalpart&sid=370&ppid=108054084&hlid=30259078&src-supplier=TI+store"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "TPSM82822SILR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=2.81, 10=2.523, 25=2.3848, 100=1.961, 250=1.7596, 500=1.696, 1000=1.4098 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "2595"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "296-TPSM82822SILRCT-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VSYS Pin=U41-1
+Added Pin To Net: NetName=VSYS Pin=U41-2
+Added Pin To Net: NetName=NetR115_1 Pin=U41-3
+Added Pin To Net: NetName=+3V3 Pin=U41-5
+Added Pin To Net: NetName=+3V3 Pin=U41-6
+Added Pin To Net: NetName=+3V3 Pin=U41-7
+Added Pin To Net: NetName=NetC146_1 Pin=U41-8
+Added Pin To Net: NetName=GND Pin=U41-9
+Added Pin To Net: NetName=GND Pin=U41-10
+Added Member To Class: ClassName=+3V3_PS Member=Component U41 (U1) TPSM82822SILR

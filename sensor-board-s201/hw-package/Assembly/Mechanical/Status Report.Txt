@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 10:40:04 PM On 12/7/2020
+
+Output: Plain_AutoCAD_Flex
+Type  : AutoCAD PCB
+From  : PCB Document [Sensor_PCB_S201_Flex_Sourav.PcbDoc]
+   Generated File[20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Plain_AutoCAD_Flex.DXF]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 10:40:08 PM On 12/7/2020

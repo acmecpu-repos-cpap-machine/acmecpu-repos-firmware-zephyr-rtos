@@ -1,0 +1,18 @@
+# Copyright (c) 2022 Acme CPU
+# Application LED notification configurations
+
+menuconfig APP_LED_NOTIFICATION
+	bool "Application LED notification configurations"
+	default n
+#	depends on BSP_LEDS
+	help
+	  Application LED notification module.
+	  Disable all of the following to turn off led feature and lower memory footprint
+	  	- CONFIG_APP_LED_NOTIFICATION
+	  	- CONFIG_BSP_LEDS
+	  	- led driver (eg. CONFIG_PCA9632)
+	  	- CONFIG_LED
+
+if APP_LED_NOTIFICATION
+
+endif # APP_LED_NOTIFICATION

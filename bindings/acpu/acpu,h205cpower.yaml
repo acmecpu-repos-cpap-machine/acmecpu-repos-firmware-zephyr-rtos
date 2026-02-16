@@ -1,0 +1,27 @@
+# Copyright (c) 2021 Acme CPU
+
+description: H205C Power
+
+include: "base.yaml"
+
+compatible: "acpu,h205cpower"
+
+properties:
+    label:
+        required: false
+        type: string
+
+    en3v3-gpios:
+        type: phandle-array
+        required: true
+        description: 3v3 power enable gpio
+
+    en5v-gpios:
+        type: phandle-array
+        required: true
+        description: 5v power enable gpio
+
+    en1v8-gpios:
+        type: phandle-array
+        required: true
+        description: 1v8 power enable gpio

@@ -1,0 +1,58 @@
+# Copyright (c) 2023 Acme CPU
+# Configurations for audio library
+
+menuconfig LIB_AUDIO
+    bool "Audio library"
+    default n
+    help
+      Enable or disable audio library to be used in the application
+
+if LIB_AUDIO
+    # select audio codec
+    choice
+        prompt "Audio Codec Selection"
+        default LIB_AUDIO_CODEC_CMX655D
+
+    config LIB_AUDIO_CODEC_CMX655D
+        bool "CMX655D voice codec"
+        select CMX655D
+        help
+            Use the cmx655d voice codec to be used in the application, selecting this will enable the particular driver to be used with this motor 
+
+    config LIB_AUDIO_CODEC_NONE
+        bool "No audio codec"
+        help
+            No audio codec used
+    endchoice
+
+    # sampling rate
+    config LIB_AUDIO_SAMPLE_RATE
+        int "sampling rate"
+        default 8000
+        help
+            sampling rate in samples per second
+
+    # number of channels
+    config LIB_AUDIO_NUM_CHANNEL
+        int "number of channels"
+        range 1 2
+        default 2
+        help
+            number of channels (1 - mono, 2 - stereo)
+
+    # bits per sample
+    config LIB_AUDIO_BPS
+        int "bits per sample"
+        default 16
+        help
+            bits per sample
+
+    # maximum file size for recording in KB
+    config LIB_AUDIO_MAX_REC_FILE_SIZE_KB
+        int "maximum file size for recording in KB"
+        range 1 1000000
+        default 1000
+        help
+            maximum file size for recording in KB
+
+endif # LIB_AUDIO

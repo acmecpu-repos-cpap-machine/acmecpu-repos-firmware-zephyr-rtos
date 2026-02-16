@@ -1,0 +1,10 @@
+/*	Copyright (c) 2021 Acme CPU */
+
+/* Dummy device tree node used to load the stm32 option bytes driver */
+
+/{
+    flash-option-bytes {
+		compatible = "st_stm32_ob";
+		label = "STM32_FLASH_OB";
+    };
+};

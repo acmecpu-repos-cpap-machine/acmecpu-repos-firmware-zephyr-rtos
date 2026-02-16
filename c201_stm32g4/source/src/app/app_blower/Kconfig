@@ -1,0 +1,44 @@
+# Copyright (c) 2021 Acme CPU
+# Blower configuration options
+
+menuconfig APP_BLOWER
+	bool "App Blower Configurations"
+	default y
+	help
+	  Enable or disable the blower
+
+if APP_BLOWER
+
+rsource "Kconfig.part"
+
+config APP_BLOWER_SENSOR_LOG_DIR_NAME
+	string "Blower sensor log directory name"
+	default "sensor"
+	help
+	  Blower sensor log directory name 
+
+config APP_BLOWER_SENSOR_LOG_CURR_FILE_NAME
+	string "Blower sensor current log file name"
+	default "sensor.dat"
+	help
+	  Blower sensor current log file name 
+
+config APP_BLOWER_SENSOR_LOG_CURR_FILE_SIZE_MAX_MB
+	int "Blower sensor current log file max size in MB"
+	default 3
+	help
+	  Blower sensor current log file max size in MB 
+
+config APP_BLOWER_SENSOR_LOG_MAX_FILE_COUNT
+	int "Blower sensor log max file count for log rotation"
+	default 5
+	help
+	  Blower sensor log max file count for log rotation 
+
+config APP_BLOWER_VOLTAGE_SLOPE_CONTROL
+	bool "Enable or disable blower voltage slope controlled logic in PID loop"
+	default n
+	help
+		Enable or disable blower voltage slope controlled logic in PID loop
+	
+endif # APP_BLOWER

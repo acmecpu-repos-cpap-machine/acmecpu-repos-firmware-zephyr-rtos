@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=NetC19_1 Pin=C19-1
+Removed Pin From Net: NetName=NetC20_1 Pin=C20-1
+Removed Member From Class: ClassName=BG95_PWR Member=NetC19_1
+Removed Member From Class: ClassName=BG95_PWR Member=NetC20_1
+Added Pin To Net: NetName=NetC51_2 Pin=C19-1
+Added Pin To Net: NetName=NetC51_2 Pin=C20-1
+Change Net Name : Old Net Name=NetC19_1 New Net Name=NetC21_1
+Change Net Name : Old Net Name=NetC20_1 New Net Name=NetC22_2
+Change Net Name : Old Net Name=NetC51_2 New Net Name=NetC19_1
+Added Member To Class: ClassName=BG95_PWR Member=Wire NetC21_1
+Added Member To Class: ClassName=BG95_PWR Member=Wire NetC22_2

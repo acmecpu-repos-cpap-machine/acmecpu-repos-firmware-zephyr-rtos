@@ -1,0 +1,8 @@
+# Copyright (c) 2024 Acme CPU
+# Application BMI algorithms
+
+config BMI270
+	bool "Application BMI algorithms"
+	default n
+	help
+	  Enable or disable the bmi sensor

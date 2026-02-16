@@ -1,0 +1,18 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: Motor_Driver_Model_D201.PcbDoc   11/5/2020  3:17:14 PM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : 1-SIG-TOP to 4-SIG-BOT
+ASCII Plated RoundHoles File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_NC_Drill-Plated.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      6mil (0.152mm)                                            Round             77        PTH        7.16inch (181.93mm)
+T2      8mil (0.203mm)                                            Round             32        PTH        3.35inch (85.17mm)
+T3      12mil (0.305mm)                                           Round             9         PTH        0.39inch (10.00mm)
+T4      28mil (0.711mm)                                           Round             14        PTH        0.99inch (25.09mm)
+T5      87mil (2.21mm)                                            Round             4         PTH        2.05inch (52.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              136
+
+Total Processing Time (hh:mm:ss) : 00:00:00

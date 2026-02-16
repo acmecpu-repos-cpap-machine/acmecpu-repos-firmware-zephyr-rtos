@@ -1,0 +1,11 @@
+# Copyright (c) 2021 Acme CPU
+# PCAL9539A GPIO configuration options
+
+config GPIO_PCAL9539A_INTERRUPT
+	bool "Interrupt enable"
+	default n
+	depends on GPIO_PCAL9539A
+	help
+	  Enable interrupt support in PCAL9539A driver.
+	  Note that the PCAL9539A cannot reliably detect
+	  short-pulse interrupts due to its design.

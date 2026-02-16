@@ -1,0 +1,10 @@
+Output: Differences Report
+Type  : DiffReport
+From  : PCB Document [Sensor_PCB_S201_Flex.PcbDoc]
+   Generated File[20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Design_Verification_Report.html]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 10:40:26 PM On 12/7/2020

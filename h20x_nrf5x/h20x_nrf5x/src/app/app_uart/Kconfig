@@ -1,0 +1,13 @@
+# Copyright (c) 2022 Acme CPU
+# UART application configurations 
+
+menuconfig APP_UART
+	bool "UART m2m configurations"
+	default y
+	help
+	  Enable / disable UART m2m
+
+if APP_UART
+
+
+endif # APP_UART

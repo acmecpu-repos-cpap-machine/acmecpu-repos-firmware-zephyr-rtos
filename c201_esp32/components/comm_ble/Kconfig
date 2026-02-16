@@ -1,0 +1,104 @@
+# Copyright (c) 2021 Acme CPU
+# ACPU Bluetooth (Application) Configurations
+
+menu "ACPU Bluetooth (Application) Configurations"
+	depends on BT_ENABLED 
+
+	config COMM_BLE_PROFILE_NUM
+		int "Number of BLE profiles"
+		default 1
+		help
+		    Number of BLE profiles supported but the application
+		    
+	config COMM_BLE_APP_ID
+		hex "BLE application ID"
+		default 0x55
+		help
+		    BLE application ID
+		    
+	config COMM_BLE_DEVICE_NAME
+		string "BLE device name"
+		default "ACPU_C201"
+		help
+		    BLE device name
+		    
+	config COMM_BLE_CHAR_VAL_LEN_MAX
+		int "The max length of characteristic value"
+		range 20 500
+		default 500
+		help
+		    The max length of characteristic value. When the GATT client performs a write or prepare write operation,
+			the data length must be less than this value
+		
+	config COMM_BLE_GATT_MTU_SIZE
+		int "MTU size for BT GATT service"
+		default	512
+		range 23 517
+		help
+		   	set BT GATT service's MTU size
+
+	##### pairing mode
+	choice COMM_BLE_PAIRING_SECURITY_MODE
+		prompt "Select BlueTooth Security Mode"
+		default BT_PAIRING_WITH_PASSKEY_INPUT
+		help
+			Specify BlueTooth Security type for pairing.
+
+		config BT_PAIRING_WITH_PAIR_OPTION
+			bool "BT pairing with Pair option"
+
+		config BT_PAIRING_WITH_PASSKEY_INPUT
+			bool "BT pairing with Entering the Passkey"
+
+		config BT_PAIRING_WITH_YES_NO_OPTION
+			bool "BT pairing with Yes/No option while Passkey display on the Screen"
+	endchoice
+
+	config COMM_BLE_PAIRING_SECURITY_MODE
+		int
+        default 0 if BT_PAIRING_WITH_PAIR_OPTION
+        default 1 if BT_PAIRING_WITH_PASSKEY_INPUT
+        default 2 if BT_PAIRING_WITH_YES_NO_OPTION
+
+	##### passkey type
+	choice COMM_BLE_PAIRING_PASSKEY_TYPE
+		prompt "Select Bluetooth Passkey Type"
+		default BT_PAIRING_WITH_STATIC_PASSKEY
+		depends on BT_PAIRING_WITH_PASSKEY_INPUT
+		help
+			Specify BlueTooth Security type for pairing.
+		
+		config BT_PAIRING_WITH_STATIC_PASSKEY
+			bool
+			prompt "BT pairing with Static Passkey config by user"
+			
+		config BT_PAIRING_WITH_RANDOM_PASSKEY
+			bool
+			prompt "BT pairing with Random system generate Passkey"
+	endchoice
+
+	config COMM_BLE_PAIRING_PASSKEY_TYPE
+		int
+        default 100 if BT_PAIRING_WITH_STATIC_PASSKEY
+        default 101 if BT_PAIRING_WITH_RANDOM_PASSKEY
+    
+        
+	config BT_SECURE_PAIRING_PASSKEY_AUTO
+		int
+		depends on BT_PAIRING_WITH_PAIR_OPTION
+		default	123456 
+		
+	config BT_SECURE_PAIRING_PASSKEY_STATIC
+		int "BT Pairing Passkey"
+		default	123456 if BT_PAIRING_WITH_STATIC_PASSKEY
+		range 0 999999
+		depends on (BT_PAIRING_WITH_PASSKEY_INPUT && BT_PAIRING_WITH_STATIC_PASSKEY)
+		
+	config BT_SECURE_PAIRING_PASSKEY_RANDOM
+		int 
+		default	1122334455 if BT_PAIRING_WITH_RANDOM_PASSKEY
+		depends on (BT_PAIRING_WITH_PASSKEY_INPUT && BT_PAIRING_WITH_RANDOM_PASSKEY)
+
+
+
+endmenu

@@ -1,0 +1,25 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ */
+
+&timers2 {
+	status = "okay";
+   	st,prescaler = <25>;
+	
+	tim_2_pwm: pwm {
+		status = "okay";
+    	pinctrl-0 = <&tim2_ch2_pa1>;
+    	pinctrl-names = "default";
+    	#pwm-cells = <3>;
+	};
+/*
+	tim_2_ic: input-capture {
+    	compatible = "st,stm32-tim-ic";
+    	status = "okay";
+    	label = "TIM_2_IC";
+    	pinctrl-0 = <&tim2_ch1_pa0>;
+    	pinctrl-names = "default";
+    	#pwm-cells = <3>;
+	};*/
+};

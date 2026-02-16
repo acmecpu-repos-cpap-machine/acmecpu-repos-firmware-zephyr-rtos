@@ -1,0 +1,23 @@
+# Copyright (c) 2021 Acme CPU
+# BSP GPIO Driver configuration options
+
+menuconfig BSP_GPIO_DRIVER
+	bool "Enable Acme CPU BSP Driver"
+	default n
+	help
+	    Enables Acme CPU C201 Board Support Package Driver
+
+if BSP_GPIO_DRIVER
+
+module = BSP_GPIO_DRIVER
+module-str = bsp_gpio_driver
+source "subsys/logging/Kconfig.template.log_config"
+
+config BSP_GPIO_DRIVER_INIT_PRIORITY
+	int
+	default 80
+	help
+	    Board Support Package GPIO Driver Initialization Priority
+
+endif # BSP_GPIO_DRIVER
+

@@ -1,0 +1,4 @@
+Layer Pairs Export File for PCB: G:\github-acme\control-board-c201\control-board-c201\hardware-design\Control_Board_Model_C201_FFC_Sens_Conn.PcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=20201215-sgu-acme_cpu_control_board_c201_001_nc_drill-roundholes-plated.txt|DrillLayers=gtl,gp1,gp2,g1,g2,gbl
+LayersSetName=Top_Bot_Plated_Slot_Holes|DrillFile=20201215-sgu-acme_cpu_control_board_c201_001_nc_drill-slotholes-plated.txt|DrillLayers=gtl,gp1,gp2,g1,g2,gbl
+LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=20201215-sgu-acme_cpu_control_board_c201_001_nc_drill-roundholes-nonplated.txt|DrillLayers=gtl,gp1,gp2,g1,g2,gbl

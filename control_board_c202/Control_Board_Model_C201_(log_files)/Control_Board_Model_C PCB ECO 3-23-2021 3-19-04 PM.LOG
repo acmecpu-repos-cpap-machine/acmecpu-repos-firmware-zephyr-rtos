@@ -1,0 +1,96 @@
+Removed Pin From Net: NetName=GND Pin=P20-S1
+Removed Pin From Net: NetName=GND Pin=P20-S1
+Removed Pin From Net: NetName=GND Pin=P20-S2
+Removed Pin From Net: NetName=GND Pin=P20-S2
+Removed Pin From Net: NetName=GND Pin=P28-S1
+Removed Pin From Net: NetName=GND Pin=P28-S1
+Removed Pin From Net: NetName=GND Pin=P28-S2
+Removed Pin From Net: NetName=GND Pin=P28-S2
+Change Component DesignItemId : Designator=P20 Old DesignItemId=CONN 5019510530 FFC FPC 5POS 0.50MM New DesignItemId=CONN FFC FPC TOP 5POS 0.50MM R/A
+Change Component DesignItemId : Designator=P28 Old DesignItemId=CONN 5019510530 FFC FPC 5POS 0.50MM New DesignItemId=CONN FFC FPC TOP 5POS 0.50MM R/A
+Change Component Footprint: Designator=P20 Old Footprint=CONN_5019510530 New Footprint=CONN_0545500571
+Change Component Footprint: Designator=P28 Old Footprint=CONN_5019510530 New Footprint=CONN_0545500571
+Change Component Description : Designator=P20 Old Description=5 Position FFC, FPC Connector Contacts, Vertical - 1 Sided 0.020" (0.50mm) Surface Mount New Description=5 Position FFC, FPC Connector Contacts, Top 0.020" (0.50mm) Surface Mount, Right Angle
+Change Component Description : Designator=P28 Old Description=5 Position FFC, FPC Connector Contacts, Vertical - 1 Sided 0.020" (0.50mm) Surface Mount New Description=5 Position FFC, FPC Connector Contacts, Top 0.020" (0.50mm) Surface Mount, Right Angle
+Change component parameters: Designator = "P20"; Footprint = "CONN_0545500571"; UniqueID = "\ILIVJWGN\WPFSHKNI"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Actuator Material"; Value = "Polyphenylene"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.molex.com/webdocs/datasheets/pdf/en-us/0545500571_FFC_FPC_CONNECTORS.pdf?src-supplier=Avnet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.molex.com/webdocs/datasheets/pdf/en-us/0545500571_FFC_FPC_CONNECTORS.pdf?src-supplier=Avnet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Material"; Value = "Bronze"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Resistance"; Value = "40mR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current Rating"; Value = "500mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Depth"; Value = "5mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Flammability Rating"; Value = "UL94 V-0"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Housing Material"; Value = "Polymer"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Length"; Value = "7.7mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Molex"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "0545500571"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-20°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Positions"; Value = "5"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Rows"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Orientation"; Value = "Right Angle"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_1"; Value = "SCL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_2"; Value = "SDA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_3"; Value = "VDD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_4"; Value = "GPIO"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_5"; Value = "GND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_MP1"; Value = "MP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_MP2"; Value = "MP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pitch"; Value = "0.02inch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=0.98, 10=0.808, 100=0.673, 1000=0.5384 (USD)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "20865"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "WM8824CT-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "50V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Wire/Cable Type"; Value = "Straight"; VariantName = "[No Variations]"
+Change component parameters: Designator = "P28"; Footprint = "CONN_0545500571"; UniqueID = "\ILIVJWGN\TDFTAPBA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Actuator Material"; Value = "Polyphenylene"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.molex.com/webdocs/datasheets/pdf/en-us/0545500571_FFC_FPC_CONNECTORS.pdf?src-supplier=Avnet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.molex.com/webdocs/datasheets/pdf/en-us/0545500571_FFC_FPC_CONNECTORS.pdf?src-supplier=Avnet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Material"; Value = "Bronze"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Resistance"; Value = "40mR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current Rating"; Value = "500mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Depth"; Value = "5mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Flammability Rating"; Value = "UL94 V-0"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Housing Material"; Value = "Polymer"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Length"; Value = "7.7mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Molex"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "0545500571"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-20°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Positions"; Value = "5"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Rows"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Orientation"; Value = "Right Angle"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_1"; Value = "SCL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_2"; Value = "SDA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_3"; Value = "VDD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_4"; Value = "GPIO"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_5"; Value = "GND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_MP1"; Value = "MP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_MP2"; Value = "MP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pitch"; Value = "0.02inch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=0.98, 10=0.808, 100=0.673, 1000=0.5384 (USD)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "20865"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "WM8824CT-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "50V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Wire/Cable Type"; Value = "Straight"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=P20-0
+Added Pin To Net: NetName=GND Pin=P20-0
+Added Pin To Net: NetName=GND Pin=P28-0
+Added Pin To Net: NetName=GND Pin=P28-0

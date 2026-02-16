@@ -1,0 +1,22 @@
+# Copyright (c) 2022 Acme CPU
+# UART based M2M communication application configuration
+
+menuconfig APP_UART_M2M
+	bool "UART based M2M communication application configuration"
+	default y
+	help
+	  UART based M2M communication application configuration 
+
+if APP_UART_M2M
+
+config UART_M2M_BUFFER_SIZE
+	int "UART M2M buffer size"
+	default 512
+	help
+	    UART M2M buffer size for received characters or characters to send
+
+
+rsource "app_wifi_bt/Kconfig"
+rsource "app_bldc_drv/Kconfig"
+
+endif # APP_UART_M2M

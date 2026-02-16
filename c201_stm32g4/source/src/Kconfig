@@ -1,0 +1,9 @@
+# Copyright (c) 2021 Acme CPU
+
+menu "ACPU C201 Application Configurations"
+
+rsource "app/Kconfig"
+rsource "bsp/Kconfig"
+rsource "lib/Kconfig"
+
+endmenu

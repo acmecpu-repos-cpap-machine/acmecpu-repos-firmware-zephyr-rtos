@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ * Created on: 19-Oct-2022
+ * Author: Rohan Dey (rohan@acmecpu.cpm)
+ *
+ */
+
+/ {
+    h205c_pwr_gpios: h205c_pwr_gpios {
+		compatible = "acpu,h205cpower";
+        label = "H205C PWR";
+
+        en3v3-gpios = <&io_1 2 (GPIO_ACTIVE_HIGH)>;
+        en5v-gpios = <&io_1 15 (GPIO_ACTIVE_HIGH)>;
+        en1v8-gpios = <&io_1 11 (GPIO_ACTIVE_HIGH)>;
+    };
+};

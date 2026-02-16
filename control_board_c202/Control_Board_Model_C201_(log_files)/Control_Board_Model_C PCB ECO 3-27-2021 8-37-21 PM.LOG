@@ -1,0 +1,31 @@
+Removed Member From Class: ClassName=P109 Member=C31
+Removed Member From Class: ClassName=P109 Member=C33
+Removed Member From Class: ClassName=P110 Member=C49
+Removed Member From Class: ClassName=+4V2_PS Member=C53
+Removed Member From Class: ClassName=+1V8_VLT2 Member=C57
+Removed Member From Class: ClassName=TCPP Member=C64
+Removed Member From Class: ClassName=STM32G473CETx Member=C67
+Removed Member From Class: ClassName=CODEC Member=C101
+Removed Member From Class: ClassName=MCU Member=C107
+Removed Member From Class: ClassName=RTC_XTAL Member=C107
+Removed Member From Class: ClassName=STM32G473QETx Member=C122
+Removed Member From Class: ClassName=+3V3_AUDIO_PS Member=C130
+Removed Member From Class: ClassName=USB-to-UART_Bridge Member=C135
+Removed Member From Class: ClassName=DISP_PS Member=C142
+Removed Member From Class: ClassName=MIC1 Member=C142
+Added Member To Class: ClassName=P109 Member=Component C30 (C40) DNP*
+Added Member To Class: ClassName=P109 Member=Component C32 (C54) CAP CER 10nF 25V X7R 10% 0402
+Added Member To Class: ClassName=P110 Member=Component C48 (C6) CAP CER 2.2UF 16V X5R 0603
+Added Member To Class: ClassName=+4V2_PS Member=Component C52 (C4) CAP CER 22UF 10V X5R 0805
+Added Member To Class: ClassName=+1V8_VLT2 Member=Component C56 (C30) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=TCPP Member=Component C63 (C3) CAP CER 220PF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component C66 (C15) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=CODEC Member=Component C100 (C32) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=MCU Member=Component C106 (C12) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=RTC_XTAL Member=Component C106 (C12) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C121 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+3V3_AUDIO_PS Member=Component C129 (C5) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=USB-to-UART_Bridge Member=Component C134 (C5) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=DISP_PS Member=Component C139 (C5) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=MIC1 Member=Component C140 (C33) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=BG95_PWR Member=Wire NetC19_1

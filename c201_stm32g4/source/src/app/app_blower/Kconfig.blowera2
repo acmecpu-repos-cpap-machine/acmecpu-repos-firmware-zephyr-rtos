@@ -1,0 +1,16 @@
+# Copyright (c) 2021 Acme CPU
+# Blower motor A2 configurations
+
+config BLOWER_MOTOR_A2_MVOLTS_MIN
+	int "Minimum voltage in mV for Blower Motor A2"
+	range 3000 10000
+	default 8250
+	help
+		The minimum voltage at which blower motor A2 can function
+		
+config BLOWER_MOTOR_A2_MVOLTS_MAX
+	int "Maximum voltage in mV for Blower Motor A2"
+	range 12000 24000
+	default 20000
+	help
+		The maximum voltage at which blower motor A2 can function 

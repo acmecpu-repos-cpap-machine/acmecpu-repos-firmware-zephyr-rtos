@@ -1,0 +1,38 @@
+# PCA9545 I2C Bus Multiplexer configuration options
+# Copyright (c) 2021 Acme CPU
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig I2C_MGM_PCA95XX
+	bool "PCA9545 I2C Bus Multiplexer"
+#	depends on I2C_DMA
+	depends on I2C
+	help
+	  Enable driver for PCA9545 I2C Bus Multiplexer.
+
+if I2C_MGM_PCA95XX
+
+module = I2C_MGM
+module-str = i2c_mgm
+source "subsys/logging/Kconfig.template.log_config"
+
+config I2C_MGM_PCA95XX_INIT_PRIORITY
+	int "I2C MGM Init Priority"
+	default 64
+	help
+	    Sets up the device driver initialization priority
+
+config I2C_MGM_PCA95XX_CH_INIT_PRIORITY
+	int "I2C MGM Channel Init Priority"
+	#default 65
+	default 85
+	help
+	    Sets up the device driver initialization priority
+
+config I2C_MGM_PCA95XX_INTERRUPT
+        bool "Interrupt enable"
+        default n
+        depends on I2C_MGM_PCA95XX
+        help
+          Enable interrupt support in I2C_MGM_PCA95XX driver.
+
+endif # PCA9545

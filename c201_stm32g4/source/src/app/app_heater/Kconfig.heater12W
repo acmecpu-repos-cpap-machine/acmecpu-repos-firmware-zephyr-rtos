@@ -1,0 +1,23 @@
+# Copyright (c) 2024 Acme CPU
+# Heater 12W configrations
+
+config HEATER_12W_TEMP_MAX
+	int "Maximum temperature in C for heater 12W"
+	range 25 65
+	default 60
+	help
+		The Maximum temperature in centegrate for heater 12W which can function
+		
+config HEATER_12W_TEMP_MIN
+	int "Minimum temperature in C for heater 12W"
+	range 25 65
+	default 25
+	help
+		The Minimum temperature in centegrate for heater 12W which can function	
+
+config RETRY_COUNTER_12W
+	int "Counter value set for retrying for heater 12W"
+	default 10
+	help
+		The number of retrials can happen to fetch the data from sensor
+			

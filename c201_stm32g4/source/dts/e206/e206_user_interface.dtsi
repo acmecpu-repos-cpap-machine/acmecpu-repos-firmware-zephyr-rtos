@@ -1,0 +1,86 @@
+/*
+ * Copyright (c) 2023 Acme CPU
+ *
+ */
+
+/*
+	Note:
+	All of the switches cannot have an interrupt because of limited number of EXTI IRQn of STM32H7
+	see reference manual section 15.4:
+		the Pn0 are grouped to EXTI0, similarly Pn1 are grouped to EXTI1 and so on.
+		That means if PD6 is configured are an EXTI6 interrupt, we cannot configure PA6 as
+		that EXTI line is already used and we will bet a -EBUSY (-16) error number
+		
+	A solution to this will be to have EXTI on one switch, i.e. power and others should be polled
+*/
+
+/ {
+	keypad_matrix {
+		compatible = "gpio-keys";
+			
+	    switch_1: switch_1 {
+	      gpios = <&gpioc 13 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      /*label = "POWER";*/
+	    };
+	
+	    keymat_row1: keymat_row1 {
+	      gpios = <&gpiod 10 (GPIO_PUSH_PULL)>;
+	      /*label = "KM_ROW1";*/
+	    };
+	
+	    keymat_row2: keymat_row2 {
+	      gpios = <&gpiob 13 (GPIO_PUSH_PULL)>;
+	      /*label = "KM_ROW2";*/
+	    };
+	
+	    keymat_row3: keymat_row3 {
+	      gpios = <&gpiod 9 (GPIO_PUSH_PULL)>;
+	      /*label = "KM_ROW3";*/
+	    };
+	
+	    keymat_row4: keymat_row4 {
+	      gpios = <&gpiod 8 (GPIO_PUSH_PULL)>;
+	      /*label = "KM_ROW3";*/
+	    };
+	
+	    keymat_col1: keymat_col1 {
+	      gpios = <&gpiog 1 (GPIO_PULL_DOWN)>;
+	      /*label = "KM_COL1";*/
+	    };
+	
+	    keymat_col2: keymat_col2 {
+	      gpios = <&gpiog 3 (GPIO_PULL_DOWN)>;
+	      /*label = "KM_COL2";*/
+	    };
+	
+	    keymat_col3: keymat_col3 {
+	      gpios = <&gpiob 15 (GPIO_PULL_DOWN)>;
+	      /*label = "KM_COL3";*/
+	    };
+
+	    keymat_col4: keymat_col4 {
+	      gpios = <&gpioe 8 (GPIO_PUSH_PULL)>;
+	      /*label = "KM_COL4";*/
+	    };
+	};
+	
+	buzz: buzzer {
+		compatible = "bsp-buzzer";
+		status = "okay";
+		
+		pwms =  <&buzzer_pwm 1 250 PWM_POLARITY_NORMAL>;	/* period given in micro seconds for 4kHz freq buzzer */
+		pwm-names = "buzzer-ctrl";
+
+		label = "BUZZER";
+	};
+	
+	display_pwr: display_pwr {
+		compatible = "tps61169";
+		status = "okay";
+		
+		pwms =  <&disp_bl_pwm 1 200 PWM_POLARITY_NORMAL>;	/* period given in micro seconds for 5kHz signal */
+		pwm-names = "disp-brightness";
+
+		label = "DISPLAY_PWR";
+	};
+};

@@ -1,0 +1,247 @@
+*************************************************************
+FileName = 20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Gerber.GBR
+AutoAperture = True
+*************************************************************
+Generating : 2-SIG_BOT
+      File : 20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Gerber.GBL
+
+    Adding Layer      : 2-SIG_BOT
+
+    Adding Layer      : PCB Sheet
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D33
+    D37
+    D38
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : 20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Gerber.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : PCB Sheet
+
+    Adding Layer      : 1-SIG-TOP
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+*************************************************************
+
+*************************************************************
+Generating : 1-SIG-TOP
+      File : 20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Gerber.GTL
+
+    Adding Layer      : 1-SIG-TOP
+
+    Adding Layer      : PCB Sheet
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+*************************************************************
+
+*************************************************************
+Generating : Outline
+      File : 20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Gerber.GM12
+
+    Adding Layer      : Outline
+
+    Adding Layer      : PCB Sheet
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D16
+    D17
+    D18
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : 20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Gerber.GBO
+
+    Adding Layer      : Bottom Overlay
+
+    Adding Layer      : PCB Sheet
+
+
+Used DCodes :
+    D11
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D39
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : 20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Gerber.GD1
+
+    Adding Layer      : PCB Sheet
+
+    Adding Drill Pair : 1-SIG-TOP-2-SIG_BOT
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D14
+    D15
+    D16
+    D17
+    D18
+    D41
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : 20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Gerber.GG1
+
+    Adding Layer      : PCB Sheet
+
+    Adding Drill Pair : 1-SIG-TOP-2-SIG_BOT
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D14
+    D15
+    D16
+    D17
+    D18
+    D41
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : 20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Gerber.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : PCB Sheet
+
+    Adding Layer      : 2-SIG_BOT
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D14
+    D15
+    D16
+    D17
+    D18
+    D23
+    D38
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : 20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Gerber.GTO
+
+    Adding Layer      : Top Overlay
+
+    Adding Layer      : PCB Sheet
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+*************************************************************
+
+*************************************************************
+Generating : BOT ASSY
+      File : 20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Gerber.GM19
+
+    Adding Layer      : BOT ASSY
+
+    Adding Layer      : PCB Sheet
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D16
+    D17
+    D18
+    D40
+*************************************************************
+
+*************************************************************
+Generating : TOP ASSY
+      File : 20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Gerber.GM14
+
+    Adding Layer      : TOP ASSY
+
+    Adding Layer      : PCB Sheet
+
+
+Used DCodes :
+    D10
+    D11
+    D14
+    D15
+    D16
+    D17
+    D18
+    D40
+*************************************************************
+

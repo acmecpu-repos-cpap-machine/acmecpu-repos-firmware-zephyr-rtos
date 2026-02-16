@@ -1,0 +1,10 @@
+Added Room: Name=+3V3_AUDIO_PS
+Added Room: Name=CODEC
+Added Room: Name=MIC1
+Added Room: Name=MIC2
+Added Room: Name=P02
+Added Room: Name=P26
+Added Room: Name=RTC_XTAL
+Added Room: Name=STM32G473QETx
+Added Room: Name=U_DRV10975 3-ph Sensorless BLDC Motor Driver
+Added Room: Name=VLT

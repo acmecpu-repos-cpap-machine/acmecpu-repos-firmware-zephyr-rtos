@@ -1,0 +1,29 @@
+# Copyright (c) 2023 Acme CPU
+# STUSB4500 I2C UCPD sink controller
+
+menuconfig STUSB4500
+	bool "STUSB4500 UCPD sink controller"
+	depends on I2C
+	help
+	  Enable driver for STUSB4500 I2C UCPD sink controller
+
+if STUSB4500
+
+module = STUSB4500
+module-str = stusb4500
+source "subsys/logging/Kconfig.template.log_config"
+
+config STUSB4500_INIT_PRIORITY
+	int "Init Priority"
+	default APPLICATION_INIT_PRIORITY
+	help
+	    Device driver initialization priority.
+	    
+config STUSB4500_INTERRUPT
+	bool "Interrupt enable"
+	default n
+	depends on STUSB4500
+	help
+	  Enable interrupt support in STUSB4500 driver.
+
+endif # STUSB4500

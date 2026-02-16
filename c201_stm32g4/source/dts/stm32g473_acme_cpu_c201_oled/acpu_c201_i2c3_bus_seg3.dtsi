@@ -1,0 +1,35 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+&i2c3_seg3 {
+
+  p121_ps_ext: bmp388@76 {
+    compatible = "bosch,bmp388";
+    reg = <0x76>;
+    label = "PS_EXT_POS";
+    odr = "25";			/* data rate = 25Hz */
+    osr-press = <1>;	/* pressure oversampling = No */
+    osr-temp = <1>;		/* temperature oversampling = No */
+    iir-filter = <0>;	/* iir filter = default val */
+  };
+
+  p122_ps_ext: bmp388@77 {
+    compatible = "bosch,bmp388";
+    reg = <0x77>;
+    label = "PS_EXT_NEG";
+    odr = "25";			/* data rate = 25Hz */
+    osr-press = <1>;	/* pressure oversampling = No */
+    osr-temp = <1>;		/* temperature oversampling = No */
+    iir-filter = <0>;	/* iir filter = default val */
+  };
+
+  p26_rtc: rv3028@52 {
+    compatible = "microcrystal,rv3028";
+    reg = <0x52>;
+    trickle-resistor-ohms = <3000>;
+    label = "LP_RTC";
+  };
+
+};

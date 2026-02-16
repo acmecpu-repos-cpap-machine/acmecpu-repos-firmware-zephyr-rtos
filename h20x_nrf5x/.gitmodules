@@ -1,0 +1,30 @@
+[submodule "h20x_nrf5x/modules/pcal9539a"]
+	path = h20x_nrf5x/modules/pcal9539a
+	url = https://github.com/acmecpu/pcal9539a.git
+[submodule "h20x_nrf5x/modules/bq25611d"]
+	path = h20x_nrf5x/modules/bq25611d
+	url = https://github.com/acmecpu/bq25611d.git
+[submodule "h20x_nrf5x/modules/buzzer_generic"]
+	path = h20x_nrf5x/modules/buzzer_generic
+	url = https://github.com/acmecpu/buzzer_generic.git
+[submodule "h20x_nrf5x/dts/bindings"]
+	path = h20x_nrf5x/dts/bindings
+	url = https://github.com/acmecpu/bindings.git
+[submodule "h20x_nrf5x/modules/cmx655d"]
+	path = h20x_nrf5x/modules/cmx655d
+	url = https://github.com/acmecpu/cmx655d.git
+[submodule "h20x_nrf5x/modules/max30001"]
+	path = h20x_nrf5x/modules/max30001
+	url = https://github.com/acmecpu/max30001.git
+[submodule "h20x_nrf5x/modules/ltc294x"]
+	path = h20x_nrf5x/modules/ltc294x
+	url = https://github.com/acmecpu/ltc294x.git
+[submodule "h20x_nrf5x/modules/shmax30101"]
+	path = h20x_nrf5x/modules/shmax30101
+	url = https://github.com/acmecpu/shmax30101.git
+[submodule "h20x_nrf5x/src/lib/lib_push_switch"]
+	path = h20x_nrf5x/src/lib/lib_push_switch
+	url = https://github.com/acmecpu/lib_push_switch.git
+[submodule "h20x_nrf5x/src/lib/lib_audio"]
+	path = h20x_nrf5x/src/lib/lib_audio
+	url = https://github.com/acmecpu/lib_audio.git

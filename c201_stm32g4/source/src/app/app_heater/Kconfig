@@ -1,0 +1,13 @@
+# Copyright (c) 2021 Acme CPU
+# Heater configuration options
+
+config APP_HAS_HEATER
+	bool "App Heater Configurations"
+	default n
+	help
+	  Enable or disable the Heater
+
+#if APP_HAS_HEATER
+rsource "Kconfig.heater24W"
+rsource "Kconfig.heater12W"
+#endif

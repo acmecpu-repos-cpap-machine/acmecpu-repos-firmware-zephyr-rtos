@@ -1,0 +1,56 @@
+# Copyright (c) 2022 Acme CPU
+
+description: |
+  Binding for LTC2941, LTC2942, LTC2943 and LTC2944 battery gauges
+  All chips measure battery capacity.
+  The LTC2942 is pin compatible with the LTC2941, it adds voltage and
+  temperature monitoring, and is runtime detected. LTC2943 and LTC2944
+  is software compatible, uses a slightly different conversion formula
+  for the charge counter and adds voltage, current and temperature monitoring.
+
+  Required properties:
+  - compatible: Should contain "lltc,ltc2941", "lltc,ltc2942", "lltc,ltc2943"
+      or "lltc,ltc2944" which also indicates the type of I2C chip attached.
+  - reg: The 7-bit I2C address.
+  - lltc,resistor-sense: The sense resistor value in milli-ohms. Can be a 32-bit
+    negative value when the battery has been connected to the wrong end of the
+    resistor.
+  - lltc,prescaler-exponent: The prescaler exponent as explained in the datasheet.
+      This determines the range and accuracy of the gauge. The value is programmed
+      into the chip only if it differs from the current setting. The setting is
+      lost when the battery is disconnected.
+
+  Example:
+    fuelgauge: ltc294x@64 {
+      compatible = "lltc,ltc294x";
+      reg = <0x64>;
+      resistor-sense = <10>;
+      prescaler-exponent = <5>; /* 2^(2*5) = 1024 */
+      label = "FUEL_GAUGE";
+    };
+
+compatible: "lltc,ltc294x"
+
+include: i2c-device.yaml
+
+properties:
+
+  resistor-sense:
+    required: true
+    type: int
+    description: The sense resistor value in milli-ohms. 
+     			 Can be a 32-bit negative value when the battery has been connected to the wrong end of the resistor.
+  
+  prescaler-exponent:
+    required: false
+    type: int
+    description: The prescaler exponent as explained in the datasheet.
+      This determines the range and accuracy of the gauge. The value is programmed
+      into the chip only if it differs from the current setting. The setting is
+      lost when the battery is disconnected. 
+      
+  device-id:
+    required: true
+    type: int
+    description: Device ID of the LTC294x chip. This is used to have a common driver for all 4 chips in this series
+                 valid values are LTC2941 = 1, LTC2942 = 2, LTC2943 = 3, LTC2944 = 4

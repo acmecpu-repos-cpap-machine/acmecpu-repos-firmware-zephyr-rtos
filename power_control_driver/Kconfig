@@ -1,0 +1,101 @@
+# Copyright (c) 2021 Acme CPU
+
+menuconfig PWR_CTRL_DRV
+	bool "Power Control Driver"
+	help
+	  Enable the Power Control Driver. This will enable / disable
+	  power supplies on the board before the other application drivers
+	  are loaded.
+	  
+if PWR_CTRL_DRV
+
+module = PWR_CTRL_DRV
+module-str = pwr_ctrl_drv
+source "subsys/logging/Kconfig.template.log_config"
+
+config PWR_CTRL_DRV_INIT_PRIORITY
+	int "PWR_CTRL_DRV initialization priority"
+	default 89
+	help
+	  PWR_CTRL_DRV initialization priority
+
+config PWR_CTRL_DRV_SUPPLY_1
+	bool "Power supply 1"
+	default true
+	help
+	  Is Power supply 1 available
+
+if PWR_CTRL_DRV_SUPPLY_1
+	config PWR_CTRL_DRV_CONTROL_SUPPLY_1
+		int "Power supply 1 (Set power supply pin to 1 or 0)"
+		range 0 1
+		default 1
+		help
+		  Set power supply pin to 1 or 0
+endif # PWR_CTRL_DRV_SUPPLY_1
+
+
+config PWR_CTRL_DRV_SUPPLY_2
+	bool "Power supply 2"
+	default false
+	help
+	  Is Power supply 2 available
+
+if PWR_CTRL_DRV_SUPPLY_2
+	config PWR_CTRL_DRV_CONTROL_SUPPLY_2
+		int "Power supply 2 (Set power supply pin to 1 or 0)"
+		range 0 1
+		default 1
+		help
+		  Set power supply pin to 1 or 0
+endif # PWR_CTRL_DRV_SUPPLY_2
+
+
+config PWR_CTRL_DRV_SUPPLY_3
+	bool "Power supply 3"
+	default false
+	help
+	  Is Power supply 3 available
+
+if PWR_CTRL_DRV_SUPPLY_3
+	config PWR_CTRL_DRV_CONTROL_SUPPLY_3
+		int "Power supply 3 (Set power supply pin to 1 or 0)"
+		range 0 1
+		default 1
+		help
+		  Set power supply pin to 1 or 0
+endif # PWR_CTRL_DRV_SUPPLY_3
+
+
+config PWR_CTRL_DRV_SUPPLY_4
+	bool "Power supply 4"
+	default false
+	help
+	  Is Power supply 4 available
+
+if PWR_CTRL_DRV_SUPPLY_4
+	config PWR_CTRL_DRV_CONTROL_SUPPLY_4
+		int "Power supply 4 (Set power supply pin to 1 or 0)"
+		range 0 1
+		default 1
+		help
+		  Set power supply pin to 1 or 0
+endif # PWR_CTRL_DRV_SUPPLY_4
+
+
+config PWR_CTRL_DRV_SUPPLY_5
+	bool "Power supply 5"
+	default false
+	help
+	  Is Power supply 5 available
+
+if PWR_CTRL_DRV_SUPPLY_5
+	config PWR_CTRL_DRV_CONTROL_SUPPLY_5
+		int "Power supply 5 (Set power supply pin to 1 or 0)"
+		range 0 1
+		default 1
+		help
+		  Set power supply pin to 1 or 0
+endif # PWR_CTRL_DRV_SUPPLY_5
+
+endif # PWR_CTRL_DRV

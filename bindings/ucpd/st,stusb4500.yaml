@@ -1,0 +1,25 @@
+# Copyright (c) 2023, Acme CPU
+
+description: STUSB4500 standalone USB C PD sink controller with I2C interface
+
+include: i2c-device.yaml
+
+compatible: "st,stusb4500"
+
+properties:
+
+    reset-gpios:
+        required: false
+        type: phandle-array
+        description: Device reset pin
+        
+    alert-gpios:
+        required: false
+        type: phandle-array
+        description: Device alert pin
+        
+    abside-gpios:
+        required: false
+        type: phandle-array
+        description: Device ABSIDE pin
+        

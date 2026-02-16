@@ -1,0 +1,38 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+/ {
+	zephyr,user {
+		dac = <&dac1>;
+		dac-channel-id = <1>;
+		dac-resolution = <12>;
+		
+		/*io-channels = <&adc1 6>;*/
+	};
+};
+
+&c201 { 
+	tps55340 {
+		compatible = "ti,tps55340";
+		label = "BOOST CONVERTER";
+		
+		enable-gpios = <&io_1 4 GPIO_PUSH_PULL>;
+		
+		/*io-channels = <&dac1 1>,
+					  <&adc1 6>;
+		io-channel-names = "voltage-ctrl",
+						   "voltage-feedback";*/
+
+		vref = <3300>;
+		vfb = <1229>;
+		v-i-conv-shunt = <2700>;
+		vdiv-bot-resistor = <10000>;
+		vdiv-top-resistor = <44200>;
+		vdiv-aux-resistor = <11000>;
+		
+		adc-channel = <6>;
+		dac-channel = <1>;
+	};
+};

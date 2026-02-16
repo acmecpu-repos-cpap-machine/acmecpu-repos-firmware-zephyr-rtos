@@ -1,0 +1,21 @@
+# Copyright (c) 2021 Acme CPU
+
+description: TPS61169 LED driver
+
+include: "base.yaml"
+
+compatible: "tps61169"
+
+properties:
+  label:
+    required: false
+    type: string
+    description: Human readable string describing the device (used as device_get_binding() argument)
+  pwms:
+    type: phandle-array
+    required: false
+    description: TIM PWM control
+  pwm-names:
+    type: string-array
+    required: false
+    description: Names for the PWM signal

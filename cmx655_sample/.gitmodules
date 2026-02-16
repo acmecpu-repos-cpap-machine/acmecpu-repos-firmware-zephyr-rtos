@@ -1,0 +1,9 @@
+[submodule "dts/bindings"]
+	path = dts/bindings
+	url = https://github.com/acmecpu/bindings.git
+[submodule "modules/cmx655d"]
+	path = modules/cmx655d
+	url = https://github.com/acmecpu/cmx655d.git
+[submodule "src/lib/lib_audio"]
+	path = src/lib/lib_audio
+	url = https://github.com/acmecpu/lib_audio.git

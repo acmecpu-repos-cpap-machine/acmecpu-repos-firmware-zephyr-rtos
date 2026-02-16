@@ -1,0 +1,2 @@
+*.DXF filter=lfs diff=lfs merge=lfs -text
+*.dxf filter=lfs diff=lfs merge=lfs -text

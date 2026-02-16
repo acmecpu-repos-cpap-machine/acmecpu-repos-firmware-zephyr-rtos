@@ -1,0 +1,95 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+&i2c3_seg0 {
+
+  bma253@18 {
+    compatible = "bosch,bma253";
+    reg = <0x18>;
+    label = "TILT_SENSOR";
+    int1-gpios = <&io_1 5 GPIO_ACTIVE_LOW>;
+  };
+  
+  /* temporary, for testing */
+  /*
+  p122_ps_test: bmp388@77 {	
+    compatible = "bosch,bmp388";
+    reg = <0x77>;
+    label = "PRESS_TEST";
+    odr = "25";			
+    osr-press = <1>;	
+    osr-temp = <1>;		
+    iir-filter = <0>;	
+  };*/
+
+  drv10975@52 {
+    compatible = "ti,drv10975";
+    reg = <0x52>;
+    label = "BLDC_MOTOR_DRIVER";
+    direction-gpios = <&io_1 8 GPIO_ACTIVE_HIGH>;
+    pwms = <&tim_2_pwm 2 10000000 0>/*,
+           <&tim_2_ic 1 10000000 0>*/;
+    pwm-names = "SPEED"/*,"TACHO"*/;
+  };
+
+
+  led_drv: pca9632@62 {
+    compatible = "nxp,pca9632";
+    reg = <0x62>;
+    label = "UI_LEDS";
+    #pwm-cells = <1>;
+  };
+
+
+  bq25611d@6b {
+    compatible = "ti,bq25611d";
+    reg = <0x6b>;
+    label = "BATT_CHRG";
+    interrupt-gpios = <&io_3 5 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    enable-gpios = <&io_1 7 GPIO_ACTIVE_HIGH>;
+    /*pwms = <&tim_2_ic 3 10000000 0>;
+    pwm-names = "bc-status";*/
+	io-channels = <&adc1 8>,
+				  <&adc1 7>;
+	io-channel-names = "batt-voltage",
+					   "vbus-voltage";
+	/*batsense-enable-gpios = <&io_1 9 GPIO_ACTIVE_HIGH>;*/
+  };
+
+
+  io_1: pcal9539@74 {
+    compatible = "nxp,pcal9539a";
+    reg = <0x74>;
+    gpio-controller;
+    has-pud;
+    /*interrupt-gpios = <&i2c_mux 0 (GPIO_INPUT | GPIO_INT_EDGE_FALLING)>;*/
+    #gpio-cells = <2>;
+    ngpios = <16>;
+    label = "IO_1";
+  };
+
+  io_2: pcal9539@75 {
+    compatible = "nxp,pcal9539a";
+    reg = <0x75>;
+    gpio-controller;
+    has-pud;
+    /*interrupt-gpios = <&io_1 6 (GPIO_INPUT | GPIO_INT_EDGE_FALLING)>;*/
+    #gpio-cells = <2>;
+    ngpios = <16>;
+    label = "IO_2";
+  };
+
+  io_3: pcal9539@76 {
+    compatible = "nxp,pcal9539a";
+    reg = <0x76>;
+    gpio-controller;
+    has-pud;
+    interrupt-gpios = <&gpioa 0 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    #gpio-cells = <2>;
+    ngpios = <16>;
+    label = "IO_3";
+  };
+
+};

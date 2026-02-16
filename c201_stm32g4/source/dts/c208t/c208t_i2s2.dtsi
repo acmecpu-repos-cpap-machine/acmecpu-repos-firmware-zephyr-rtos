@@ -1,0 +1,34 @@
+/*
+ * Copyright (c) 2024 Acme CPU
+ *
+ * The C208T I2S2 is connected to CMX655d audio codec
+ *
+ */
+ 
+&pinctrl {
+	/omit-if-no-ref/ i2s2_mck_pc6: i2s2_mck_pc6 {
+		pinmux = <STM32_PINMUX('C', 6, AF5)>;
+		slew-rate = "very-high-speed";
+	};
+
+	/omit-if-no-ref/ i2s2_sdi_pi2: i2s2_sdi_pi2 {
+		pinmux = <STM32_PINMUX('I', 2, AF5)>;
+		slew-rate = "very-high-speed";
+	};
+ 
+	/omit-if-no-ref/ i2s2_sdo_pi3: i2s2_sdo_pi3 {
+		pinmux = <STM32_PINMUX('I', 3, AF5)>;
+		slew-rate = "very-high-speed";
+	}; 
+};
+
+&i2s2 {
+	status = "okay";
+	pinctrl-0 = <&i2s2_ck_pi1 &i2s2_mck_pc6 &i2s2_sdi_pi2 &i2s2_sdo_pi3 &i2s2_ws_pb12>;
+	pinctrl-names = "default";
+	
+	dmas = <&dmamux1 4 40 0x20440
+			&dmamux1 5 39 0x20480>;
+	dma-names = "tx", "rx";
+};
+ 

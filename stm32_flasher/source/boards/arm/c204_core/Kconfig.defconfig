@@ -1,0 +1,9 @@
+# C204 CORE board configuration
+# Copyright (c) 2022 Acme CPU
+
+if BOARD_C204_CORE
+
+config BOARD
+	default "c204_core"
+
+endif # BOARD_C204_CORE

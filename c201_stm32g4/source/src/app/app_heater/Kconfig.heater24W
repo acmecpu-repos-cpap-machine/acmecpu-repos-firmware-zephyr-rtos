@@ -1,0 +1,22 @@
+# Copyright (c) 2024 Acme CPU
+# Heater 24W configrations
+
+config HEATER_24W_HUMIDITY_MAX
+	int "Maximum humidity in percentage for heater 24W"
+	range 40 80
+	default 80
+	help
+		The Maximum humidity in percentage for heater 24W which can function
+		
+config HEATER_24W_HUMIDITY_MIN
+	int "Minimum humidity in percentage for heater 24W"
+	range 40 80
+	default 40
+	help
+		The Minimum humidity in percentage for heater 24W which can function	
+
+config RETRY_COUNTER_24W
+	int "Counter value set for retrying for heater 24W"
+	default 15
+	help
+		The number of retrials can happen to fetch the data from sensor	

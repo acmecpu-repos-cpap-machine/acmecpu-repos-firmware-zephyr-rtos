@@ -1,0 +1,94 @@
+# Copyright (c) 2021 Acme CPU
+# Application Stepper Motor configuration options
+
+menuconfig APP_STEPPER
+	bool "Application Stepper Motor Configurations"
+	default y
+	help
+	  Application Stepper Motor Configurations 
+
+if APP_STEPPER
+
+config STEPPER_RESET_POSITION
+	int "Default Reset position in degrees"
+	default 0
+	range 0 360
+	help
+	  Reset position of the stepper motor in degrees
+
+config STEPPER_STEP_SPEED_HZ
+	int "Default step speed in Hz"
+	default 500
+	range 0 5000000
+	help
+	  Default step speed in Hz
+	  
+config STEPPER_NUM_ROTATION_TO_RESET
+	int "Number of rotations to Reset position"
+	default 10
+	range 0 10000
+	help
+	  Number of rotations required to bring the stepper to reset position
+
+choice
+	prompt "Direction of rotation to go to reset position"
+	config DIR_ANTICLOCKWISE
+		bool "Anti clockwise"
+
+	config DIR_CLOCKWISE
+		bool "Clockwise"
+endchoice
+
+config STEPPER_RESET_DIRECTION
+	int 
+	default 1 if DIR_ANTICLOCKWISE
+	default 0 if DIR_CLOCKWISE
+	  
+choice
+	prompt "Select default step mode"
+
+	config STEP_MODE_FULL
+		bool "Full step"
+
+	config STEP_MODE_HALF
+		bool "Half step"
+
+	config STEP_MODE_1_4TH
+		bool "1/4th step"
+
+	config STEP_MODE_1_8TH
+		bool "1/8th step"
+
+	config STEP_MODE_1_16TH
+		bool "1/16th step"
+
+	config STEP_MODE_1_32ND
+		bool "1/32nd step"
+
+	config STEP_MODE_1_64TH
+		bool "1/64th step"
+
+	config STEP_MODE_1_128TH
+		bool "1/128th step"
+
+	config STEP_MODE_1_256TH
+		bool "1/256th step"
+endchoice
+
+config STEPPER_STEP_MODE
+	int
+	#default 2
+	default 1 if STEP_MODE_FULL
+	default 2 if STEP_MODE_HALF
+	default 4 if STEP_MODE_1_4TH
+	default 8 if STEP_MODE_1_8TH
+	default 16 if STEP_MODE_1_16TH
+	default 32 if STEP_MODE_1_32ND
+	default 64 if STEP_MODE_1_64TH
+	default 128 if STEP_MODE_1_128TH
+	default 256 if STEP_MODE_1_256TH
+
+# Select the motor to be used in the application	  
+rsource "Kconfig.part"
+
+endif # APP_STEPPER

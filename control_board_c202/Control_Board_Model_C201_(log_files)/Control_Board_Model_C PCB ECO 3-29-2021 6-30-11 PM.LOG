@@ -1,0 +1,62 @@
+Removed Pin From Net: NetName=TS Pin=D4-1
+Removed Pin From Net: NetName=GND Pin=D4-2
+Removed Pin From Net: NetName=TS Pin=P18-1
+Removed Pin From Net: NetName=GND Pin=P18-2
+Removed Pin From Net: NetName=VBAT Pin=P18-3
+Removed Pin From Net: NetName=NetD2_1 Pin=P18-4
+Removed Pin From Net: NetName=GND Pin=P18-5
+Change Component DesignItemId : Designator=P18 Old DesignItemId=CONN HEADER SMD R/A 5POS 1.5MM New DesignItemId=CONN HEADER SMD R/A 3POS 1.5MM
+Change Component Footprint: Designator=P18 Old Footprint=CONN_JST_S5B-ZR-SM4A-TF(LF)(SN) New Footprint=CONN_JST_S3B-ZR-SM4A-TF(LF)(SN)
+Change Component Description : Designator=P18 Old Description=Connector Header Surface Mount, Right Angle 5 position 0.059" (1.50mm) New Description=Connector Header Surface Mount, Right Angle 3 position 0.059" (1.50mm)
+Change component parameters: Designator = "P18"; Footprint = "CONN_JST_S3B-ZR-SM4A-TF(LF)(SN)"; UniqueID = "\BACKIVUA\PQUOLYGI"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Color"; Value = "Natural"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.jst-mfg.com/product/pdf/eng/eZH.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.jst-mfg.com/product/pdf/eng/eZH.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://uk.rs-online.com/webdocs/13ed/0900766b813ed0dc.pdf?src-supplier=RSComponents"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://uk.rs-online.com/webdocs/13ed/0900766b813ed0dc.pdf?src-supplier=RSComponents"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "https://www.verical.com/server-webapp/html/getDatasheet?partID=641056&src-supplier=Verical"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "https://www.verical.com/server-webapp/html/getDatasheet?partID=641056&src-supplier=Verical"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Connector Type"; Value = "Male Pin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Material"; Value = "Brass,Tin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Plating"; Value = "Tin,Copper"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Resistance"; Value = "30mR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Type"; Value = "Male Pin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current Rating"; Value = "1A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Depth"; Value = "6.5mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Fastening Type"; Value = "Detent"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Gender"; Value = "Male"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "7.2mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Housing Color"; Value = "Beige"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Housing Material"; Value = "Polyamide"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Length"; Value = "7.5mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "JST"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "S3B-ZR-SM4A-TF(LF)(SN)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Current Rating"; Value = "1A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Voltage Rating (AC)"; Value = "50V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-25°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Contacts"; Value = "3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Positions"; Value = "3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Rows"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Orientation"; Value = "Right Angle"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_1"; Value = "BATT+"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_2"; Value = "VSENS"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_3"; Value = "BATT-"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_MP1"; Value = "MP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_MP2"; Value = "MP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pitch"; Value = "1.5mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=0.6, 10=0.561, 100=0.4304, 500=0.3743 (USD)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Series"; Value = "ZH"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "0"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "455-1694-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "50V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Width"; Value = "3.5mm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VBAT Pin=P18-1
+Added Pin To Net: NetName=NetD2_1 Pin=P18-2
+Added Pin To Net: NetName=GND Pin=P18-3

@@ -1,0 +1,10 @@
+# Copyright (c) 2021 Acme CPU
+# Stepper Motor B102 configuration options
+
+config FULL_STEP_ANGLE
+	int "Full step angle of the motor in degrees"
+	range 1 360
+	default 36
+	help
+		Full step angle of the motor in degrees
+

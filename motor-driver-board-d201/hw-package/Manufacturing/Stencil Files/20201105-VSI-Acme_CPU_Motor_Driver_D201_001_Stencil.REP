@@ -1,0 +1,38 @@
+*************************************************************
+FileName = 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Stencil.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Paste
+      File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Stencil.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : PCB Sheet
+
+    Adding Layer      : 1-SIG-TOP
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+*************************************************************
+

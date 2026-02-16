@@ -1,0 +1,8 @@
+# Copyright (c) 2021 Acme CPU
+# Configurations for PID control library 
+
+menuconfig LIB_PID_CONTROL
+	bool "PID control library"
+	default y
+	help
+	  Enable or disable the PID control library to be used in the application 

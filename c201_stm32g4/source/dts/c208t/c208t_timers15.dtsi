@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) 2024 Acme CPU
+ * - UV LED 3 PWM
+ * - UV LED 2 PWM
+ */
+
+&timers15 {
+	status = "okay";
+   	st,prescaler = <239>;	/* The counter clock frequency (CK_CNT) is equal to fCK_PSC / (PSC[15:0] + 1). */
+	
+	uvc3_pwm: pwm {
+		status = "okay";
+    	pinctrl-0 = <&tim15_ch1_pe5>;
+    	pinctrl-names = "default";
+	};
+
+	uvc2_pwm: pwm {
+		status = "okay";
+    	pinctrl-0 = <&tim15_ch2_pe6>;
+    	pinctrl-names = "default";
+	};
+};

@@ -1,0 +1,36 @@
+# Copyright (c) 2022 Acme CPU
+# MAX30001 audio codec configurations
+
+menuconfig MAX30001
+	bool "Maxim MAX30001 ECG & BioZ AFE"
+	depends on SPI
+	help
+	  Enable driver for Maxim MAX30001 ECG & BioZ AFE
+
+if MAX30001
+
+module = MAX30001
+module-str = max30001
+source "subsys/logging/Kconfig.template.log_config"
+
+config MAX30001_INIT_PRIORITY
+	int "MAX30001 Init Priority"
+	default APPLICATION_INIT_PRIORITY
+	help
+	    Device driver initialization priority.
+
+config MAX30001_INTERRUPT_B
+	bool "Interrupt B enable"
+	default n
+	depends on MAX30001
+	help
+	  Enable interrupt B support in MAX30001 driver.
+
+config MAX30001_INTERRUPT_2B
+	bool "Interrupt 2B enable"
+	default n
+	depends on MAX30001
+	help
+	  Enable interrupt 2B support in MAX30001 driver.
+
+endif # MAX30001

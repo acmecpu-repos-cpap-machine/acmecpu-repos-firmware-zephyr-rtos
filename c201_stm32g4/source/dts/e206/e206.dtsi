@@ -1,0 +1,46 @@
+/*
+ * Copyright (c) 2023 Acme CPU
+ *
+ */
+
+#include "e206_adc1.dtsi"
+#include "e206_adc3.dtsi"
+#include "e206_dac1.dtsi"
+#include "e206_dma.dtsi"
+#include "e206_i2c1_bus.dtsi"
+#include "e206_i2c2_bus.dtsi"
+#include "e206_i2c3_bus.dtsi"
+#include "e206_i2c4_bus.dtsi"
+#include "e206_quadspi.dtsi"
+/*#include "e206_spi1.dtsi"*/
+#include "e206_spi4.dtsi"
+#include "e206_timers1.dtsi"
+#include "e206_timers2.dtsi"
+#include "e206_timers3.dtsi"
+#include "e206_timers5.dtsi"
+#include "e206_timers15.dtsi"
+#include "e206_usart1.dtsi"
+#include "e206_usart2.dtsi"
+#include "e206_usart3.dtsi"
+#include "e206_usart6.dtsi"
+#include "e206_usb.dtsi"
+#include "e206_gpios.dtsi"
+#include "e206_i2s2.dtsi"		
+
+/*
+ *	In this section we collect compound-type devices which may rely on several
+ *	different nodes in the devicetree
+ */
+
+#include "e206_stepper.dtsi"
+#include "e206_user_interface.dtsi"
+#include "e206_boost_converter.dtsi"
+#include "e206_motor_a2.dtsi"
+#include "e206_power_control.dtsi"
+#include "e206_thermistor.dtsi"
+/*
+ *	Virtual devices which benefit from the devicetree
+ */
+
+/*#include "c205_stm32_flash_ob.dtsi"*/
+

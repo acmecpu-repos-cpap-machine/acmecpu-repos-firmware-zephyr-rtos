@@ -1,0 +1,396 @@
+Removed Member From Class: ClassName=P110 Member=C32
+Removed Member From Class: ClassName=SENS Member=C32
+Removed Member From Class: ClassName=SENS Member=C33
+Removed Member From Class: ClassName=+4V2_PS Member=C41
+Removed Member From Class: ClassName=P110 Member=C41
+Removed Member From Class: ClassName=+4V2_PS Member=C46
+Removed Member From Class: ClassName=+3V3_PS Member=C51
+Removed Member From Class: ClassName=USB_MUX Member=C51
+Removed Member From Class: ClassName=+1V8_VLT2 Member=C52
+Removed Member From Class: ClassName=+3V3_PS Member=C52
+Removed Member From Class: ClassName=+1V8_VLT2 Member=C56
+Removed Member From Class: ClassName=P102 Member=C56
+Removed Member From Class: ClassName=UART_MUX Member=C56
+Removed Member From Class: ClassName=+1V8_VLT1 Member=C60
+Removed Member From Class: ClassName=P102 Member=C60
+Removed Member From Class: ClassName=U_CP2102N_USB-to-UART_Bridge Member=C60
+Removed Member From Class: ClassName=+1V8_VLT1 Member=C61
+Removed Member From Class: ClassName=U_CP2102N_USB-to-UART_Bridge Member=C61
+Removed Member From Class: ClassName=TCPP Member=C65
+Removed Member From Class: ClassName=U_CP2102N_USB-to-UART_Bridge Member=C65
+Removed Member From Class: ClassName=DISP_PS Member=C69
+Removed Member From Class: ClassName=DISP_PS Member=C70
+Removed Member From Class: ClassName=TCPP Member=C70
+Removed Member From Class: ClassName=DISP_PS Member=C74
+Removed Member From Class: ClassName=TCPC Member=C75
+Removed Member From Class: ClassName=TCPP Member=C75
+Removed Member From Class: ClassName=STM32G473CETx Member=C78
+Removed Member From Class: ClassName=STM32G473CETx Member=C79
+Removed Member From Class: ClassName=P103 Member=C80
+Removed Member From Class: ClassName=STM32G473CETx Member=C80
+Removed Member From Class: ClassName=U_ESP32-WROOM32D_Module Member=C80
+Removed Member From Class: ClassName=P105 Member=C81
+Removed Member From Class: ClassName=AUTH Member=C82
+Removed Member From Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=C82
+Removed Member From Class: ClassName=U_ESP32-WROOM32D_Module Member=C84
+Removed Member From Class: ClassName=+1V8_PS Member=C86
+Removed Member From Class: ClassName=STM32G473QETx Member=C86
+Removed Member From Class: ClassName=CODEC Member=C94
+Removed Member From Class: ClassName=CODEC Member=C95
+Removed Member From Class: ClassName=SENS Member=C99
+Removed Member From Class: ClassName=U_ESP32-WROOM32D_Module Member=C99
+Removed Member From Class: ClassName=STM32G473QETx Member=C113
+Removed Member From Class: ClassName=STM32G473QETx Member=C114
+Removed Member From Class: ClassName=CODEC Member=C116
+Removed Member From Class: ClassName=P103 Member=C116
+Removed Member From Class: ClassName=STM32G473QETx Member=C116
+Removed Member From Class: ClassName=CODEC Member=C117
+Removed Member From Class: ClassName=P103 Member=C117
+Removed Member From Class: ClassName=STM32G473QETx Member=C117
+Removed Member From Class: ClassName=SENS Member=C126
+Removed Member From Class: ClassName=P110 Member=C127
+Removed Member From Class: ClassName=SENS Member=C127
+Removed Member From Class: ClassName=P26 Member=C134
+Removed Member From Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=C134
+Removed Member From Class: ClassName=P26 Member=C138
+Removed Member From Class: ClassName=VLT Member=C138
+Removed Member From Class: ClassName=P103 Member=C142
+Removed Member From Class: ClassName=P128 Member=C142
+Removed Member From Class: ClassName=P103 Member=C143
+Removed Member From Class: ClassName=CODEC Member=C147
+Removed Member From Class: ClassName=P103 Member=C147
+Removed Member From Class: ClassName=P109 Member=D6
+Removed Member From Class: ClassName=DISP_PS Member=D9
+Removed Member From Class: ClassName=TCPC Member=D9
+Removed Member From Class: ClassName=TCPC Member=D14
+Removed Member From Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=D19
+Removed Member From Class: ClassName=MIC1 Member=FB5
+Removed Member From Class: ClassName=P103 Member=FB8
+Removed Member From Class: ClassName=P103 Member=L5
+Removed Member From Class: ClassName=STM32G473CETx Member=NT1
+Removed Member From Class: ClassName=STM32G473CETx Member=NT2
+Removed Member From Class: ClassName=U_ESP32-WROOM32D_Module Member=Q8
+Removed Member From Class: ClassName=P103 Member=Q10
+Removed Member From Class: ClassName=STM32G473CETx Member=Q10
+Removed Member From Class: ClassName=TCPC Member=Q10
+Removed Member From Class: ClassName=TCPP Member=Q10
+Removed Member From Class: ClassName=I2C_SW Member=R10
+Removed Member From Class: ClassName=I2C_SW Member=R17
+Removed Member From Class: ClassName=I2C_SW Member=R18
+Removed Member From Class: ClassName=STM32G473CETx Member=R18
+Removed Member From Class: ClassName=I2C_SW Member=R25
+Removed Member From Class: ClassName=STM32G473CETx Member=R25
+Removed Member From Class: ClassName=STM32G473CETx Member=R27
+Removed Member From Class: ClassName=P16_P25 Member=R35
+Removed Member From Class: ClassName=UART_MUX Member=R43
+Removed Member From Class: ClassName=SENS Member=R67
+Removed Member From Class: ClassName=DISP_PS Member=R98
+Removed Member From Class: ClassName=TCPC Member=R98
+Removed Member From Class: ClassName=U_CP2102N_USB-to-UART_Bridge Member=R98
+Removed Member From Class: ClassName=DISP_PS Member=R99
+Removed Member From Class: ClassName=TCPC Member=R100
+Removed Member From Class: ClassName=TCPP Member=R100
+Removed Member From Class: ClassName=TCPC Member=R105
+Removed Member From Class: ClassName=TCPP Member=R105
+Removed Member From Class: ClassName=TCPC Member=R107
+Removed Member From Class: ClassName=USB_MUX Member=R108
+Removed Member From Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=R111
+Removed Member From Class: ClassName=P103 Member=R112
+Removed Member From Class: ClassName=STM32G473CETx Member=R112
+Removed Member From Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=R112
+Removed Member From Class: ClassName=USB_MUX Member=R112
+Removed Member From Class: ClassName=P103 Member=R118
+Removed Member From Class: ClassName=STM32G473CETx Member=R118
+Removed Member From Class: ClassName=P26 Member=R119
+Removed Member From Class: ClassName=P26 Member=R120
+Removed Member From Class: ClassName=STM32G473QETx Member=R120
+Removed Member From Class: ClassName=STM32G473CETx Member=R125
+Removed Member From Class: ClassName=P26 Member=R126
+Removed Member From Class: ClassName=U_TPS22810 2 Member=R126
+Removed Member From Class: ClassName=FLASH Member=R132
+Removed Member From Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=R132
+Removed Member From Class: ClassName=U_TPS22810 2 Member=R135
+Removed Member From Class: ClassName=+3V3_PS Member=R136
+Removed Member From Class: ClassName=+3V3_PS Member=R137
+Removed Member From Class: ClassName=+3V3_PS Member=R138
+Removed Member From Class: ClassName=+3V3_PS Member=R146
+Removed Member From Class: ClassName=+3V3_PS Member=R147
+Removed Member From Class: ClassName=P109 Member=TP22
+Removed Member From Class: ClassName=P109 Member=TP23
+Removed Member From Class: ClassName=P26 Member=TP24
+Removed Member From Class: ClassName=P109 Member=U11
+Removed Member From Class: ClassName=+4V2_PS Member=U17
+Removed Member From Class: ClassName=SENS Member=U17
+Removed Member From Class: ClassName=+3V3_PS Member=U18
+Removed Member From Class: ClassName=P110 Member=U18
+Removed Member From Class: ClassName=SENS Member=U18
+Removed Member From Class: ClassName=+1V8_VLT2 Member=U23
+Removed Member From Class: ClassName=P102 Member=U23
+Removed Member From Class: ClassName=UART_MUX Member=U23
+Removed Member From Class: ClassName=+1V8_VLT1 Member=U26
+Removed Member From Class: ClassName=TCPP Member=U26
+Removed Member From Class: ClassName=USB_MUX Member=U26
+Removed Member From Class: ClassName=+1V8_PS Member=U30
+Removed Member From Class: ClassName=DISP_PS Member=U43
+Removed Member From Class: ClassName=U_CP2102N_USB-to-UART_Bridge Member=U43
+Added Component: Designator=U38(QFN50P400X400X100_HS-25N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case/Package"; Value = "VQFN"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "https://www.cmlmicro.com/wp-content/uploads/2018/10/CMX655_ds.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.cmlmicro.com/wp-content/uploads/2018/10/CMX655_ds.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "CML Microcircuits"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "CMX655DQ6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Cut Tape"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1.41, 10=1.41, 50=1.36, 100=1.22, 1000=1.07, 10000=1.01 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "164"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "226-CMX655DQ6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 2"; Value = "2032-1036-1-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetU38_1 Pin=U38-1
+Added Pin To Net: NetName=VDD_PA Pin=U38-2
+Added Pin To Net: NetName=NetC122_2 Pin=U38-4
+Added Pin To Net: NetName=NetC121_2 Pin=U38-5
+Added Pin To Net: NetName=+3V3 Pin=U38-7
+Added Pin To Net: NetName=+3V3 Pin=U38-8
+Added Pin To Net: NetName=\CMX655_RST Pin=U38-9
+Added Pin To Net: NetName=MICCLK Pin=U38-10
+Added Pin To Net: NetName=MICDO Pin=U38-11
+Added Pin To Net: NetName=PE2 Pin=U38-12
+Added Pin To Net: NetName=PE4 Pin=U38-13
+Added Pin To Net: NetName=PE3 Pin=U38-14
+Added Pin To Net: NetName=PE6 Pin=U38-15
+Added Pin To Net: NetName=PE5 Pin=U38-16
+Added Pin To Net: NetName=NetNT5_2 Pin=U38-17
+Added Pin To Net: NetName=\CMX655_IRQ Pin=U38-18
+Added Pin To Net: NetName=PC8 Pin=U38-19
+Added Pin To Net: NetName=PC9 Pin=U38-20
+Added Pin To Net: NetName=NetNT5_2 Pin=U38-21
+Added Pin To Net: NetName=NetNT5_2 Pin=U38-22
+Added Pin To Net: NetName=NetU38_23 Pin=U38-23
+Added Pin To Net: NetName=GND Pin=U38-24
+Added Pin To Net: NetName=GND Pin=U38-25
+Change Class Name : Old Net Name=P103 New Net Name=STM32G473CETx
+Change Class Name : Old Net Name=STM32G473CETx New Net Name=USB_SW
+Added Class: Name=P103
+Added Member To Class: ClassName=P16_P25 Member=Component C12 (C17) CAP ALUM 68 UF 20% 25 V SMD
+Added Member To Class: ClassName=P16_P25 Member=Component C13 (C18) CAP ALUM 68 UF 20% 25 V SMD
+Added Member To Class: ClassName=P109 Member=Component C30 (C39) DNP*
+Added Member To Class: ClassName=P109 Member=Component C33 (C53) CAP CER 10nF 25V X7R 10% 0402
+Added Member To Class: ClassName=SENS Member=Component C37 (C21) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=SENS Member=Component C39 (C23) CAP CER 1UF 6.3V X5R 0402
+Added Member To Class: ClassName=SENS Member=Component C40 (C24) CAP CER 1UF 6.3V X5R 0402
+Added Member To Class: ClassName=SENS Member=Component C41 (C25) DNP*
+Added Member To Class: ClassName=SENS Member=Component C42 (C26) DNP*
+Added Member To Class: ClassName=SENS Member=Component C43 (C27) DNP*
+Added Member To Class: ClassName=P110 Member=Component C47 (C4) CAP CER 0.022UF 25V X7R 0402
+Added Member To Class: ClassName=P110 Member=Component C48 (C5) CAP CER 22UF 25V X5R 0805
+Added Member To Class: ClassName=P110 Member=Component C49 (C6) CAP CER 2.2UF 16V X5R 0603
+Added Member To Class: ClassName=+4V2_PS Member=Component C52 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+4V2_PS Member=Component C53 (C3) CAP CER 22UF 10V X5R 0805
+Added Member To Class: ClassName=+4V2_PS Member=Component C54 (C4) CAP CER 22UF 10V X5R 0805
+Added Member To Class: ClassName=UART_MUX Member=Component C59 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=USB_MUX Member=Component C60 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+1V8_VLT2 Member=Component C61 (C28) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+1V8_VLT2 Member=Component C62 (C30) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+1V8_VLT1 Member=Component C63 (C28) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+1V8_VLT1 Member=Component C64 (C30) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=P102 Member=Component C65 (C1) CAP CER 2.2UF 6.3V X5R 0402
+Added Member To Class: ClassName=P102 Member=Component C66 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=USB_SW Member=Component C67 (C1) CAP CER 1UF 25V X5R 0603
+Added Member To Class: ClassName=USB_SW Member=Component C68 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=U_CP2102N_USB-to-UART_Bridge Member=Component C70 (C2) CAP CER 4.7UF 16V X5R 0603
+Added Member To Class: ClassName=U_CP2102N_USB-to-UART_Bridge Member=Component C71 (C3) CAP CER 4.7UF 16V X5R 0603
+Added Member To Class: ClassName=U_CP2102N_USB-to-UART_Bridge Member=Component C72 (C4) CAP CER 0.1UF 16V X7R 0402
+Added Member To Class: ClassName=TCPP Member=Component C73 (C1) CAP CER 1UF 16V X5R 0402
+Added Member To Class: ClassName=TCPP Member=Component C74 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=DISP_PS Member=Component C75 (C1) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=DISP_PS Member=Component C76 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=DISP_PS Member=Component C77 (C3) CAP CER 10UF 16V X7R 0805
+Added Member To Class: ClassName=DISP_PS Member=Component C78 (C4) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=DISP_PS Member=Component C79 (C5) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=TCPC Member=Component C80 (C1) CAP CER 220PF 50V X7R 0402
+Added Member To Class: ClassName=TCPP Member=Component C80 (C1) CAP CER 220PF 50V X7R 0402
+Added Member To Class: ClassName=TCPC Member=Component C81 (C2) CAP CER 4.7UF 35V X7R 0805
+Added Member To Class: ClassName=TCPC Member=Component C82 (C3) CAP CER 220PF 50V X7R 0402
+Added Member To Class: ClassName=TCPP Member=Component C82 (C3) CAP CER 220PF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component C85 (C15) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=P105 Member=Component C86 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=AUTH Member=Component C87 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=P26 Member=Component C88 (C1) CAP CER 0.1UF 16V X7R 0402
+Added Member To Class: ClassName=P26 Member=Component C89 (C2) CAP CER 0.1UF 16V X7R 0402
+Added Member To Class: ClassName=P26 Member=Component C90 (C3) CAP 11MF 3.3V SURFACE MNT
+Added Member To Class: ClassName=U_PCA9632_4-Ch_LED_Driver Member=Component C102 (C1) CAP CER 1UF 16V X5R 0402
+Added Member To Class: ClassName=U_PCA9632_4-Ch_LED_Driver Member=Component C103 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=Component C106 (C1) CAP CER 1UF 16V X5R 0402
+Added Member To Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=Component C107 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+1V8_PS Member=Component C108 (C1) CAP CER 2.2UF 6.3V X5R 0402
+Added Member To Class: ClassName=+1V8_PS Member=Component C109 (C2) CAP CER 2.2UF 6.3V X5R 0402
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component C110 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component C111 (C2) CAP CER 1UF 6.3V X5R 0402
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component C112 (C3) CAP CER 1UF 6.3V X5R 0402
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component C113 (C4) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component C114 (C5) CAP CER 22UF 25V X5R 0805
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component C115 (C6) CAP CER 10uF X7R 10% 0805
+Added Member To Class: ClassName=VLT Member=Component C116 (C1) CGA2B3X7R1H104K050BB
+Added Member To Class: ClassName=VLT Member=Component C117 (C2) CGA2B3X7R1H104K050BB
+Added Member To Class: ClassName=P128 Member=Component C118 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=P128 Member=Component C119 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=CODEC Member=Component C120 (C28) CAP CER 10nF 25V X7R 10% 0402
+Added Member To Class: ClassName=CODEC Member=Component C121 (C29) CAP CER 10PF 50V C0G/NP0 0402
+Added Member To Class: ClassName=CODEC Member=Component C122 (C30) C 100pF 50V C0G, NP0 0402
+Added Member To Class: ClassName=CODEC Member=Component C123 (C31) CAP CER 10nF 25V X7R 10% 0402
+Added Member To Class: ClassName=CODEC Member=Component C124 (C32) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=U_ESP32-WROOM32D_Module Member=Component C125 (C1) CAP CER 1UF 16V X5R 0402
+Added Member To Class: ClassName=U_ESP32-WROOM32D_Module Member=Component C126 (C2) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=U_ESP32-WROOM32D_Module Member=Component C127 (C3) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=U_ESP32-WROOM32D_Module Member=Component C128 (C4) CAP CER 0.1UF 16V X7R 0402
+Added Member To Class: ClassName=MIC1 Member=Component C129 (C33) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=FLASH Member=Component C131 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=MCU Member=Component C132 (C12) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=RTC_XTAL Member=Component C132 (C12) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C133 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C134 (C7) CAP CER 10uF X7R 10% 0805
+Added Member To Class: ClassName=STM32G473QETx Member=Component C135 (C3) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C137 (C4) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C138 (C9) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C139 (C5) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C140 (C10) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C141 (C6) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C142 (C11) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C143 (C12) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C144 (C13) CAP CER 1UF 16V X5R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C145 (C14) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C146 (C15) CAP CER 1UF 16V X5R 0402
+Added Member To Class: ClassName=P012 Member=Component D4 (D1) SMF05CT1G
+Added Member To Class: ClassName=P02 Member=Component D5 (D1) SMF05CT1G
+Added Member To Class: ClassName=P109 Member=Component D10 LED GREEN CLEAR 0603 SMD
+Added Member To Class: ClassName=P109 Member=Component D11 LED BLUE CLEAR 0603 SMD
+Added Member To Class: ClassName=P109 Member=Component D12 ESDA7P120-1U1M
+Added Member To Class: ClassName=DISP_PS Member=Component D15 (D1) STPS120MF
+Added Member To Class: ClassName=DISP_PS Member=Component D16 (D2) MMSZ5226B-7-F
+Added Member To Class: ClassName=TCPC Member=Component D17 (D1) ESDA25P35-1U1M
+Added Member To Class: ClassName=USB_SW Member=Component D18 (D2) NSR0140P2T5G
+Added Member To Class: ClassName=TCPC Member=Component D18 (D2) NSR0140P2T5G
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component D22 (D1) Zener Diode 6.2V 2.5W ±5% Surface Mount SOD-123FL
+Added Member To Class: ClassName=MIC1 Member=Component FB6 (FB1) FERRITE BEAD 1 KOHM 0402 1LN
+Added Member To Class: ClassName=Net Tie Member=Component J2 (J1) Net Tie
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component J2 (J1) Net Tie
+Added Member To Class: ClassName=STM32G473CETx Member=Component NT1 Net Tie
+Added Member To Class: ClassName=STM32G473CETx Member=Component NT2 Net Tie
+Added Member To Class: ClassName=P109 Member=Component Q8 (Q12A) DMN32D2LV-7
+Added Member To Class: ClassName=U_ESP32-WROOM32D_Module Member=Component Q10 (Q5) BC847CW,115
+Added Member To Class: ClassName=TCPC Member=Component Q11 (Q1A) DMN32D2LV-7
+Added Member To Class: ClassName=TCPP Member=Component Q11 (Q1A) DMN32D2LV-7
+Added Member To Class: ClassName=STM32G473CETx Member=Component Q12 (Q2A) EM6M2T2R
+Added Member To Class: ClassName=I2C_SW Member=Component R4 (R22) RES SMD 4.75K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=I2C_SW Member=Component R5 (R23) RES SMD 4.75K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=I2C_SW Member=Component R6 (R24) RES SMD 4.75K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=I2C_SW Member=Component R7 (R25) RES SMD 4.75K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component R8 (R26) RES SMD 2.7K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component R9 (R27) RES SMD 2.7K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component R10 (R28) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component R24 (R42) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component R25 (R43) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=P16_P25 Member=Component R26 (R52) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P16_P25 Member=Component R27 (R53) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P16_P25 Member=Component R28 (R54) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=P16_P25 Member=Component R29 (R55) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=P16_P25 Member=Component R30 (R56) DNP*
+Added Member To Class: ClassName=P109 Member=Component R39 (R85) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=UART_MUX Member=Component R39 (R85) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_ESP32-WROOM32D_Module Member=Component R64 (R79) RES SMD 2.7K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_ESP32-WROOM32D_Module Member=Component R65 (R80) RES SMD 2.7K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=SENS Member=Component R71 (R61) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=SENS Member=Component R73 (R63) DNP*
+Added Member To Class: ClassName=SENS Member=Component R74 (R64) DNP*
+Added Member To Class: ClassName=SENS Member=Component R75 (R65) DNP*
+Added Member To Class: ClassName=P110 Member=Component R86 (R11) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P110 Member=Component R87 (R12) RES SMD 2.2 OHM 5% 1W 2512
+Added Member To Class: ClassName=P110 Member=Component R88 (R13) RES SMD 2.2 OHM 5% 1W 2512
+Added Member To Class: ClassName=+4V2_PS Member=Component R94 (R1) RES SMD 100K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=+4V2_PS Member=Component R95 (R2) RES SMD 100K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=+4V2_PS Member=Component R96 (R3) RES SMD 536K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_CP2102N_USB-to-UART_Bridge Member=Component R102 (R4) RES SMD 402 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_CP2102N_USB-to-UART_Bridge Member=Component R103 (R5) RES SMD 402 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_CP2102N_USB-to-UART_Bridge Member=Component R104 (R6) RES SMD 47K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_CP2102N_USB-to-UART_Bridge Member=Component R105 (R7) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=DISP_PS Member=Component R106 (R1) RES SMD 2.26 OHM 1% 1/10W 0603
+Added Member To Class: ClassName=DISP_PS Member=Component R107 (R2) RES SMD 63.4K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=TCPP Member=Component R108 (R3) RES SMD 100K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=TCPP Member=Component R109 (R4) RES SMD 100K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=Component R115 (R10) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=Component R116 (R11) DNP*
+Added Member To Class: ClassName=USB_MUX Member=Component R117 (R12) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=USB_MUX Member=Component R118 (R13) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=TCPC Member=Component R119 (R14) RES SMD 2.2 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=TCPC Member=Component R120 (R15) RES SMD 2.2 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=TCPC Member=Component R121 (R16) RES SMD 2.2 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=TCPC Member=Component R122 (R17) DNP*
+Added Member To Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=Component R122 (R17) DNP*
+Added Member To Class: ClassName=USB_SW Member=Component R123 (R18) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=TCPC Member=Component R123 (R18) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component R124 (R44) RES SMD 390K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component R125 (R45) RES SMD 390K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component R126 (R46) RES SMD 100K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component R127 (R47) RES SMD 75K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component R128 (R48) RES SMD 75K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component R129 (R49) RES SMD 100K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473CETx Member=Component R130 (R50) RES SMD 27K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P26 Member=Component R132 (R1) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P26 Member=Component R133 (R2) RES SMD 402 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P26 Member=Component R134 (R3) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component R142 (R2) DNP*
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component R143 (R3) DNP*
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component R144 (R4) RES SMD 4.75K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component R145 (R5) RES SMD 39 OHM 1% 1/4W 1206
+Added Member To Class: ClassName=Top_Level_Block_Diagram Member=Component R146 (R1) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=U_ESP32-WROOM32D_Module Member=Component R152 (R1) RES SMD 100 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=FLASH Member=Component R156 (R1) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=FLASH Member=Component R157 (R2) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=FLASH Member=Component R158 (R3) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component R159 (R1) RES SMD 100 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_TPS22810 2 Member=Component R160 (R1) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_TPS22810 2 Member=Component R161 (R2) RES SMD 100 OHM 1% 1/2W 0805
+Added Member To Class: ClassName=+3V3_PS Member=Component R162 (R1) RES SMD 910K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=+3V3_PS Member=Component R163 (R2) RES SMD 390K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=+3V3_PS Member=Component R164 (R3) RES SMD 88.7K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P109 Member=Component TP26 (TP1) Test Point Pad
+Added Member To Class: ClassName=P109 Member=Component TP27 (TP2) Test Point Pad
+Added Member To Class: ClassName=TestPoint Member=Component TP27 (TP2) Test Point Pad
+Added Member To Class: ClassName=P26 Member=Component TP28 (TP1) Test Point Pad
+Added Member To Class: ClassName=TestPoint Member=Component TP28 (TP1) Test Point Pad
+Added Member To Class: ClassName=P109 Member=Component U6 (U12A) BG95-M1
+Added Member To Class: ClassName=SENS Member=Component U11 (U4) TPD3F303DPVR
+Added Member To Class: ClassName=SENS Member=Component U13 (U6) TPD3F303DPVR
+Added Member To Class: ClassName=P110 Member=Component U14 (U1) STSPIN220
+Added Member To Class: ClassName=+4V2_PS Member=Component U15 (U1) TPS61023DRLT
+Added Member To Class: ClassName=UART_MUX Member=Component U17 (U1) TS3USB3031RMGR
+Added Member To Class: ClassName=USB_MUX Member=Component U18 (U1) TS3USB3031RMGR
+Added Member To Class: ClassName=+1V8_VLT2 Member=Component U19 (U9) TXB0108DQSR
+Added Member To Class: ClassName=+1V8_VLT1 Member=Component U20 (U9) TXB0108DQSR
+Added Member To Class: ClassName=P102 Member=Component U21 (U1) EMIF06-MSD02N16
+Added Member To Class: ClassName=USB_SW Member=Component U22 (U1) BQ24392RSER
+Added Member To Class: ClassName=U_CP2102N_USB-to-UART_Bridge Member=Component U23 (U1) CP2102N-A02-GQFN28R
+Added Member To Class: ClassName=TCPP Member=Component U24 (U1) TPD6S300ARUKR
+Added Member To Class: ClassName=DISP_PS Member=Component U25 (U1) TPS61169DCKR
+Added Member To Class: ClassName=TCPC Member=Component U26 (U1) ECMF02-2AMX6
+Added Member To Class: ClassName=P105 Member=Component U27 (U1) 24LC00T-I/OT
+Added Member To Class: ClassName=AUTH Member=Component U28 (U1) ATECC608A-MAHDA-S
+Added Member To Class: ClassName=P26 Member=Component U29 (U1) RV-3028-C7 32.768KHZ 1PPM-TA-QC
+Added Member To Class: ClassName=U_PCA9632_4-Ch_LED_Driver Member=Component U32 (U1) PCA9632TK,118
+Added Member To Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=Component U33 (U1) TS3USBCA410IRSVT
+Added Member To Class: ClassName=+1V8_PS Member=Component U34 (U1) LDLN025PU18R
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component U35 (U1) DRV10975ZRHFR
+Added Member To Class: ClassName=VLT Member=Component U36 (U1) TXS0102DQMR
+Added Member To Class: ClassName=CODEC Member=Component U38 (U7) CMX655DQ6
+Added Member To Class: ClassName=MIC2 Member=Component U40 (U8) IM69D130V01XTSA1
+Added Member To Class: ClassName=FLASH Member=Component U41 (U1) MT29F1G01ABAFDWB-IT:F TR
+Added Member To Class: ClassName=P109 Member=Component X4 (X3) U.FL-R-SMT-1(10)
+Added Member To Class: ClassName=P109 Member=Component X5 (X4) U.FL-R-SMT-1(10)
+Added Member To Class: ClassName=SENS Member=Component X6 (X1) SPO2
+Added Member To Class: ClassName=P102 Member=Component X8 (X1) uSD Card
+Added Member To Class: ClassName=GPIO[0..21] Member=Element[5]: GPIO
+Added Member To Class: ClassName=GPIO[0..21] Member=Element[10]: GPIO
+Added Member To Class: ClassName=PA[0..15] Member=Element[15]: MICRO_SD.DAT3

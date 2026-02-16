@@ -1,0 +1,22 @@
+identifier: c208t
+name: Custom STM32H753 C208t board
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+ram: 1024
+flash: 2048
+supported:
+  - uart
+  - gpio
+  - counter
+  - i2c
+  - pwm
+  - adc
+  - netif:eth
+  - spi
+  - usb_device
+  - can
+  - canfd

@@ -1,0 +1,12 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ */
+
+
+
+#ifndef SRC_INCLUDE_APP_MEMBRANE_SWITCH_APP_MEMBRANE_SWITCH_H_
+#define SRC_INCLUDE_APP_MEMBRANE_SWITCH_APP_MEMBRANE_SWITCH_H_
+
+int app_membrane_switch_init();
+
+#endif /* SRC_INCLUDE_APP_MEMBRANE_SWITCH_APP_MEMBRANE_SWITCH_H_ */

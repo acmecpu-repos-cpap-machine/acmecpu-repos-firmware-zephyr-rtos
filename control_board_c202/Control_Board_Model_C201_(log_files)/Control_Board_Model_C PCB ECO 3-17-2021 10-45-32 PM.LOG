@@ -1,0 +1,61 @@
+Added Component: Designator=U42(XTAL4_SiT1533_SIT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case/Package"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ClassName"; Value = "MCU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "https://www.sitime.com/datasheet/SiT1533?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.sitime.com/datasheet/SiT1533?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "http://www.mouser.com/ds/2/371/SiT1533-datasheet-275337.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.mouser.com/ds/2/371/SiT1533-datasheet-275337.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "http://components.arrow.com/part/dataview/0323_07137603?src-supplier=Arrow+Europe"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://components.arrow.com/part/dataview/0323_07137603?src-supplier=Arrow+Europe"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "1.35uA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "32.768kHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency Stability"; Value = "100ppm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.024inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "0.079inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Load Capacitance"; Value = "10pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "SiTime"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "SIT1533AI-H4-DCC-32.768E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Duty Cycle"; Value = "52%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Supply Current"; Value = "1.4uA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Supply Voltage"; Value = "3.63V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Supply Voltage"; Value = "1.5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1.1, 10=0.975, 50=0.9116, 100=0.8056, 500=0.7632 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "89278"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1473-1239-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.047inch"; VariantName = "[No Variations]"
+Added Component: Designator=Y1(SPKR_CMS-151135-078S)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "https://www.cui.com/product/resource/digikeypdf/CMS-15113-078x.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.cui.com/product/resource/digikeypdf/CMS-15113-078x.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Impedance"; Value = "8R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "CUI"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "CMS-151135-078S"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Power Dissipation"; Value = "1W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tray"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Rating"; Value = "700mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=2.07, 10=1.72, 25=1.5888, 50=1.4932, 100=1.4013, 500=1.2016, 1000=1.17 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Self Resonant Frequency"; Value = "550Hz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Sensing Method"; Value = "Magnetic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Shape"; Value = "Rectangular"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "1971"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "102-4616-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "General Purpose"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U42-2
+Added Pin To Net: NetName=PC14 Pin=U42-3
+Added Pin To Net: NetName=3V3_ESP32 Pin=U42-4
+Added Pin To Net: NetName=NetU38_1 Pin=Y1-M
+Added Pin To Net: NetName=NetU38_23 Pin=Y1-P
+Added Member To Class: ClassName=MCU Member=Component U42 (U3) IC SIT1533AI-H4-DCC-32.768E MEMS OSC XO 32.7680KHZ LVCMOS
+Added Member To Class: ClassName=RTC_XTAL Member=Component U42 (U3) IC SIT1533AI-H4-DCC-32.768E MEMS OSC XO 32.7680KHZ LVCMOS
+Added Member To Class: ClassName=AUDIO Member=Component Y1 CMS-151135-078S

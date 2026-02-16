@@ -1,0 +1,27 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ * Network Processor Interface
+ *
+ */
+
+
+&usart2 {
+    status = "okay";
+    pinctrl-0 = <&usart2_rx_pa3 &usart2_tx_pa2 &usart2_rts_pd4 &usart2_cts_pd3>;
+    pinctrl-names = "default";
+    current-speed = <921600>;
+    hw-flow-control;
+    
+/* Ref:
+		rm0440 pg. 427,
+		zephyr/tests/drivers/uart/uart_async_api/boards/disco_l475_iot1.overlay
+		st,stm32-qspi.yaml
+		stm32_dma.h
+		
+	dmas = 	<&dmamux1 4 29 0x20440 0>,
+			<&dmamux1 5 28 0x20480 0>;
+	dma-names = "tx", "rx";
+*/
+
+};

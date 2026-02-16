@@ -1,0 +1,16 @@
+# Copyright (c) 2023 Acme CPU
+# C20x screen configurations 
+
+menuconfig C20X_SCREENS
+	bool "C20x screen configurations"
+	default y
+	help
+	  C20x screen configurations
+	  
+if C20X_SCREENS
+
+module = C20X_SCREENS
+module-str = c20x_screens
+source "subsys/logging/Kconfig.template.log_config"
+
+endif # C20X_SCREENS

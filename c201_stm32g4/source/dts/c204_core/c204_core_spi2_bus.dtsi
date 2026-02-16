@@ -1,0 +1,39 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ * Display interface
+ */
+
+&spi2 {
+    status = "okay";
+    pinctrl-0 = <&spi2_nss_pb12 &spi2_sck_pb13 &spi2_mosi_pb15>;
+    pinctrl-names = "default";
+    
+/* Ref:
+		rm0440 pg. 426,
+		zephyr/tests/drivers/spi/spi_loopback/boards/nucleo_g474re.overlay
+		st,stm32-qspi.yaml
+*/
+	dmas = <&dmamux1 0 13 0x20440
+			&dmamux1 1 12 0x20480>;
+	dma-names = "tx", "rx";
+
+    ssd1306_ssd1306_128x64_spi: ssd1306@0 {
+		compatible = "solomon,ssd1306fb";
+		reg = <0x0>;
+		label = "OLED_SSD1306";
+		spi-max-frequency = <8000000>;
+		width = <128>;
+		height = <64>;
+		segment-offset = <0>;
+		page-offset = <0>;
+		display-offset = <0>;
+		multiplex-ratio = <63>;
+		segment-remap;
+		com-invdir;
+		/*com-sequential;*/
+		prechargep = <0x22>;
+		data_cmd-gpios = <&gpiog 0 GPIO_ACTIVE_HIGH>;
+		reset-gpios = <&gpiog 1 GPIO_ACTIVE_LOW>;
+	};
+};

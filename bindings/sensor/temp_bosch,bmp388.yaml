@@ -1,0 +1,14 @@
+# Copyright (c) 2020, Acme CPU
+
+description: |
+    Bosch BMP388 Digital pressure and temperature sensor.  See more info at:
+    https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp388-ds001.pdf
+
+compatible: "bosch,zbmp388"
+
+include: i2c-device.yaml
+
+properties:
+    int-gpios:
+      type: phandle-array
+      required: false

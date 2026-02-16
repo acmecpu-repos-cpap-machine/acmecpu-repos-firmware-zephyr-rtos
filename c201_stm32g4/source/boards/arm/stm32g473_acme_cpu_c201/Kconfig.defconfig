@@ -1,0 +1,10 @@
+# STM32G473 ACME CPU C201 board configuration
+# Copyright (c) 2021 Acme CPU
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_STM32G473_ACME_CPU_C201
+
+config BOARD
+	default "stm32g473_acme_cpu_c201"
+
+endif # BOARD_STM32G473_ACME_CPU

@@ -1,0 +1,99 @@
+/*
+ * Copyright (c) 2024 Acme CPU
+ *
+ * C208T I2C1 bus has
+ *		- BQ25792
+ *		- LTC2944
+ *		- BMA253
+ *		- CMX655D
+ *		- STUSB4500
+ *		- BMI270
+ *		- TPA2028D
+ *		- STSPIN32F0A
+  *		- STSPIN32G4
+ */
+
+ &i2c1 {
+	pinctrl-0 = <&i2c1_scl_pb8 &i2c1_sda_pb9>;
+	pinctrl-names = "default";
+	status = "okay";
+	clock-frequency = <I2C_BITRATE_FAST>;
+	
+	bq25792: bq25792@6b {
+    	compatible = "ti,bq25792";
+    	reg = <0x6b>;
+    	
+    	interrupt-gpios = <&gpioe 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    	charge-enable-gpios = <&gpiob 5 (GPIO_PUSH_PULL)>;
+    	
+        watchdog-timer = <0>;						/* disable watchdog timer */
+        input-voltage-limit-microvolt = <22000000>;	/* 22 V */
+        input-current-limit-microamp = <3300000>;	/* 3.3 Amp */
+	};
+
+  	fuelgauge: ltc2944@64 {
+		compatible = "lltc,ltc294x";
+		reg = <0x64>;
+		resistor-sense = <10>;
+		prescaler-exponent = <6>; 	/* for Qbat=1500 mAh, Rsense=10 mOhm [(4096 * 1500 * 10)/(2^16 * 0.340 * 50)] */
+		device-id = <4>;			/* LTC2941 = 1, LTC2942 = 2, LTC2943 = 3, LTC2944 = 4 */
+		label = "FG";
+	};
+
+	bma253@18 {
+		compatible = "bosch,bma253";
+		reg = <0x18>;
+		label = "TILT_SENSOR";
+		int1-gpios = <&gpioi 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	};
+
+	audio_codec_ctrl: cmx655d@54 {
+		compatible = "cml,cmx655d";
+    	reg = <0x54>;
+    	label = "AUDIO_CODEC_CTRL";
+    	classd-oc-reset-attempts = <5>;
+    	reset-gpios = <&gpioh 9 (GPIO_ACTIVE_LOW)>;
+    	interrupt-gpios = <&gpioi 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	};
+	
+  	stusb4500: stusb4500@28 {
+		compatible = "st,stusb4500";
+		reg = <0x28>;
+    	reset-gpios = <&gpioc 7 (GPIO_ACTIVE_LOW)>;
+    	alert-gpios = <&gpiog 7 (GPIO_PULL_UP)>;
+    	abside-gpios = <&gpiog 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+  	};
+  	
+  	bmi270@68 {
+		compatible = "bosch,bmi270";
+		reg = <0x68>;
+		label = "IMU_SENSOR";
+		irq-gpios = <&gpiod 3 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	};
+	/*
+	audio_amp_ctrl: tpa2028d@58 {
+		compatible = "tp,tpa2028d";
+    	reg = <0x54>;
+    	label = "AUDIO_AMPLIFIER_CTRL";
+    	#classd-oc-reset-attempts = <5>;
+    	#reset-gpios = <&gpioh 9 (GPIO_ACTIVE_LOW)>;
+    	#interrupt-gpios = <&gpioi 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	};
+	*/
+	
+	/*	
+	motor_driver: stspin32f0a@10 {
+		compatible = "st,stspin32f0a";
+		reg = <0x10>
+		label = "BLDC_DRIVER"
+	}
+	*/
+	
+	/*	
+	motor_driver: stspin32g4@10 {
+		compatible = "st,stspin32g4";
+		reg = <0x10>
+		label = "BLDC_DRIVER"
+	}
+	*/
+};

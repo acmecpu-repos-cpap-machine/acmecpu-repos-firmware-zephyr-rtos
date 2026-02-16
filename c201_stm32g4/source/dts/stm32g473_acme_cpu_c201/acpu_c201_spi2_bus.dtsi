@@ -1,0 +1,58 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+
+&spi2 {
+    status = "okay";
+    pinctrl-0 = <&spi2_sck_pf1 &spi2_mosi_pb15 &spi2_nss_pf0>;
+    pinctrl-names = "default";
+    
+/* Ref:
+		rm0440 pg. 426,
+		zephyr/tests/drivers/spi/spi_loopback/boards/nucleo_g474re.overlay
+		st,stm32-qspi.yaml
+*/
+	dmas = <&dmamux1 0 13 0x20440
+			&dmamux1 1 12 0x20480>;
+	dma-names = "tx", "rx";
+
+    st7789v_st7789v_320x240_spi: st7789v2@0 {
+	compatible = "sitronix,st7789v";
+	reg = <0>;
+	spi-max-frequency = <8000000>;	/* 8 MHz */
+	label = "DISPLAY";
+	
+	reset-gpios = <&gpiob 7 GPIO_ACTIVE_LOW>;
+	cmd-data-gpios = <&gpiob 8 GPIO_ACTIVE_LOW>;
+		
+	height = <240>;
+	width = <320>;
+	x-offset = <0>;
+	y-offset = <0>;
+		
+	vcom = <0x1F>;
+	
+	gctrl = <0x35>;
+	vrhs = <0x12>;
+	vdvs = <0x20>;
+		
+	/*mdac = <0x60>;	/*Landscape orientation 1*/
+	mdac = <0xA0>;	/*Landscape orientation 2 */
+			
+	lcm = <0x2c>;
+	colmod = <0x05>;
+	gamma = <0x01>;
+	
+	porch-param = [0c 0c 00 33 33];
+	cmd2en-param = [5a 69 02 01];
+	pwctrl1-param = [a4 a1];
+	
+	pvgam-param = [D0 08 11 08 0C 15 39 33 50 36 13 14 29 2D];
+	nvgam-param = [D0 08 10 08 06 06 39 44 51 0B 16 14 2F 31];
+	
+	ram-param = [00 F0];
+	rgb-param = [CD 08 14];
+    };
+};

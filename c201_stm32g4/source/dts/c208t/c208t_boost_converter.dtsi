@@ -1,0 +1,24 @@
+/*
+ * Copyright (c) 2024 Acme CPU
+ *
+ * TPS55340 based sepic converter
+ */
+
+/ { 
+	tps55340 {
+		compatible = "ti,tps55340";
+		label = "BOOST CONVERTER";
+		
+		enable-gpios = <&gpioe 0 GPIO_PUSH_PULL>;
+		
+		vref = <3300>;
+		vfb = <1229>;
+		v-i-conv-shunt = <2700>;
+		vdiv-bot-resistor = <10000>;
+		vdiv-top-resistor = <44200>;
+		vdiv-aux-resistor = <11000>;
+		
+		adc-channel = <2>;
+		dac-channel = <1>;
+	};
+};

@@ -1,0 +1,86 @@
+# Copyright (c) 2021 Acme CPU
+# Application Logger configuration options
+
+menuconfig APP_LOGGER
+#	bool
+	bool "Application Logger Configurations"
+	default y
+	help
+	  Application Logger Configurations 
+
+if APP_LOGGER
+
+
+choice
+	prompt "Log Storage Device"
+	default APP_LOG_STORAGE_NONE
+
+	config APP_LOG_STORAGE_SD_CARD
+		bool "Save log messages on SD Card"
+		depends on DISK_DRIVER_SDMMC
+		help
+		  Save log messages on SD Card
+	
+	config APP_LOG_STORAGE_FLASH
+		bool "Save log messages on a Flash memory"
+		depends on DISK_DRIVER_FLASH
+		help
+		  Save log messages on a Flash memory
+
+	config APP_LOG_STORAGE_NONE
+		bool "Do not save log messages"
+		help
+		  Do not save log messages
+endchoice
+
+#config APP_LOGGER_SD_CARD
+#	bool "Use SD Card for data logging"
+#	default y
+#	help
+#	    Enable facility for application to log data into an SD Card
+
+#config LOG_BACKEND_SD_CARD_AUTOSTART
+#	bool "Start the SD Card logger backend with the standard backend"
+#	default n
+#	help
+#	    Start the SD Card logger backend with the standard backend.
+#	    Must ensure that the SD Card is attached and mounted successfully (not implemented, keep disabled)
+
+#config LOG_BACKEND_SD_CARD_MAX_BUF_SIZE
+#	int "Max buffer size for SD Card log"
+#	range 32 512
+#	default 256
+#	help
+#	    Max buffer size of SD Card log message in bytes
+
+config LOG_BACKEND_STORAGE_AUTOSTART
+	bool "Start the logger backend with the standard backend"
+	default n
+	help
+	    Start the logger backend with the standard backend.
+	    Must ensure that the storage device is mounted successfully (not implemented, keep disabled)
+
+config LOG_BACKEND_STORAGE_MAX_BUF_SIZE
+	int "Max buffer size for the logger"
+	range 32 512
+	default 256
+	help
+	    Max buffer size of log message in bytes
+
+config APP_LOGGER_MAX_CURR_FILESIZE_MB
+	int "Current log file maximum size in Mbytes"
+	range 1 1000
+	default 10
+	help
+	    Current log file maximum size in Mbytes. If this size is reached, then the current file is
+	    renamed with timestamp, and a new current file is opened for writing
+
+config APP_LOGGER_MAX_FILE_COUNT
+	int "Max number of log files that can exist"
+	range 1 100
+	default 10
+	help
+	    The maximum number of files that can exist in the log directory. Once the max file count is reached
+	    the oldest file is deleted.
+
+endif # APP_LOGGER

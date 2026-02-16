@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+#include <st/g4/stm32g4.dtsi>
+
+/ {
+	soc {
+		
+		quadspi: quadspi@a0001000 {
+			compatible = "st,stm32-qspi";
+			#address-cells = <1>;
+			#size-cells = <0>;
+			reg = <0xa0001000 0x0400>;							/* RM0440 ref manual: Pg. 82, table 3 */
+			clocks = <&rcc STM32_CLOCK_BUS_AHB3 0x00000100>;	
+			interrupts = <95 0>;								/* RM0440 ref manual: Pg. 445, table 97 */
+			status = "disabled";
+			label = "QUADSPI";
+		};
+	};
+};

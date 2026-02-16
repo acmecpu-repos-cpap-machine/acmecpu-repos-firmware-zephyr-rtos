@@ -1,0 +1,21 @@
+# Copyright (c) 2021 Acme CPU
+
+menuconfig TPS22810
+	bool "TPS22810 18V 3A Load Switch"
+	help
+	  Enable TPS22810 18V 3A Load Switch
+	  
+if TPS22810
+
+module = TPS22810
+module-str = tps22810
+source "subsys/logging/Kconfig.template.log_config"
+
+config TPS22810_INIT_PRIORITY
+	int "TPS22810 initialization priority"
+#	default 69
+	default 89
+	help
+	  TPS22810 initialization priority
+
+endif # TPS22810

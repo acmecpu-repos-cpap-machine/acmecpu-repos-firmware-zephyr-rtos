@@ -1,0 +1,25 @@
+# Copyright (c) 2021 Acme CPU
+# BQ25611D I2C Battery Charger configurations
+
+menuconfig BQ25611D
+	bool "BQ25611D I2C Battery Charger"
+#	depends on I2C_MGM_PCA95XX
+	depends on I2C
+	help
+	  Enable driver for BQ25611D I2C Battery Charger
+
+if BQ25611D
+
+module = BQ25611D
+module-str = bq25611d
+source "subsys/logging/Kconfig.template.log_config"
+
+config BQ25611D_INIT_PRIORITY
+	int "Init Priority"
+	default APPLICATION_INIT_PRIORITY
+	help
+	    Device driver initialization priority.
+
+rsource "Kconfig.bq25611d"
+
+endif # BQ25611D

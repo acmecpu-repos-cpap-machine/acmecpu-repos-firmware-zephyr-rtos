@@ -1,0 +1,13 @@
+# Copyright (c) 2021 Acme CPU
+# Device commands application configurations 
+
+menuconfig APP_DEVCMD
+#	bool
+	bool "Device commands application configurations"
+	default n
+	help
+	  Device commands application configurations
+
+if APP_DEVCMD
+
+endif # APP_DEVCMD

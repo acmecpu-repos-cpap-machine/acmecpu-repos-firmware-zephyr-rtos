@@ -1,0 +1,16 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+&dma1 {
+	status = "okay";
+};
+
+&dma2 {
+	status = "okay";
+};
+
+&dmamux1 {
+	status = "okay";
+};

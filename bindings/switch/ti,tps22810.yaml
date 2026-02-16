@@ -1,0 +1,21 @@
+# Copyright (c) 2020, Acme CPU
+
+description: |
+    Texas Instruments 18-V, 3-A, 79-mΩ load switch with adj. rise time and adj. output discharge
+    https://www.ti.com/lit/ds/symlink/tps22810.pdf
+
+compatible: "ti,tps22810"
+
+properties:
+    label:
+        required: false
+        type: string
+
+    enable-gpios:
+      type: phandle-array
+      required: true
+
+    audio-gpios:
+      type: phandle-array
+      required: false
+      

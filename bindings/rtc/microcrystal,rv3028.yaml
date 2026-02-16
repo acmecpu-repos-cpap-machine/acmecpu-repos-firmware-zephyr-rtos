@@ -1,0 +1,20 @@
+# Copyright (c) 2020, Acme CPU
+
+description: |
+    Micro Crystal Extreme Low Power RTC Module
+    https://www.microcrystal.com/fileadmin/Media/Products/RTC/Datasheet/RV-3028-C7.pdf
+
+compatible: "microcrystal,rv3028"
+
+include: i2c-device.yaml
+
+properties:
+    int-gpios:
+      type: phandle-array
+      required: false
+    
+    trickle-resistor-ohms:
+      type: int
+      required: false
+      description: Trickle charger series resistor value in ohms.
+                   Valid values are 3000, 5000, 9000, 15000

@@ -1,0 +1,23 @@
+# TPS55340 boost converter configurations
+# Copyright (c) 2021 Acme CPU
+
+menuconfig TPS55340
+	bool "TPS55340 boost converter configurations"
+	default n
+	help
+	  Enable driver for TPS55340 boost converter configurations
+
+if TPS55340
+
+module = TPS55340
+module-str = tps55340
+source "subsys/logging/Kconfig.template.log_config"
+
+config TPS55340_INIT_PRIORITY
+	int "Init Priority"
+	default APPLICATION_INIT_PRIORITY
+#	default 69
+	help
+	    Device driver initialization priority.
+
+endif # TPS55340

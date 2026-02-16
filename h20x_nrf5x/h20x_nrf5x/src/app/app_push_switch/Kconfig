@@ -1,0 +1,8 @@
+# Copyright (c) 2022 Acme CPU
+# App push switch configurations
+
+menuconfig APP_PUSH_SWITCH
+	bool "App push switch configurations"
+	default y
+	help
+	  Enable / disable App push switch

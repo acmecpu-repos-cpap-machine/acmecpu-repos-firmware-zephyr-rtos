@@ -1,0 +1,15 @@
+Removed Member From Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=C83
+Removed Member From Class: ClassName=P128 Member=C92
+Removed Member From Class: ClassName=CODEC Member=C94
+Removed Member From Class: ClassName=STM32G473QETx Member=C105
+Removed Member From Class: ClassName=+3V3_AUDIO_PS Member=C123
+Removed Member From Class: ClassName=+3V3_PS Member=C141
+Removed Member From Class: ClassName=P01 Member=C145
+Added Member To Class: ClassName=P103 Member=Component C80 (C10) CAP CER 22UF 25V X5R 0805
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component C85 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=P128 Member=Component C93 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=CODEC Member=Component C95 (C28) CAP CER 10nF 25V X7R 10% 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C106 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=+3V3_AUDIO_PS Member=Component C124 (C1) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=+3V3_PS Member=Component C142 (C1) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=P01 Member=Component C147 (C1) CAP CER 0.1UF 50V X7R 0402

@@ -1,0 +1,23 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ * Created on: 10-Nov-2022
+ * Author: Rohan Dey (rohan@acmecpu.cpm)
+ *
+ * H205C SPI4 bus has
+ *      - MAX30001
+ */
+
+ &spi4 {
+    status = "okay";
+    cs-gpios = <&gpio1 0 GPIO_ACTIVE_LOW>;
+
+    ekg_rtor: max30001@0 {
+        compatible = "maxim,max30001";
+        reg = <0x0>;
+        label = "EKG_RTOR";
+        spi-max-frequency = <3000000>;
+        intb-gpios = <&gpio1 14 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        int2b-gpios = <&io_1 12 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    };
+ };

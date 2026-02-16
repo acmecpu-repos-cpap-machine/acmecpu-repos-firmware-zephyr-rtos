@@ -1,0 +1,2 @@
+Record=DiagramHierarchy|SourceDocument=Control_Board_Model_C202.MbsDoc|Kind=Multi-board Schematic Module|Designator=1|Source=..\..\c202-b1\Control_Board_Model_C201.PrjPcb
+Record=SubProject|SourceDocument=Control_Board_Model_C202.MbsDoc|ProjectPath=..\..\c202-b1\Control_Board_Model_C201.PrjPcb

@@ -1,0 +1,53 @@
+/*
+ * Copyright (c) 2023 Acme CPU
+ *
+ * E206 I2C3 bus has
+ *		- Capacitive touch
+ *		- Lidar sensor
+ *		- T3USBCA410 (SBU MUX)
+ *		- S203 (BME680 sumidity sensor)
+ *		- APDS-9930
+ */
+
+ &i2c3 {
+	pinctrl-0 = <&i2c3_scl_pa8 &i2c3_sda_ph8>;
+	pinctrl-names = "default";
+	status = "okay";
+	clock-frequency = <I2C_BITRATE_FAST>;
+
+/*
+  	ctp: xxxx@38 {
+		compatible = "abc,xxxx";
+		reg = <0x38>;
+		reset-gpios = <&gpioc 12 (GPIO_ACTIVE_HIGH)>;
+		int-gpios = <&gpiod 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+  	};
+*/
+
+/*
+  	lidar: vl53l4cd@52 {
+		compatible = "st,vl53l4cd";
+		reg = <0x52>;
+  	};
+*/
+
+ 	usbc_sbu_mux: ts3usbca4@5c {
+    	compatible = "ti,ts3usbca4";
+    	reg = <0x5c>;
+    	label = "USBC_SBU_MUX";
+    	oe-gpios = <&gpioh 15 (GPIO_ACTIVE_HIGH)>;
+	};
+	
+	bme680@76 {
+		compatible = "bosch,bme680";
+		reg = <0x76>;
+	};
+
+/*
+	apds9930@39 {
+		compatible = "avago,apds9930";
+		reg = <0x39>;
+		int-gpios = <&gpioi 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+	};
+*/
+};

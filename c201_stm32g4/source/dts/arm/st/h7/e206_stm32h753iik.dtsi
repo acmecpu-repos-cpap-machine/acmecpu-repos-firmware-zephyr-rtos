@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+#include <st/h7/stm32h7.dtsi>
+/*
+/ {
+	soc {
+		i2s2: i2s2@40003800 {
+			compatible = "st,stm32-i2s";
+			#address-cells = <1>;
+			#size-cells = <0>;
+			reg = <0x40003800 0x400>;
+			clocks = <&rcc STM32_CLOCK_BUS_APB1 0x00004000>,
+					<&rcc STM32_SRC_PLL1_Q SPI123_SEL(0)>;
+			interrupts = <36 0>;
+			status = "disabled";
+		};
+	};
+};
+*/

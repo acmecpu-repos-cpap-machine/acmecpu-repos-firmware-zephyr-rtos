@@ -1,0 +1,23 @@
+# STSPIN220 Stepper Motor Driver configurations
+# Copyright (c) 2021 Acme CPU
+
+menuconfig STSPIN220
+	bool "STSPIN220 Stepper Motor Driver"
+	help
+	  Enable driver for STSPIN220 Stepper Motor Driver
+
+if STSPIN220
+
+module = STSPIN220
+module-str = stspin220
+source "subsys/logging/Kconfig.template.log_config"
+
+config STSPIN220_INIT_PRIORITY
+	int "Init Priority"
+	default APPLICATION_INIT_PRIORITY
+	help
+	    Device driver initialization priority.
+
+rsource "Kconfig.stspin220"
+
+endif # STSPIN220

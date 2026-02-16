@@ -1,0 +1,23 @@
+# Copyright (c) 2022 Acme CPU
+# SHMAX30101 sensor hub + oximeter configurations
+
+menuconfig SHMAX30101
+	bool "Maxim MAX32664 sensor hub + MAX30101 oximeter"
+	depends on I2C
+	help
+	  Enable driver for Maxim MAX32664 sensor hub + MAX30101 oximeter
+
+if SHMAX30101
+
+module = SHMAX30101
+module-str = shmax30101
+source "subsys/logging/Kconfig.template.log_config"
+
+config SHMAX30101_INIT_PRIORITY
+	int "SHMAX30101 Init Priority"
+	default APPLICATION_INIT_PRIORITY
+	help
+	    Device driver initialization priority.
+
+
+endif # SHMAX30101

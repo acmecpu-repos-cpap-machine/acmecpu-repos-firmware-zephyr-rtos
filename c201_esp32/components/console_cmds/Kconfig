@@ -1,0 +1,13 @@
+# Copyright (c) 2021 Acme CPU
+# ACPU Console Commands Application Configurations
+
+menu "ACPU Console Commands Application Configurations"
+
+config CONSOLE_CMDS_APP
+	int "Console commands application enable / disable"
+	default 1
+	help
+	    Console commands application enable / disable
+	    
+endmenu
+

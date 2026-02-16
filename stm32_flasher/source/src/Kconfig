@@ -1,0 +1,9 @@
+# Copyright (c) 2023 Acme CPU
+
+menu "Application Configurations"
+
+rsource "app/Kconfig"
+rsource "lib/Kconfig"
+
+endmenu
+

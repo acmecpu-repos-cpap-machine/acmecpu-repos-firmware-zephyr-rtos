@@ -1,0 +1,17 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 10:39:24 PM On 12/7/2020
+
+Output: Stencils
+Type  : Gerber
+From  : PCB Document [Sensor_PCB_S201_Flex.PcbDoc]
+   Generated File[20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Stencil.GTP]
+   Generated File[20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Stencil.GBP]
+   Generated File[20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Stencil.EXTREP]
+   Generated File[20201207-SGU-Acme_CPU_Sensor_PCB_S201_001_Stencil.REP]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 10:39:25 PM On 12/7/2020

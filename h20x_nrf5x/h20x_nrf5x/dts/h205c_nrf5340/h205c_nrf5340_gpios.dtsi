@@ -1,0 +1,105 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ * Created on: 19-Oct-2022
+ * Author: Rohan Dey (rohan@acmecpu.cpm)
+ *
+ * H205C GPIOs
+ *      - WiFi
+ *      - Power
+ *      - Keypad
+ *      - Other
+ */
+
+/ {
+	wifi_gpios {
+		compatible = "gpio-keys";
+	    net_rst: net_rst {
+	      gpios = <&gpio1 6 (GPIO_ACTIVE_LOW)>;
+	      label = "ESP32_RST";
+	    };
+	    
+	    net_wake: net_wake {
+	      gpios = <&gpio0 9 (GPIO_ACTIVE_LOW)>;
+	      label = "ESP32_WU";
+	    };
+	};
+
+	pwr_gpios {
+		compatible = "gpio-keys";
+	  en_3v3: en_3v3 {
+	    gpios = <&io_1 2 (GPIO_ACTIVE_HIGH)>;
+	    label = "EN_3V3";
+	  };
+	    
+	  en_1v8: en_1v8 {
+	    gpios = <&io_1 11 (GPIO_ACTIVE_HIGH)>;
+	    label = "EN_1V8";
+	  };
+	
+    en_5v: en_5v {
+      gpios = <&io_1 15 (GPIO_ACTIVE_HIGH)>;
+      label = "EN_5V";
+    };
+  };
+
+  keypad {
+    compatible = "gpio-keys";
+    switch_1: switch_1 {
+      gpios = <&gpio0 4 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "SW_POWER";
+    };
+    switch_2: switch_2 {
+      gpios = <&io_1 4 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "SW_CANCEL";
+    };
+    switch_3: switch_3 {
+      gpios = <&io_1 5 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "SW_HOME";
+    };
+    switch_4: switch_4 {
+      gpios = <&io_1 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "SW_NO";
+    };
+    switch_5: switch_5 {
+      gpios = <&io_1 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "SW_YES";
+    };
+    switch_6: switch_6 {
+      gpios = <&io_1 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "SW_ENTER";
+    };
+    switch_7: switch_7 {
+      gpios = <&io_1 9 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "SW_MIC";
+    };
+    switch_8: switch_8 {
+      gpios = <&io_1 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "SW_SAVE";
+    };
+  };
+
+  other_gpios {
+	  compatible = "gpio-keys";
+	  vmeasure_en: vmeasure_en {
+	    gpios = <&io_1 14 (GPIO_ACTIVE_HIGH)>;
+	    label = "M_ON";
+	  };
+    usb_dsel: usb_dsel {
+      gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH)>;
+      label = "DSEL";
+    };
+    haptic_gpio: haptic_gpio {
+      gpios = <&gpio1 8 (GPIO_ACTIVE_HIGH)>;
+      label = "HAPTIC_GPIO";
+    };
+    oxh_rst: oxh_rst {
+	    gpios = <&io_oxh 4 (GPIO_ACTIVE_LOW)>;
+	    label = "OXH_RST";
+	  };
+    h205c_ab_det: h205c_ab_det {
+      gpios = <&gpio0 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "H205C_AB_DET";
+    };
+  };
+};

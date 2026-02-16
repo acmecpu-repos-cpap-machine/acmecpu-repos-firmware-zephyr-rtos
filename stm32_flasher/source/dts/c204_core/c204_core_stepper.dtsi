@@ -1,0 +1,35 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ */
+
+&c204 { 
+	stspin220 {
+		compatible = "st,stspin220";
+		label = "STSPIN220";
+
+/*
+		pwms = 	<&tim_17_pwm 1 300000000 PWM_POLARITY_NORMAL>, Step Clock PWM period in nanoseconds for 6 Hz
+				<&tim_3_pwm 2 200000 PWM_POLARITY_NORMAL>;	Vref PWM period in nanoseconds for 5000 Hz
+		pwm-names = "stepclk", "vref";
+*/
+		
+		pwms = 	<&tim_4_pwm 2 200 PWM_POLARITY_NORMAL>;	/* Vref PWM period in microseconds for 5000 Hz	*/
+		pwm-names = "vref";
+		
+		step-clock-gpios = <&gpiob 9 (GPIO_PUSH_PULL)>;
+	
+		step-mode1-gpios = <&gpiof 5 (GPIO_PUSH_PULL)>;
+		step-mode2-gpios = <&gpioe 0 (GPIO_PUSH_PULL)>;
+
+		direction-gpios = <&gpioe 1 (GPIO_PUSH_PULL)>;
+		
+		enable-gpios = <&gpiof 14 (GPIO_PUSH_PULL)>;
+		
+		standby-gpios = <&gpiod 15 (GPIO_PUSH_PULL)>;
+		
+		fault-gpios = <&gpioe 7 (GPIO_PULL_UP)>;
+		
+		vref-pwm-duty = <100>;	/* For 100% duty cycle, Vref will be 0.491V, i.e. Ipeak = 220mA as per resitor configuration in the C204 board */
+	};
+};

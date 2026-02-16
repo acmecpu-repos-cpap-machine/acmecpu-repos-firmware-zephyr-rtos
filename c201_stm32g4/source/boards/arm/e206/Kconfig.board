@@ -1,0 +1,7 @@
+# E206 board configuration
+
+# Copyright (c) 2023 Acme CPU
+
+config BOARD_E206
+	bool "Acme CPU E206 Board"
+	depends on SOC_STM32H753XX

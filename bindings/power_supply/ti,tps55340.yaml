@@ -1,0 +1,69 @@
+# Copyright (c) 2021 Acme CPU
+
+description: TPS55340 boost regulator
+
+include: "base.yaml"
+
+compatible: "ti,tps55340"
+
+properties:
+
+    label:
+        required: false
+        type: string
+    
+    enable-gpios:
+        type: phandle-array
+        required: true
+        description: This is the power stage enable (when low, the power stage is turned off)
+
+    io-channels:
+      type: phandle-array
+      required: false
+      description: Analog control signal for the adjustable DC-DC converter
+      
+    io-channel-names:
+      type: string-array
+      required: false
+      description: Analog control signal name for the adjustable DC-DC converter
+      
+    vref:
+      type: int
+      required: true
+      description: Reference voltage in millivolts for the DAC
+      
+    vfb:
+      type: int
+      required: true
+      description: Voltage in millivolts on the FB pin in regulation
+      
+    v-i-conv-shunt:
+      type: int
+      required: true
+      description: Resistance of the current sense resistor of the V-to-I converter
+      
+    vdiv-bot-resistor:
+      type: int
+      required: true
+      description: Resistance of the bottom resistor in the voltage divider in the feedback loop
+      
+    vdiv-top-resistor:
+      type: int
+      required: true
+      description: Resistance of the top resistor in the voltage divider in the feedback loop
+      
+    vdiv-aux-resistor:
+      type: int
+      required: true
+      description: Resistance of the auxiliary resistor in the voltage divider in the feedback loop
+
+    adc-channel:
+      type: int
+      required: false
+      description: ADC channel number
+      
+    dac-channel:
+      type: int
+      required: false
+      description: DAC channel number
+      

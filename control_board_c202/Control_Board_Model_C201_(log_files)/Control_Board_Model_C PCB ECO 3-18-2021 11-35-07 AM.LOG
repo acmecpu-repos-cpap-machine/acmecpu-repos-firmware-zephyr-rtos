@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=P25 Old Footprint=CONN_S4B-ZR(LF)(SN) New Footprint=CONN_JST_SM4B-NSHSS-TB(LF)(SN)
+Added Pin To Net: NetName=GND Pin=P25-S1
+Added Pin To Net: NetName=GND Pin=P25-S2

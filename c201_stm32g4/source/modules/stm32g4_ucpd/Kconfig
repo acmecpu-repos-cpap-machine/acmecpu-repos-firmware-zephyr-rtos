@@ -1,0 +1,35 @@
+# STM32G4 UCPD Driver configurations
+# Copyright (c) 2021 Acme CPU
+
+menuconfig STM32G4UCPD
+	bool "UCPD Driver for STM32G4 MCUs"
+	help
+	  Enable UCPD driver for STM32G4 MCUs
+
+if STM32G4UCPD
+
+module = STM32G4UCPD
+module-str = stm32g4ucpd
+source "subsys/logging/Kconfig.template.log_config"
+
+# IMPORTANT
+# ---------
+# The below is added because the USE_STM32_LL_UCPD config is not defined in zephyr/modules/Kconfig.stm32
+# If future releases this Kconfig is added inside of Zephyr, then it has to be deleted from here
+
+if HAS_STM32CUBE
+	config USE_STM32_LL_UCPD
+		bool ""
+		help
+		  Enable STM32Cube UCPD LL module driver
+endif # HAS_STM32CUBE
+
+
+
+config STM32G4UCPD_INIT_PRIORITY
+	int "Init Priority"
+	default 60
+	help
+	    Device driver initialization priority.
+
+endif # STM32G4_UCPD

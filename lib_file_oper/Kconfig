@@ -1,0 +1,37 @@
+# Copyright (c) 2023 Acme CPU
+# Configurations for file operations library 
+
+menuconfig LIB_FILE_OPER
+	bool "File operations library"
+	default y
+	help
+	  Enable or disable the file operations library to be used in the application 
+
+if LIB_FILE_OPER
+
+config LIB_FILE_OPER_MAX_FILES
+	int "Max number of files that can be created / opened"
+	default 1
+	help
+		Max number of files that can be created / opened		
+
+config LIB_FILE_OPER_FILE_PATH_LEN_MAX
+	int "Max file path length in bytes"
+	default 100
+	help
+		Max file path length in bytes		
+
+config LIB_THREAD_STACK_SIZE_FILE_OPER
+	int "Lib file thread stack size in bytes"
+	default 2048
+	help
+		Lib file thread stack size in bytes		
+
+config LIB_THREAD_PRIO_FILE_OPER
+	int "Lib file thread priority"
+	default 10
+	help
+		Lib file thread priority		
+
+
+endif # LIB_FILE_OPER

@@ -1,0 +1,113 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ * Created on: 19-Oct-2022
+ * Author: Rohan Dey (rohan@acmecpu.cpm)
+ *
+ * H205C I2C0 bus has
+ *      - PCAL9539
+ *      - PCA9551BS
+ *      - BMI270 (IMU2)
+ *      - BMI270 (H205C-AB)
+ *      - BMP388
+ *      - MAX32664 or MAX30101 (H205C-oxH)
+ *      - BQ25611D
+ *      - LTC2942
+ *		  - CMX655D Control Interface
+ *      - BMA456 (external accelerometer)
+ */
+
+&i2c2 {
+	/*compatible = "nordic,nrf-twim";
+	status = "okay";
+	pinctrl-0 = <&i2c0_default>;
+	pinctrl-1 = <&i2c0_sleep>;
+	pinctrl-names = "default", "sleep";*/
+
+  io_1: pcal9539@74 {
+      compatible = "nxp,pcal9539a";
+      reg = <0x74>;
+      gpio-controller;
+      has-pud;
+      interrupt-gpios = <&gpio1 5 (GPIO_PULL_UP)>;
+      #gpio-cells = <2>;
+      ngpios = <16>;
+      label = "IO_1";
+    };
+
+  batt_chrg: bq25611d@6b {
+      compatible = "ti,bq25611d";
+      reg = <0x6b>;
+      label = "BATT_CHRG";
+      interrupt-gpios = <&gpio0 5 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+/*    enable-gpios = <&io_1 7 GPIO_ACTIVE_HIGH>;
+      pwms = <&tim_2_ic 3 10000000 0>;
+      pwm-names = "bc-status";
+      io-channels = <&adc1 8>,
+                    <&adc1 7>;
+      io-channel-names = "batt-voltage",
+                         "vbus-voltage";
+      batsense-enable-gpios = <&io_1 9 GPIO_ACTIVE_HIGH>;
+*/
+    };
+
+  cmx655d: cmx655d@54 {
+    compatible = "cml,cmx655d";
+    reg = <0x54>;
+    classd-oc-reset-attempts = <5>;
+    reset-gpios = <&gpio0 22 (GPIO_ACTIVE_LOW)>;
+    interrupt-gpios = <&gpio0 21 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+  };
+
+  imu_mb: bmi270@69 {
+		compatible = "bosch,bmi270";
+		reg = <0x69>;
+		label = "IMU_MB"; /* IMU on MAIN board */
+	};
+
+  imu_ab: bmi270@68 {
+		compatible = "bosch,bmi270";
+		reg = <0x68>;
+		label = "IMU_AB"; /* IMU on H205C-AB board */
+	};
+
+  press_mb: bmp388@76 {
+		compatible = "bosch,bmp388";
+    	reg = <0x76>;
+    	label = "PRESS_MB";
+    	odr = "25";			/* data rate = 25Hz */
+    	osr-press = <1>;	/* pressure oversampling = No */
+    	osr-temp = <1>;		/* temperature oversampling = No */
+    	iir-filter = <0>;	/* iir filter = default val */
+	};
+
+  fuelgauge: ltc2942@64 {
+		compatible = "lltc,ltc294x";
+		reg = <0x64>;
+		resistor-sense = <10>;
+		prescaler-exponent = <5>; 	/* for Qbat=5000 mAh, Rsense=10 mOhm [(128 * 5000 * 10)/(2^16 * 0.085 * 50)] */
+		device-id = <2>;			/* LTC2941 = 1, LTC2942 = 2, LTC2943 = 3, LTC2944 = 4 */
+		label = "FG";
+	};
+
+  /* h205c-oxH */
+  io_oxh: pca95xx@25 {
+    compatible = "nxp,pca95xx";
+    reg = <0x25>;
+    gpio-controller;
+    /*has-pud;*/
+    /*interrupt-gpios = <&gpio1 5 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;*/
+    #gpio-cells = <2>;
+    ngpios = <8>;
+    label = "IO_OXH";
+  };
+
+  sh_oxh: shmax30101@55 {
+		compatible = "maxim,shmax30101";
+		reg = <0x55>;
+    reset-gpios = <&io_oxh 4 GPIO_ACTIVE_LOW>;
+    mfio-gpios = <&gpio0 3 0>;
+		label = "SH_MAXIM";
+	};
+
+};

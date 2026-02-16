@@ -1,0 +1,58 @@
+Removed Member From Class: ClassName=+3V3_AUDIO_PS Member=C132
+Removed Member From Class: ClassName=USB-to-UART_Bridge Member=C136
+Removed Member From Class: ClassName=MIC1 Member=C145
+Removed Member From Class: ClassName=P109 Member=R33
+Removed Member From Class: ClassName=UART_MUX Member=R33
+Removed Member From Class: ClassName=P109 Member=R44
+Removed Member From Class: ClassName=U_ESP32-WROOM32D_Module Member=R52
+Removed Member From Class: ClassName=P110 Member=R67
+Removed Member From Class: ClassName=+3V3_PS Member=R83
+Removed Member From Class: ClassName=USB_MUX Member=R94
+Removed Member From Class: ClassName=USB_SW Member=R96
+Removed Member From Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=R99
+Removed Member From Class: ClassName=USB_SW Member=R100
+Removed Member From Class: ClassName=P103 Member=R112
+Removed Member From Class: ClassName=+1V8_PS Member=R122
+Removed Member From Class: ClassName=+3V3_PS Member=R122
+Removed Member From Class: ClassName=STM32G473QETx Member=R132
+Removed Member From Class: ClassName=DISP_PS Member=R141
+Removed Member From Class: ClassName=MIC1 Member=R142
+Removed Member From Class: ClassName=MIC1 Member=U40
+Added Member To Class: ClassName=FLASH Member=Component C114 (C1) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=MCU Member=Component C115 (C12) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=RTC_XTAL Member=Component C115 (C12) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component C117 (C7) CAP CER 10uF X7R 10% 0805
+Added Member To Class: ClassName=+3V3_AUDIO_PS Member=Component C134 (C1) CAP CER 10UF 16V X5R 0603
+Added Member To Class: ClassName=USB-to-UART_Bridge Member=Component C140 (C2) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=MIC1 Member=Component C149 (C33) CAP CER 0.1UF 50V X7R 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component FB5 (FB1) FERRITE BEAD 1 KOHM 0402 1LN
+Added Member To Class: ClassName=DISP_PS Member=Component FB6 (FB1) FERRITE BEAD 470 OHM 0603 1LN
+Added Member To Class: ClassName=MIC1 Member=Component FB7 (FB1) FERRITE BEAD 1 KOHM 0402 1LN
+Added Member To Class: ClassName=Net Tie Member=Component NT4 (NT5) Net Tie
+Added Member To Class: ClassName=P109 Member=Component R35 (R82) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=UART_MUX Member=Component R35 (R82) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P109 Member=Component R45 (R88) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=U_ESP32-WROOM32D_Module Member=Component R53 (R73) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=P110 Member=Component R68 (R1) RES SMD 68.1K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=+3V3_PS Member=Component R84 (R1) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=USB_MUX Member=Component R95 (R12) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=USB_SW Member=Component R97 (R14) RES SMD 2.2 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=Component R100 (R17) DNP*
+Added Member To Class: ClassName=USB_SW Member=Component R101 (R18) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=P103 Member=Component R113 (R1) RES SMD 54.9K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=+3V3_PS Member=Component R124 (R1) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=+1V8_PS Member=Component R125 (R2) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=FLASH Member=Component R133 (R2) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=FLASH Member=Component R134 (R3) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component R135 (R1) RES SMD 100 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_TPS22810 2 Member=Component R136 (R1) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_TPS22810 2 Member=Component R137 (R2) RES SMD 100 OHM 1% 1/2W 0805
+Added Member To Class: ClassName=+3V3_AUDIO_PS Member=Component R140 (R3) RES SMD 88.7K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=DISP_PS Member=Component R144 (R1) RES SMD 2.26 OHM 1% 1/10W 0603
+Added Member To Class: ClassName=MIC1 Member=Component R145 (R71) RES SMD 100 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=FLASH Member=Component U35 (U1) MT29F1G01ABAFDWB-IT:F TR
+Added Member To Class: ClassName=MCU Member=Component U36 (U3) IC SIT1533AI-H4-DCC-32.768E MEMS OSC XO 32.7680KHZ LVCMOS
+Added Member To Class: ClassName=RTC_XTAL Member=Component U36 (U3) IC SIT1533AI-H4-DCC-32.768E MEMS OSC XO 32.7680KHZ LVCMOS
+Added Member To Class: ClassName=STM32G473QETx Member=Component U37 (U1A) STM32G473QET6
+Added Member To Class: ClassName=+3V3_AUDIO_PS Member=Component U39 (U1) TPSM82822SILR
+Added Member To Class: ClassName=MIC1 Member=Component U42 (U8) IM69D130V01XTSA1

@@ -1,0 +1,24 @@
+# Copyright (c) 2022 Acme CPU
+# H205C power control driver configurations
+
+menuconfig H205C_POWER
+	bool "H205C power control driver"
+	default n
+	help
+	  Enable driver H205C board power.
+	  This will enable / disable various power ICs on the H205C board at boot time based on dts configurations
+	  The drver also exposes APIs to control the power ICs from the application
+
+if H205C_POWER
+
+module = H205C_POWER
+module-str = h205c_power
+source "subsys/logging/Kconfig.template.log_config"
+
+config H205C_POWER_INIT_PRIORITY
+	int "H205C_POWER Init Priority"
+	default 67
+	help
+	    Device driver initialization priority.
+
+endif # H205C_POWER

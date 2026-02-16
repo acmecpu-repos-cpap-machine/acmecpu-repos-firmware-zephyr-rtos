@@ -1,0 +1,15 @@
+identifier: stm32g473_acme_cpu_c201
+name: Custom STM32G473 Acme CPU C201
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+ram: 64
+flash: 256
+supported:
+  - i2c
+  - usart
+  - gpio
+  - counter

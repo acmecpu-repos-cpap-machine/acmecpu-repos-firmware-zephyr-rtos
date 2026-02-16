@@ -1,0 +1,46 @@
+# Copyright (c) 2021 Acme CPU
+# Choice of display used for the application
+
+choice
+	prompt "C20x Display Selection"
+	default DISPLAY_TFT_2INCH
+
+config DISPLAY_NONE
+	bool "No display"
+	help
+	  Application does not use a display
+
+config DISPLAY_TFT_1_5INCH
+	bool "TFT Display 1.5 inch"
+	select ST7789V
+	select C20X_SCREENS_TFT
+	help
+	  Use 1.5 inch TFT display for the application
+
+config DISPLAY_TFT_2INCH
+	bool "TFT Display 2 inch"
+	select ST7789V
+	select C20X_SCREENS_TFT
+	help
+	  Use 2 inch TFT display for the application
+
+config DISPLAY_OLED_0_96INCH
+	bool "OLED Display 0.96 inch"
+	select SSD1306
+	select C20X_SCREENS_OLED
+	help
+	  Use 0.96 inch OLED display for the application
+
+endchoice
+
+if DISPLAY_TFT_2INCH
+	rsource "Kconfig.tft"
+endif # DISPLAY_TFT_2INCH
+
+if DISPLAY_TFT_1_5INCH
+	rsource "Kconfig.tft"
+endif # DISPLAY_TFT_1_5INCH
+
+if DISPLAY_OLED_0_96INCH
+	rsource "Kconfig.oled"
+endif # DISPLAY_OLED_0_96INCH

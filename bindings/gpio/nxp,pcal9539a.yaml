@@ -1,0 +1,33 @@
+# Copyright (c) 2021 Acme CPU
+
+description: PCAL9539A I2C-based GPIO expander
+
+compatible: "nxp,pcal9539a"
+
+include: [gpio-controller.yaml, i2c-device.yaml]
+
+properties:
+    label:
+      required: false
+
+    has-pud:
+      type: boolean
+      required: false
+      description: Supports pull-up/pull-down
+
+    interrupt-gpios:
+      type: phandle-array
+      required: false
+      description: Interrupt GPIO pin (active-low open-drain)
+
+    reset-gpios:
+      type: phandle-array
+      required: false
+      description: Reset GPIO pin (output push-pull)
+
+    "#gpio-cells":
+      const: 2
+
+gpio-cells:
+  - pin
+  - flags

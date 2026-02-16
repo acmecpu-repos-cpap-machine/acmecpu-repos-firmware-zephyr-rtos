@@ -1,0 +1,9 @@
+[submodule "source/dts/bindings"]
+	path = source/dts/bindings
+	url = git@github.com:acmecpu/bindings.git
+[submodule "source/src/lib/lib_stm32bl_host"]
+	path = source/src/lib/lib_stm32bl_host
+	url = git@github.com:acmecpu/lib_stm32bl_host.git
+[submodule "source/src/lib/lib_events"]
+	path = source/src/lib/lib_events
+	url = git@github.com:acmecpu/lib_events.git

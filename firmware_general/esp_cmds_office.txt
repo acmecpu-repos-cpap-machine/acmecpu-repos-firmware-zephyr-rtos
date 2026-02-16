@@ -1,0 +1,42 @@
+# export the environment
+. /home/acpuvm001/esp/esp-idf-v5.2.1/export.sh
+. /home/acpuvm001/esp/esp-idf-v4.3/export.sh
+
+idf.py build
+idf.py -p /dev/ttyUSB0 flash monitor
+idf.py -p /dev/ttyUSB0 monitor
+idf.py -p /dev/ttyUSB0 erase_flash
+idf.py menuconfig
+--------------------------------------------------------------------------------------------------------------------------
+openocd commands for debugging
+--------------------------------------------------------------------------------------------------------------------------
+- First export the environment using the command above, then run the openocd commands
+- The openocd tool has to be kept running in the terminal for gdb to be able to work from command line or eclipse
+
+# command for custom board (tested on C201)
+openocd -f interface/ftdi/esp32_devkitj_v1.cfg -f target/esp32.cfg
+
+- OR -
+
+# for wrover kit
+openocd -f board/esp32-wrover-kit-3.3v.cfg
+openocd -f board/esp32-wrover-kit-1.8v.cfg
+
+# to flash via openocd and jtag port
+openocd -f interface/ftdi/esp32_devkitj_v1.cfg -f target/esp32.cfg -c "program_esp build/c201_esp32.bin 0x10000 verify exit"
+openocd -f interface/ftdi/esp32_devkitj_v1.cfg -f target/esp32.cfg -c "program_esp build/blink.bin 0x10000 verify exit"
+openocd -f interface/ftdi/esp32_devkitj_v1.cfg -f target/esp32.cfg -c "program_esp build/modem_comm.bin 0x10000 verify exit"
+openocd -f interface/ftdi/esp32_devkitj_v1.cfg -f target/esp32.cfg -c "program_esp build/ble_spp_server.bin 0x10000 verify exit"
+--------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------
+git commands
+--------------------------------------------------------------------------------------------------------------------------
+git clone git@github.com:acmecpu/c201_esp32.git
+git clone --single-branch --branch <branchname> <remote-repo>
+git clone --single-branch --branch dummy_ble git@github.com:acmecpu/c201_esp32.git
+git clone --single-branch --branch file-download --recurse-submodules git@github.com:acmecpu/c201_esp32.git
+git clone --single-branch --branch fw_update --recurse-submodules git@github.com:acmecpu/c201_esp32.git
+--------------------------------------------------------------------------------------------------------------------------
+
+scp c201_esp32_file_download.bin user@192.168.73.105:~/websocket_server/files

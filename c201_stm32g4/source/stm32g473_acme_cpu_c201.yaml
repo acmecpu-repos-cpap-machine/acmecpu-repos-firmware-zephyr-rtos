@@ -1,0 +1,13 @@
+sample:
+  name: Custom Acme CPU C201 PCBA
+tests:
+  sample.sensor.xxxxx:
+    harness: console
+    platform_whitelist: stm32g473_acme_cpu
+    tags: sensors
+    depends_on: i2c
+    harness_config:
+        type: one_line
+        regex:
+            - "xxxx is (.*) xx"
+        fixture: fixture_i2c_xxxxx

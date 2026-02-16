@@ -1,0 +1,6 @@
+# STSPIN220 Stepper Motor Driver configurations
+
+#config DRV10975_MOTOR_PARAMS1
+#	hex
+#	default 0x1F
+	

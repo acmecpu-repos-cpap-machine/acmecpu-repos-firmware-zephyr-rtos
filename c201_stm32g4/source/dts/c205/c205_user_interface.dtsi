@@ -1,0 +1,76 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ */
+
+/*
+	Note:
+	All of the switches cannot have an interrupt because of limited number of EXTI IRQn of STM32G4
+	see reference manual section 15.4:
+		the Pn0 are grouped to EXTI0, similarly Pn1 are grouped to EXTI1 and so on.
+		That means if PD6 is configured are an EXTI6 interrupt, we cannot configure PA6 as
+		that EXTI lie is already used and we will bet a -EBUSY (-16) error number
+		
+	A solution to this will be to have EXTI on one switch, i.e. power and needs should be polled
+*/
+
+
+/ {
+	keypad {
+		compatible = "gpio-keys";
+			
+	    switch_1: switch_1 {
+	      gpios = <&gpiod 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      label = "ENTER";
+	    };
+	
+	    switch_2: switch_2 {
+	      gpios = <&gpioa 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      label = "BACK";
+	    };
+	
+	    switch_3: switch_3 {
+	      /*gpios = <&gpioc 6 (GPIO_INPUT | GPIO_INT_LEVEL_LOW)>; level trigger not supported in gpio_stm32 driver */
+	      gpios = <&gpioc 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      label = "DOWN";
+	    };
+	
+	    switch_4: switch_4 {
+	      gpios = <&gpioc 13 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      label = "POWER";
+	    };
+	
+	    switch_5: switch_5 {
+	      /*gpios = <&gpioc 15 (GPIO_INPUT | GPIO_INT_LEVEL_LOW)>; level trigger not supported in gpio_stm32 driver */
+	      gpios = <&gpioc 15 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      label = "RIGHT";
+	    };
+	
+	    switch_6: switch_6 {
+	      /*gpios = <&gpiof 10 (GPIO_INPUT | GPIO_INT_LEVEL_LOW)>; level trigger not supported in gpio_stm32 driver */
+	      gpios = <&gpiof 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      label = "LEFT";
+	    };
+	
+	    switch_7: switch_7 {
+	      /*gpios = <&gpioc 3 (GPIO_INPUT | GPIO_INT_LEVEL_LOW)>; level trigger not supported in gpio_stm32 driver */
+	      gpios = <&gpioc 3 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      label = "UP";
+	    };
+	
+	    switch_8: switch_8 {
+	      gpios = <&gpioc 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      label = "HOME";
+	    };
+	};
+	
+	buzz: buzzer {
+		compatible = "bsp-buzzer";
+		status = "okay";
+		
+		pwms =  <&tim_5_pwm 2 250 PWM_POLARITY_NORMAL>;	/* period given in micro seconds for 4kHz freq buzzer */
+		pwm-names = "buzzer-ctrl";
+
+		label = "BUZZER";
+	};
+};

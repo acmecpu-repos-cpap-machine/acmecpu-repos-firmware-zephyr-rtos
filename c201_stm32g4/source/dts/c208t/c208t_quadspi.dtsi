@@ -1,0 +1,35 @@
+/*
+ * Copyright (c) 2024 Acme CPU
+ *
+ */
+
+ &quadspi {
+    status = "okay";
+    pinctrl-0 = <&quadspi_clk_pf10 &quadspi_bk1_ncs_pb6
+                 &quadspi_bk1_io0_pc9 &quadspi_bk1_io1_pc10
+                 &quadspi_bk1_io2_pf7 &quadspi_bk1_io3_pf6>;
+    pinctrl-names = "default";
+    flash-id = <1>;
+
+	mt25ql256aba1: mt25ql256aba1@0 {
+		compatible = "st,stm32-qspi-nor";
+        reg = <0 DT_SIZE_M(256)>; /* size in mega bits */
+        qspi-max-frequency = <120000000>;
+        
+        spi-bus-width = <4>;
+        reset-cmd;
+        
+        status = "okay";
+        
+		partitions {
+			compatible = "fixed-partitions";
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			storage_partition: partition@0 {
+				label = "data";
+				reg = <0 DT_SIZE_M(32)>;
+			};
+		};
+	};
+};

@@ -1,0 +1,36 @@
+# Copyright (c) 2021 Acme CPU
+# Choice of stepper motor used for the application
+
+menuconfig APP_STEPPER_PART
+	bool "Select the Stepper Motor"
+	default y
+	help
+	  Select the Stepper Motor (do not disable) 
+
+if APP_STEPPER_PART
+choice
+	prompt "Stepper Motor Selection"
+	default STEPPER_MOTOR_B101
+
+	config STEPPER_MOTOR_B101
+		bool "Stepper Motor B101"
+		help
+		  Stepper Motor B101
+	
+	config STEPPER_MOTOR_B102
+		bool "Stepper Motor B102"
+		help
+		  Stepper Motor B102 
+
+endchoice
+
+
+if STEPPER_MOTOR_B101
+	rsource "Kconfig.stepperb101"
+endif
+
+if STEPPER_MOTOR_B102
+	rsource "Kconfig.stepperb102"
+endif
+
+endif # APP_STEPPER_PART

@@ -1,0 +1,36 @@
+# Copyright (c) 2022 Acme CPU
+# Sensors application configurations 
+
+menuconfig APP_ANALOG
+	bool "ADC configurations"
+	default y
+	help
+	  Enable / disable ADC measurement module
+
+if APP_ANALOG
+
+config APP_ANALOG_VBAT_R1
+	int "VBAT resistor divider R1 in ohms"
+	default 2700
+	help
+	  VBAT resistor divider R1 in ohms
+
+config APP_ANALOG_VBAT_R2
+	int "VBAT resistor divider R2 in ohms"
+	default 7500
+	help
+	  VBAT resistor divider R2 in ohms
+
+config APP_ANALOG_VBUS_R1
+	int "VBUS resistor divider R1 in ohms"
+	default 4700
+	help
+	  VBUS resistor divider R1 in ohms
+
+config APP_ANALOG_VBUS_R2
+	int "VBUS resistor divider R2 in ohms"
+	default 7500
+	help
+	  VBUS resistor divider R2 in ohms
+
+endif # APP_SENSOR

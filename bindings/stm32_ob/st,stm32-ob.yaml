@@ -1,0 +1,11 @@
+# Copyright (c) 2020, Acme CPU
+
+description: STM32 Flash Option Bytes binding to be used by the option bytes programming driver
+
+include: base.yaml
+
+compatible: "st,stm32-ob"
+
+properties:
+    label:
+      required: false

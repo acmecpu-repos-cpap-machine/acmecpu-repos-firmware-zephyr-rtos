@@ -1,0 +1,13 @@
+# Copyright (c) 2021 Acme CPU
+# Configurations for a membrane switch used in the application 
+
+menuconfig APP_MEMBRANE_SWITCH
+#	bool
+	bool "Membrane Switch enable / disable config"
+	default y
+	help
+	  Enable or disable the membrane switch module 
+
+if APP_MEMBRANE_SWITCH
+
+endif # APP_MEMBRANE_SWITCH

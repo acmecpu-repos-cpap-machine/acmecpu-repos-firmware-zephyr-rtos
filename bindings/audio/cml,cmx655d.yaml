@@ -1,0 +1,25 @@
+# Copyright (c) 2020, Acme CPU
+
+description: CMX655 audio CODEC
+
+include: i2c-device.yaml
+
+compatible: "cml,cmx655d"
+
+properties:
+
+    classd-oc-reset-attempts:
+        required: false
+        type: int
+        default: 5
+        description: Maximum number of times to reset CMX655 class-D following a overcurrent event. default = 5, >10000 = disable limit.
+                     
+    reset-gpios:
+        required: false
+        type: phandle-array
+        description: a GPIO spec for the reset pin. If specified, it will be deasserted before communication to the codec starts.
+        
+    interrupt-gpios:
+        required: false
+        type: phandle-array
+        description: interrupt pin

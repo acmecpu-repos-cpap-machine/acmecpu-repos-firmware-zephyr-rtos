@@ -1,0 +1,31 @@
+# Copyright (c) 2021 Acme CPU
+# TFT display configurations
+
+
+config APP_DISPLAY_HEIGHT_PX
+	int "Display height in pixels"
+	range 1 4000
+	default 240
+	help
+		Display height in pixels
+		
+config APP_DISPLAY_WIDTH_PX
+	int "Display width in pixels"
+	range 1 4000
+	default 320
+	help
+		Display width in pixels
+		
+config APP_DISPLAY_DIMMING_SUPPORT
+	bool "Supports display dimming"
+	default y
+	help
+		Supports display dimming
+
+config APP_DISPLAY_STATUSBAR_HEIGHT_PX
+	int "Statusbar height in pixels"
+	range 1 4000
+	default 24
+	help
+		Display width in pixels
+	

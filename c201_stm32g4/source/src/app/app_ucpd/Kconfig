@@ -1,0 +1,37 @@
+# Copyright (c) 2022 Acme CPU
+# App UCPD configurations
+
+menuconfig APP_UCPD
+	bool "Enable / disable USB Power Delivery"
+	default n
+	help
+	  Enable / disable USB Power Delivery
+
+if APP_UCPD
+
+config APP_MVOLT_MAX
+	int "Max VBUS (mV) supported by the application"
+	default 5000
+	range 5000 20000
+	help
+	  Max VBUS (mV) supported by the application
+	  
+endif	# APP_UCPD
+
+menuconfig APP_UCPD_EXT_CONTR
+	bool "Enable / disable UCPD external controller app and shell commands"
+	default n
+	help
+		Enable / disable UCPD external controller app and commands.
+		If this is enabled then ucpd shell commands are activated. 
+
+if APP_UCPD_EXT_CONTR
+
+config APP_MVOLT_MAX
+	int "Max VBUS (mV) supported by the application"
+	default 5000
+	range 5000 20000
+	help
+	  Max VBUS (mV) supported by the application
+
+endif # APP_UCPD_EXT_CONTR

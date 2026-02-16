@@ -1,0 +1,10 @@
+# GPIO configuration options
+
+# Copyright (c) 2021 Acme CPU
+# SPDX-License-Identifier: Apache-2.0
+
+if GPIO
+
+rsource "Kconfig.pca95xx"
+
+endif # GPIO

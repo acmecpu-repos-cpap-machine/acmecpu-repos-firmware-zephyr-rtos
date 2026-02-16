@@ -1,0 +1,16 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ */
+
+&timers17 {
+	status = "okay";
+   	st,prescaler = <8000>;
+  
+	tim_17_pwm: pwm {
+    	status = "okay";
+    	pinctrl-0 = <&tim17_ch1_pb9>;
+    	pinctrl-names = "default";
+    	#pwm-cells = <3>;
+  	};
+};

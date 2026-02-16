@@ -1,0 +1,25 @@
+Added Component: Designator=U37(XDCR_BMI270)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Manufacturer"; Value = "Bosch Sensortec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "BMI270"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=5.75, 5=5.07, 10=4.478, 25=3.6336, 50=3.211, 100=3.1265, 500=2.6195, 1000=2.4505 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "828-1091-1-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetNT7_1 Pin=U37-1
+Added Pin To Net: NetName=NetU37_2 Pin=U37-2
+Added Pin To Net: NetName=NetU37_3 Pin=U37-3
+Added Pin To Net: NetName=PD7 Pin=U37-4
+Added Pin To Net: NetName=+3V3 Pin=U37-5
+Added Pin To Net: NetName=GND Pin=U37-6
+Added Pin To Net: NetName=GND Pin=U37-7
+Added Pin To Net: NetName=+3V3 Pin=U37-8
+Added Pin To Net: NetName=NetU37_9 Pin=U37-9
+Added Pin To Net: NetName=NetU37_10 Pin=U37-10
+Added Pin To Net: NetName=NetU37_11 Pin=U37-11
+Added Pin To Net: NetName=NetNT6_1 Pin=U37-12
+Added Pin To Net: NetName=PC8 Pin=U37-13
+Added Pin To Net: NetName=PC9 Pin=U37-14
+Change Class Name : Old Net Name=+3V3_PS New Net Name=+3V3_AUDIO_PS
+Added Class: Name=+3V3_PS
+Added Member To Class: ClassName=P128 Member=Component U37 (U1) BMI270

@@ -1,0 +1,94 @@
+/*	Copyright (c) 2021 Acme CPU
+ *	SPDX-License-Identifier:
+*/
+
+/{
+    ui-entry {
+	compatible = "menu-entry";
+	label = "Menu Entry";
+	menu = <&menu_entry>;
+    };
+
+    ui-menu {
+	menu_entry: menu-item-1 {
+    	    compatible = "menu-item";
+            title = "Main Menu";
+	    message = "Acme CPU C201";
+    	    label = "Main Menu";
+	    font_idx = <0>;
+	    parent_node = <&menu_entry>;
+    	    priority = <70>;
+	};
+
+        clock_menu: menu-item-2 {
+	    compatible = "menu-item";
+            title = "Clock";
+	    message = "Acme CPU Clock Menu";
+    	    label = "Clock Menu";
+	    font_idx = <0>;
+	    parent_node = <&menu_entry>;
+    	    priority = <71>;
+	};
+
+        time_menu: menu-item-3 {
+	    compatible = "menu-item";
+	    title = "Time";
+            message = "Time Settings";
+	    label = "Time";
+	    font_idx = <0>;
+	    parent_node = <&clock_menu>;
+	    priority = <80>;
+	};
+
+        date_menu: menu-item-4 {
+	    compatible = "menu-item";
+            title = "Date";
+	    message = "Date Settings";
+	    label = "Date";
+	    font_idx = <0>;
+	    parent_node = <&clock_menu>;
+    	    priority = <81>;
+	};
+
+        alarm_menu: menu-item-5 {
+	    compatible = "menu-item";
+            title = "Alarm";
+	    message = "Alarm Settings";
+    	    label = "Alarm";
+	    font_idx = <0>;
+	    parent_node = <&clock_menu>;
+            priority = <82>;
+	};
+
+        led_driver_menu: menu-item-6 {
+	    compatible = "menu-item";
+            title = "FAN";
+	    message = "Acme CPU FAN Settings";
+    	    label = "FAN Menu";
+	    font_idx = <0>;
+	    parent_node = <&menu_entry>;
+    	    priority = <72>;
+	};
+
+        tools: menu-item-7 {
+	    compatible = "menu-item";
+            title = "Tools";
+	    message = "Acme CPU C201 Settings";
+    	    label = "Tools";
+	    font_idx = <0>;
+	    parent_node = <&menu_entry>;
+    	    priority = <73>;
+	};
+
+        preferences: menu-item-8 {
+	    compatible = "menu-item";
+            title = "Preferences";
+	    message = "Preferences";
+    	    label = "Preferences";
+	    font_idx = <0>;
+	    parent_node = <&menu_entry>;
+    	    priority = <74>;
+	};
+    };
+};
+

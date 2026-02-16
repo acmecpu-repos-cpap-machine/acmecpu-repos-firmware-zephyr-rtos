@@ -1,0 +1,10 @@
+Output: Pick and place BG95-M3_Global_OLED_SCREEN
+Type  : Pick Place
+From  : Variant [BG95-M1_US_TFT_SCREEN] of PCB Document [Control_Board_Model_C201_FFC_Sens_Conn.PcbDoc]
+   Generated File[20201215-SGU-Acme_CPU_Control_Board_C201_001_Pick_and_Place.txt]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 11:18:39 AM On 12/22/2020

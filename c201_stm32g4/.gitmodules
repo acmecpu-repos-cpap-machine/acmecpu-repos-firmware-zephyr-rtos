@@ -1,0 +1,48 @@
+[submodule "source/src/lib/lib_events"]
+	path = source/src/lib/lib_events
+	url = git@github.com:acmecpu/lib_events.git
+[submodule "source/dts/bindings"]
+	path = source/dts/bindings
+	url = git@github.com:acmecpu/bindings.git
+[submodule "source/modules/ltc294x"]
+	path = source/modules/ltc294x
+	url = git@github.com:acmecpu/ltc294x.git
+[submodule "buzzer_generic"]
+	path = buzzer_generic
+	url = git@github.com:acmecpu/buzzer_generic.git
+[submodule "source/modules/buzzer_generic"]
+	path = source/modules/buzzer_generic
+	url = git@github.com:acmecpu/buzzer_generic.git
+[submodule "source/modules/pcal9539a"]
+	path = source/modules/pcal9539a
+	url = git@github.com:acmecpu/pcal9539a.git
+[submodule "source/src/lib/lib_push_switch"]
+	path = source/src/lib/lib_push_switch
+	url = git@github.com:acmecpu/lib_push_switch.git
+[submodule "source/modules/bq25611d"]
+	path = source/modules/bq25611d
+	url = git@github.com:acmecpu/bq25611d.git
+[submodule "source/src/lib/lib_file_oper"]
+	path = source/src/lib/lib_file_oper
+	url = git@github.com:acmecpu/lib_file_oper.git
+[submodule "source/modules/power_control_driver"]
+	path = source/modules/power_control_driver
+	url = git@github.com:acmecpu/power_control_driver.git
+[submodule "source/modules/cmx655d"]
+	path = source/modules/cmx655d
+	url = git@github.com:acmecpu/cmx655d.git
+[submodule "source/src/lib/lib_matrix_keypad"]
+	path = source/src/lib/lib_matrix_keypad
+	url = git@github.com:acmecpu/lib_matrix_keypad.git
+[submodule "source/modules/bq25792"]
+	path = source/modules/bq25792
+	url = git@github.com:acmecpu/bq25792.git
+[submodule "source/modules/stusb4500"]
+	path = source/modules/stusb4500
+	url = git@github.com:acmecpu/stusb4500.git
+[submodule "source/src/lib/lib_m2m_frame"]
+	path = source/src/lib/lib_m2m_frame
+	url = git@github.com:acmecpu/lib_m2m_frame.git
+[submodule "source/src/lib/lib_stm32bl_host"]
+	path = source/src/lib/lib_stm32bl_host
+	url = git@github.com:acmecpu/lib_stm32bl_host.git

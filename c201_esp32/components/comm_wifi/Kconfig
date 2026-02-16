@@ -1,0 +1,6 @@
+# Copyright (c) 20213Acme CPU
+# WiFi Application Configurations
+
+menu "WiFi Application Configurations"
+
+endmenu

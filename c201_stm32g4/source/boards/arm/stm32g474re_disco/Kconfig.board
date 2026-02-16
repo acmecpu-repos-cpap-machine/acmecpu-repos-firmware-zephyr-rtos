@@ -1,0 +1,8 @@
+# STM32G474RE Discovery board configuration
+
+# Copyright (c) 2019 STMicroelectronics.
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_G474RE_DISCO
+	bool "Discovery G474RE Development Board"
+	depends on SOC_STM32G474XX

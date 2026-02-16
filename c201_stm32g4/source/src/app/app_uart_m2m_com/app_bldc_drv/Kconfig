@@ -1,0 +1,14 @@
+# Copyright (c) 2022 Acme CPU
+# UART based BLDC motor driver module communication application configuration
+
+menuconfig APP_BLDC_DRV
+	bool "UART based BLDC motor driver module communication application configuration"
+	depends on (BOARD_C204_CORE || BOARD_C205 || BOARD_E206 || BOARD_C208T)
+	default y
+	help
+	  UART based BLDC motor driver module communication application configuration 
+
+if APP_BLDC_DRV
+
+
+endif # APP_BLDC_DRV

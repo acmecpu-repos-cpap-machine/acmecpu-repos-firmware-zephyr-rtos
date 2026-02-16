@@ -1,0 +1,179 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ * 
+ * GPIO device list
+ * 	- keypad
+ * 	- load switch enable (may consier to remove dedicated tps22810 driver)
+ *  - audio ps enable
+ * 	- reed switches
+ * 	- network processor (esp32) reset and wakeup
+ *  - bldc driver reset and boot
+ *  - tcpp fault
+ *  - usb mux (TS3USB221ERSER)
+ */
+ 
+ / {
+ 	aux_enable {
+		compatible = "gpio-keys";
+		
+	    bldc_hall_ps_en: bldc_hall_ps_en {
+	      gpios = <&gpiog 12 (GPIO_PUSH_PULL)>;
+	    };
+
+	    audio_ps_en: audio_ps_en {
+	      gpios = <&gpioi 8 (GPIO_PUSH_PULL)>;
+	    };
+	};
+ 
+	reed_switches {
+		compatible = "gpio-keys";
+
+	    reed_switch_1: reed_switch_1 {
+	      gpios = <&gpioh 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	    };
+	    
+	    reed_switch_2: reed_switch_2 {
+	      gpios = <&gpioh 3 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	    };
+
+	    reed_switch_3: reed_switch_3 {
+	      gpios = <&gpioh 4 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	    };
+	};
+	
+	net_proc_gpios {
+		compatible = "gpio-keys";
+		
+	    wifibt_rst: wifibt_rst {
+	      gpios = <&gpiof 8 (GPIO_PUSH_PULL)>;
+	      /*label = "ESP32_RST";*/
+	    };
+	    
+	    wifibt_wake: wifibt_wake {
+	      gpios = <&gpiof 5 (GPIO_PUSH_PULL)>;
+	      /*label = "ESP32_WU";*/
+	    };
+	};
+	
+	lte_gpios {
+		compatible = "gpio-keys";
+	
+	    lte_dtr: lte_dtr {
+	      gpios = <&gpioe 13 (GPIO_PUSH_PULL)>;
+	      /*label = "LTE_DTR";*/
+	    };
+	    
+	    lte_dcd: lte_dcd {
+	      gpios = <&gpiog 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      /*label = "LTE_DCD";*/
+	    };
+	    
+	    lte_ri: lte_ri {
+	      gpios = <&gpioh 9 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      /*label = "LTE_RI";*/
+	    };
+
+	    lte_board_det: lte_board_det {
+	      gpios = <&gpiog 13 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      /*label = "LTE_BOARD_DET";*/
+	    };
+
+	    lte_pwr_en: lte_pwr_en {
+	      gpios = <&gpioe 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      /*label = "LTE_PWR_EN";*/
+	    };
+	};
+	
+	bldc_drv_gpios {
+		compatible = "gpio-keys";
+		
+	    bldc_rst: bldc_rst {
+	      gpios = <&gpioh 12 (GPIO_PUSH_PULL)>;
+	      /*label = "BLDC_RST";*/
+	    };
+	    
+	    bldc_boot: bldc_boot {
+	      gpios = <&gpioh 10 (GPIO_PUSH_PULL)>;
+	      /*label = "BLDC_BOOT";*/
+	    };
+	};
+
+	i2c_switch_gpios {
+		compatible = "gpio-keys";
+
+	    ts3usb221_sel: ts3usb221_sel {
+	      gpios = <&gpioc 2 (GPIO_PUSH_PULL)>;
+	      /*label = "TS3USB221_SEL";*/
+	    };
+
+	    ts3usb221_oe: ts3usb221_oe {
+	      gpios = <&gpioc 3 (GPIO_PUSH_PULL)>;
+	      /*label = "TS3USB221_OE";*/
+	    };
+	};
+	
+	heating_module_gpios {
+		compatible = "gpio-keys";
+		
+	    hm1_24w_en: hm1_24w_en {
+	      gpios = <&gpioi 9 (GPIO_PUSH_PULL)>;
+	    };
+
+	    hm1_12w_en: hm1_12w_en {
+	      gpios = <&gpioi 11 (GPIO_PUSH_PULL)>;
+	    };		
+	};
+	
+	ucpd_ctrl_gpios {	/* use if i2c driver is not available */
+		compatible = "gpio-keys";
+		
+	    ucpd_rst: ucpd_rst {
+	      gpios = <&gpioa 1 (GPIO_PUSH_PULL)>;
+	    };
+
+	    ucpd_alert: ucpd_alert {
+	      gpios = <&gpioa 0 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	    };		
+
+	    ucpd_abside: ucpd_abside {
+	      gpios = <&gpiof 14 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	    };		
+	};
+
+	other_gpios {
+		compatible = "gpio-keys";
+
+	    cont1: cont1 {
+	      gpios = <&gpiod 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      /*label = "CONT_1";*/
+	    };
+	    
+	    cont2: cont2 {
+	      gpios = <&gpiod 0 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      /*label = "CONT_2";*/
+	    };
+
+	    pwr_jack_sense_en: pwr_jack_sense_en {
+	      gpios = <&gpioe 4 GPIO_ACTIVE_HIGH>;
+	      /*label = "PWR_JACK_SENSE_EN";*/
+	    };
+	    
+	    vbus_in_sense_en: vbus_in_sense_en {
+	      gpios = <&gpioe 3 GPIO_ACTIVE_HIGH>;
+	      /*label = "VBUS_IN_SENSE_EN";*/
+	    };
+
+	    vbat_sense_en: vbat_sense_en {
+	      gpios = <&gpiof 4 GPIO_ACTIVE_HIGH>;
+	      /*label = "VBAT_SENSE_EN";*/
+	    };
+
+	    sdcard_det: sdcard_det {
+	      gpios = <&gpiog 11 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	      /*label = "SDCARD_DET";*/
+	    };
+	};
+};
+
+
+

@@ -1,0 +1,46 @@
+# Copyright (c) 2021 Acme CPU
+# Configurations for a membrane switch used in the application 
+
+menuconfig BSP_MEMBRANE_SWITCH
+#	bool
+	bool "Membrane Switch configurations"
+	default y
+	help
+	  Enable or disable the membrane switch module 
+
+if BSP_MEMBRANE_SWITCH
+
+config SWITCH_EDGE_NORMAL_PRESS_DURATION_MS_MIN
+	int "(EDGE TRIG) Min time in milli seconds a switch must stay asserted for normal press detection"
+	range 50 500
+	default 150
+	help
+	    A normal switch press is considered valid if the time (in milli seconds) from the moment an interrupt is detected is
+	    more than this time
+
+config SWITCH_EDGE_LONG_PRESS_DURATION_MS_MIN
+	int "(EDGE TRIG) Min time in milli seconds a switch must stay asserted for long press detection"
+	range 2000 10000
+	default 3000
+	help
+	    A long switch press is considered valid if the time (in milli seconds) from the moment an interrupt is detected is
+	    more than this time
+
+config SWITCH_LEVEL_NORMAL_PRESS_DURATION_MS_MIN
+	int "(LEVEL TRIG) Min time in milli seconds a switch must stay asserted for normal press detection"
+	range 50 500
+	default 200
+	help
+	    A normal switch press is considered valid if the time (in milli seconds) from the moment an interrupt is detected is
+	    more than this time
+
+config SWITCH_LEVEL_NORMAL_PRESS_DURATION_MS_MAX
+	int "(LEVEL TRIG) Max time in milli seconds a switch can stay asserted for normal press detection"
+	range 500 2000
+	default 800
+	help
+	    The maximum time helps to rule out incorrect data.
+
+
+endif # BSP_MEMBRANE_SWITCH
+

@@ -1,0 +1,8 @@
+# Copyright (c) 2022 Acme CPU
+
+rsource "lib_pid/Kconfig"
+rsource "lib_push_switch/Kconfig"
+rsource "lib_file_oper/Kconfig"
+rsource "lib_matrix_keypad/Kconfig"
+rsource "lib_m2m_frame/Kconfig"
+rsource "lib_stm32bl_host/Kconfig"

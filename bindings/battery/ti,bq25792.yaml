@@ -1,0 +1,40 @@
+# Copyright (c) 2023, Acme CPU
+# Ref: https://git.ti.com/gitweb?p=ti-analog-linux-kernel/dmurphy-analog.git;a=commit;h=75997c21e9dfc0d54b7f774bfb37e6af796ff293
+
+description: BQ25792 I2C Controlled 1 to 4 cell Battery Charger
+
+include: i2c-device.yaml
+
+compatible: "ti,bq25792"
+
+properties:
+
+    status-gpios:
+        required: false
+        type: phandle-array
+        description: Charge status output to indicate various charger operations
+        
+    interrupt-gpios:
+        required: false
+        type: phandle-array
+        description: Interrupt output
+
+    charge-enable-gpios:
+        required: false
+        type: phandle-array
+        description: Active low charge enable pin
+
+    watchdog-timer:
+        required: true
+        type: int
+        description: Watchdog timer value in ms. A 0 value mease watchdog disable
+        
+    input-voltage-limit-microvolt:
+        required: true
+        type: int
+        description: minimum system voltage limit in microvolts
+        
+    input-current-limit-microamp:
+        required: true
+        type: int
+        description: intput current limit in microamps

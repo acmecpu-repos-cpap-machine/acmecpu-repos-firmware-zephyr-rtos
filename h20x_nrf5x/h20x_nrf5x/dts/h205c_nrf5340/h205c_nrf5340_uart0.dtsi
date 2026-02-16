@@ -1,0 +1,14 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ * Created on: 7-Dec-2022
+ * Author: Rohan Dey (rohan@acmecpu.cpm)
+ *
+ * H205C UART0 - interface with wifi module
+ */
+
+ &uart0 {
+    status = "okay";
+    current-speed = <115200>;
+    hw-flow-control;
+ };

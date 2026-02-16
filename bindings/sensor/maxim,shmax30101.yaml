@@ -1,0 +1,22 @@
+# Copyright (c) 2022 Acme CPU
+
+description: |
+  Maxim MAX32664 sensor hub and MAX30101 oximeter
+
+compatible: "maxim,shmax30101"
+
+include: i2c-device.yaml
+
+properties:
+  reset-gpios:
+    type: phandle-array
+    required: false
+    description: |
+      Identifies pin for the reset signal on the sensor hub.
+
+  mfio-gpios:
+    type: phandle-array
+    required: false
+    description: |
+      Identifies pin for the MFIO signal on the sensor hub.
+

@@ -1,0 +1,332 @@
+*************************************************************
+FileName = 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Gerber.GBR
+AutoAperture = True
+*************************************************************
+Generating : 1-SIG-TOP
+      File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Gerber.GTL
+
+    Adding Layer      : 1-SIG-TOP
+
+    Adding Layer      : PCB Sheet
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+*************************************************************
+
+*************************************************************
+Generating : 2-GND
+      File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Gerber.GP1
+
+    Adding Layer      : 2-GND
+
+    Adding Layer      : PCB Sheet
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D28
+    D33
+    D34
+    D35
+    D36
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+*************************************************************
+
+*************************************************************
+Generating : 3-GND-PWR
+      File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Gerber.GP2
+
+    Adding Layer      : 3-GND-PWR
+
+    Adding Layer      : PCB Sheet
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D28
+    D33
+    D34
+    D35
+    D36
+    D42
+    D43
+    D44
+    D45
+    D47
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+*************************************************************
+
+*************************************************************
+Generating : 4-SIG-BOT
+      File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Gerber.GBL
+
+    Adding Layer      : 4-SIG-BOT
+
+    Adding Layer      : PCB Sheet
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D23
+    D27
+    D28
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Gerber.GTO
+
+    Adding Layer      : Top Overlay
+
+    Adding Layer      : PCB Sheet
+
+
+Used DCodes :
+    D27
+    D28
+    D33
+    D34
+    D35
+    D36
+    D60
+    D61
+    D62
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Gerber.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : PCB Sheet
+
+    Adding Layer      : 1-SIG-TOP
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D26
+    D28
+    D33
+    D34
+    D35
+    D36
+    D63
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+    D70
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
+    D81
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Gerber.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : PCB Sheet
+
+    Adding Layer      : 4-SIG-BOT
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D28
+    D33
+    D34
+    D35
+    D36
+    D64
+    D67
+    D77
+    D80
+    D81
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Gerber.GBO
+
+    Adding Layer      : Bottom Overlay
+
+    Adding Layer      : PCB Sheet
+
+
+Used DCodes :
+    D27
+    D28
+    D33
+    D34
+    D35
+    D36
+    D82
+*************************************************************
+
+*************************************************************
+Generating : Outline
+      File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Gerber.GM12
+
+    Adding Layer      : Outline
+
+    Adding Layer      : PCB Sheet
+
+
+Used DCodes :
+    D28
+    D33
+    D34
+    D35
+    D36
+    D83
+*************************************************************
+
+*************************************************************
+Generating : TOP ASSY
+      File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Gerber.GM14
+
+    Adding Layer      : TOP ASSY
+
+    Adding Layer      : PCB Sheet
+
+
+Used DCodes :
+    D27
+    D28
+    D33
+    D34
+    D35
+    D36
+    D60
+    D61
+    D62
+    D84
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Gerber.GD1
+
+    Adding Layer      : PCB Sheet
+
+    Adding Drill Pair : 1-SIG-TOP-4-SIG-BOT
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D28
+    D33
+    D34
+    D35
+    D36
+    D85
+    D86
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : 20201105-VSI-Acme_CPU_Motor_Driver_D201_001_Gerber.GG1
+
+    Adding Layer      : PCB Sheet
+
+    Adding Drill Pair : 1-SIG-TOP-4-SIG-BOT
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D28
+    D33
+    D34
+    D35
+    D36
+    D85
+*************************************************************
+

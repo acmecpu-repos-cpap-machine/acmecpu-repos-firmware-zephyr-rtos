@@ -1,0 +1,17 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 11:16:14 AM On 12/22/2020
+
+Output: Stencils
+Type  : Gerber
+From  : PCB Document [Control_Board_Model_C201_FFC_Sens_Conn.PcbDoc]
+   Generated File[20201215-SGU-Acme_CPU_Control_Board_C201_001_Stencil.GTP]
+   Generated File[20201215-SGU-Acme_CPU_Control_Board_C201_001_Stencil.GBP]
+   Generated File[20201215-SGU-Acme_CPU_Control_Board_C201_001_Stencil.EXTREP]
+   Generated File[20201215-SGU-Acme_CPU_Control_Board_C201_001_Stencil.REP]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 11:16:16 AM On 12/22/2020

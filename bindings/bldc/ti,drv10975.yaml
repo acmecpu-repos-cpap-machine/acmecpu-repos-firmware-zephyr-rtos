@@ -1,0 +1,21 @@
+# Copyright (c) 2020, Acme CPU
+
+description: DRV10975 Three Phase Sensorless BLDC Motor Driver
+
+include: i2c-device.yaml
+
+compatible: "ti,drv10975"
+
+properties:
+
+  direction-gpios:
+    required: true
+    type: phandle-array
+
+  pwm-names:
+    type: string-array
+    required: true
+
+  pwms:
+    type: phandle-array
+    required: true

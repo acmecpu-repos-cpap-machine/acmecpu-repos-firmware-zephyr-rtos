@@ -1,0 +1,56 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ */
+
+/ { 
+	stepper1_stspin220 {
+		compatible = "st,stspin220";
+		label = "STSPIN220";
+
+		pwms = 	<&stp1_vref_pwm 4 200 PWM_POLARITY_NORMAL>;	/* Vref PWM period in microseconds for 5000 Hz	*/
+		pwm-names = "vref";
+		
+		step-clock-gpios = <&gpiob 2 (GPIO_PUSH_PULL)>;
+	
+		step-mode1-gpios = <&gpioc 1 (GPIO_PUSH_PULL)>;
+		step-mode2-gpios = <&gpioc 0 (GPIO_PUSH_PULL)>;
+
+		direction-gpios = <&gpioc 4 (GPIO_PUSH_PULL)>;
+		
+		enable-gpios = <&gpiog 0 (GPIO_PUSH_PULL)>;
+		
+		standby-gpios = <&gpiof 12 (GPIO_PUSH_PULL)>;
+		
+		fault-gpios = <&gpiof 13 (GPIO_PULL_UP)>;
+		
+		vref-pwm-duty = <100>;	/* For 100% duty cycle, Vref will be 0.491V, i.e. Ipeak = 220mA as per resitor configuration in the E206 board */
+		
+		vref-gpios = <&gpioa 3 (GPIO_PUSH_PULL)>;
+	};
+
+	stepper2_stspin220 {
+		compatible = "st,stspin220";
+		label = "STSPIN220_2";
+
+		pwms = 	<&stp2_vref_pwm 1 200 PWM_POLARITY_NORMAL>;	/* Vref PWM period in microseconds for 5000 Hz	*/
+		pwm-names = "vref";
+		
+		step-clock-gpios = <&gpiod 13 (GPIO_PUSH_PULL)>;
+	
+		step-mode1-gpios = <&gpiod 15 (GPIO_PUSH_PULL)>;
+		step-mode2-gpios = <&gpiog 2 (GPIO_PUSH_PULL)>;
+
+		direction-gpios = <&gpiod 14 (GPIO_PUSH_PULL)>;
+		
+		enable-gpios = <&gpiob 14 (GPIO_PUSH_PULL)>;
+		
+		standby-gpios = <&gpiog 4 (GPIO_PUSH_PULL)>;
+		
+		fault-gpios = <&gpiog 6 (GPIO_PULL_UP)>;
+		
+		vref-pwm-duty = <100>;	/* For 100% duty cycle, Vref will be 0.491V, i.e. Ipeak = 220mA as per resitor configuration in the E206 board */
+		
+		vref-gpios = <&gpioi 0 (GPIO_PUSH_PULL)>;
+	};
+};

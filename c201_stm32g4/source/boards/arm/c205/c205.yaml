@@ -1,0 +1,15 @@
+identifier: c205
+name: Custom STM32G473 Acme CPU C205
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+ram: 128
+flash: 512
+supported:
+  - i2c
+  - usart
+  - gpio
+  - counter

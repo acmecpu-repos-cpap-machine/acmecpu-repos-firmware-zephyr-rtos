@@ -1,0 +1,39 @@
+# Copyright (c) 2021 Acme CPU
+# Choice of blower part used for the application
+
+choice
+	prompt "ACPU C201 Blower Selection"
+	default BLOWER_MOTOR_A101
+
+config BLOWER_MOTOR_A101
+	bool "Blower Motor A101"
+	help
+	  Use the 3 phase BLDC Motor A101 as the blower to be used in the application
+	  Selecting this will enable the particular driver to be used with this motor
+
+config BLOWER_MOTOR_A102
+	bool "Blower Motor A102"
+	help
+	  Use the 3 phase BLDC Motor A102 as the blower to be used in the application
+	  Selecting this will enable the particular driver to be used with this motor 
+
+config BLOWER_MOTOR_A2
+	bool "Blower Motor A2"
+	help
+	  Use the 3 phase BLDC Motor A2 as the blower to be used in the application
+	  Selecting this will enable the particular driver to be used with this motor 
+
+endchoice
+
+
+if BLOWER_MOTOR_A2
+	rsource "Kconfig.blowera2"
+endif # BLOWER_MOTOR_A2
+
+if BLOWER_MOTOR_A101
+	rsource "Kconfig.blowera101"
+endif # BLOWER_MOTOR_A101
+
+if BLOWER_MOTOR_A102
+	rsource "Kconfig.blowera102"
+endif # BLOWER_MOTOR_A102

@@ -1,0 +1,20 @@
+# Copyright (c) 2021 Acme CPU
+
+menuconfig BSP_LEDS
+	bool "BSP LED module"
+	help
+	  Enable BSP LED module
+	  
+if BSP_LEDS
+
+module = BSP_LEDS
+module-str = bsp_leds
+source "subsys/logging/Kconfig.template.log_config"
+
+config BSP_LEDS_INIT_PRIORITY
+	int "BSP_LEDS initialization priority"
+	default 90
+	help
+	  System initialization priority for BSP_LEDS module.
+
+endif # BSP_LEDS

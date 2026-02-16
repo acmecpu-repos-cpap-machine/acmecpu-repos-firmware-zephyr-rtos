@@ -1,0 +1,37 @@
+# Copyright (c) 2022 Acme CPU
+# Board Selection
+
+menu "ACPU Board Selection"
+
+choice BOARD_CHOICE
+    prompt "Select the board for which the application will be built"
+    default BOARD_E206
+    
+    config BOARD_C201
+        bool "C201"
+    config BOARD_C204
+        bool "C204"
+    config BOARD_H205C
+        bool "H205C"
+    config BOARD_D205
+        bool "D205"
+    config BOARD_E206
+        bool "E206"
+endchoice
+
+endmenu
+
+menu "ESP IDF version info"
+
+choice ESP_IDF_VERSION
+	prompt "Select the ESP IDF version"
+	default IDF_V5_2_1
+	
+    config IDF_V4_3
+        bool "IDF_V4.3"
+    config IDF_V5_2_1
+        bool "IDF_V5.2.1"	
+endchoice
+	    
+endmenu
+

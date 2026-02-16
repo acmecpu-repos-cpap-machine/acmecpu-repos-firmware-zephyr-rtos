@@ -1,0 +1,110 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+/*
+/ {
+  ui-leds {
+    compatible = "bsp-leds";
+
+    p09_yellow_led: led-drv-0 {
+      pwms = <&led_drv 0>;
+      label = "POWER_LED";
+    };
+
+    p15_blue_led: led-drv-1 {
+      pwms = <&led_drv 1>;
+      label = "SYS_ON_LED";
+    };
+
+    p23_red_led: led-drv-2 {
+      pwms = <&led_drv 2>;
+      label = "SYS_FAULT_LED";
+    };
+
+    d11_green_led: led-drv-3 {
+      pwms = <&led_drv 3>;
+      label = "RESERVED_LED";
+    };
+
+  };
+};
+*/
+
+&c201 { 
+	buzzer {
+		compatible = "bsp-buzzer";
+		status = "okay";
+		
+		pwms =  <&pwm20 1 250 PWM_POLARITY_NORMAL>;	/* period given in micro seconds for 4kHz freq buzzer */
+		pwm-names = "buzzer-ctrl";
+
+		label = "BUZZER";
+	};
+	display_pwr {
+		compatible = "tps61169";
+		status = "okay";
+		
+		pwms =  <&tim_3_pwm 1 200 PWM_POLARITY_NORMAL>;	/* period given in micro seconds for 5kHz signal */
+		pwm-names = "disp-brightness";
+
+		label = "DISPLAY_PWR";
+	};
+};
+
+/*
+ * This section describes parameters to initialize individual pins of the DIO_3 port expander with
+ * during the system boots up. It is intended to be used by BSP GPIO Device Driver.
+ */
+
+
+/*
+ *  Remaining pins of the DIO_3 port expander are dedicated to serve on-board peripheral devices.
+ *  Description of those pins is presented in acme_cpu_c201_gpios.dtsi file
+ */
+
+
+&dio3_gpios {
+
+    switch_1: switch_1 {
+      gpios = <&io_3 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "ENTER";
+    };
+
+    switch_2: switch_2 {
+      gpios = <&io_3 9 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "BACK";
+    };
+
+    switch_3: switch_3 {
+      gpios = <&io_3 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "LEFT";
+    };
+
+    switch_4: switch_4 {
+      gpios = <&io_3 11 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "POWER";
+    };
+
+    switch_5: switch_5 {
+      gpios = <&io_3 12 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "RIGHT";
+    };
+
+    switch_6: switch_6 {
+      gpios = <&io_3 13 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "DOWN";
+    };
+
+    switch_7: switch_7 {
+      gpios = <&io_3 14 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "UP";
+    };
+
+    switch_8: switch_8 {
+      gpios = <&io_3 15 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "HOME";
+    };
+
+  };

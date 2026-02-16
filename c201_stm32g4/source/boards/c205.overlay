@@ -1,0 +1,54 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+/* 
+4KB partition used to store device settings -- not valid for c205
+settings moved to data partition of external flash on c205
+
+&flash0 {
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		storage_partition: partition@7F000 {
+			label = "storage";
+			reg = <0x0007F000 0x00001000>;
+		};
+	};
+};
+*/
+
+&dma1 {
+	status = "okay";
+};
+
+&dma2 {
+	status = "okay";
+};
+
+&dmamux1 {
+	status = "okay";
+};
+
+/ {
+	chosen {
+		zephyr,shell-uart = &cdc_acm_uart0;
+		/*zephyr,console = &cdc_acm_uart0;*/
+		/*zephyr,flash-controller = &mt29f2g01abagdwb;*/
+		zephyr,display = &ssd1306_ssd1306_128x64_spi;
+	};
+	aliases {
+		wifibt-serial = &usart2;
+		bldc-drv-serial = &usart3;
+	};
+};
+
+&zephyr_udc0 {
+	cdc_acm_uart0: cdc_acm_uart0 {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "CDC_ACM_0";
+	};
+};

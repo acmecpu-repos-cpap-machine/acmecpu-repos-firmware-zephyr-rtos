@@ -1,0 +1,23 @@
+# Copyright (c) 2020, Acme CPU
+
+description: I2C Bus Switch Channel Node
+
+#compatible: "i2c-bus-switch"
+
+#include: [i2c-controller.yaml]
+
+properties:
+  reg:
+    required: true
+
+  label:
+    type: string
+    required: false
+    description: Human readable string describing the device (used as device_get_binding() argument)
+
+  "#address-cells":
+    required: true
+    const: 1
+  "#size-cells":
+    required: true
+    const: 0

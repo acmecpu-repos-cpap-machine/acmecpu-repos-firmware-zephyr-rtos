@@ -1,0 +1,30 @@
+Change Component DesignItemId : Designator=X1 Old DesignItemId=TC2030-IDC-NL New DesignItemId=EC06-IDC 6-pin Castellated Board-Edge Connector
+Change Component DesignItemId : Designator=X2 Old DesignItemId=TC2030-IDC-NL New DesignItemId=EC06-IDC 6-pin Castellated Board-Edge Connector
+Change Component Footprint: Designator=X1 Old Footprint=TC2030-IDC-NL New Footprint=EC06-IDC
+Change Component Footprint: Designator=X2 Old Footprint=TC2030-IDC-NL New Footprint=EC06-IDC
+Change Component Description : Designator=X1 Old Description=Tag-Connect TC2030-MCP-NL (3x2 pins No Legs) New Description=6-pin Edge-Connect™ connector to 6-pin 0.1" pitch female IDC.
+Change Component Description : Designator=X2 Old Description=Tag-Connect TC2030-MCP-NL (3x2 pins No Legs) New Description=6-pin Edge-Connect™ connector to 6-pin 0.1" pitch female IDC.
+Change Component Library : Designator=X1 Old Library=EvansWerks.SchLib New Library=connectors_TAG-Connect.SchLib
+Change Component Library : Designator=X2 Old Library=EvansWerks.SchLib New Library=connectors_TAG-Connect.SchLib
+Change Component Kind : Designator=X2 Old Kind=Standard (No BOM) New Kind=Standard
+Change Component Kind : Designator=X1 Old Kind=Standard (No BOM) New Kind=Standard
+Change component parameters: Designator = "X1"; Footprint = "EC06-IDC"; UniqueID = "\IXHGEQJC\KSSMFCJF\PSAQBNMT\VLVIFJXT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "pin_1"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_2"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_3"; Value = "3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_4"; Value = "4"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_5"; Value = "5"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_6"; Value = "6"; VariantName = "[No Variations]"
+Change component parameters: Designator = "X2"; Footprint = "EC06-IDC"; UniqueID = "\IXHGEQJC\ASVPJMJC\TCIGDLWG\VLVIFJXT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "pin_1"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_2"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_3"; Value = "3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_4"; Value = "4"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_5"; Value = "5"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "pin_6"; Value = "6"; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=PIN#6_P012 New Net Name=PIN#6_P01
+Change Class Name : Old Net Name=P012 New Net Name=P01
+Added Class: Name=EC06-IDC_6-pin_Castellated_Board-Edge_Connector
+Added Room: Name=P01

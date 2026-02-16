@@ -1,0 +1,21 @@
+# Copyright (c) 2021 Acme CPU
+
+description: General representation of a PWM buzzer
+
+include: "base.yaml"
+
+compatible: "bsp-buzzer"
+
+properties:
+  label:
+    required: false
+    type: string
+    description: Human readable string describing the device (used as device_get_binding() argument)
+  pwms:
+    type: phandle-array
+    required: false
+    description: TIM PWM control and signal of a buzzer
+  pwm-names:
+    type: string-array
+    required: false
+    description: Names for the PWM signal

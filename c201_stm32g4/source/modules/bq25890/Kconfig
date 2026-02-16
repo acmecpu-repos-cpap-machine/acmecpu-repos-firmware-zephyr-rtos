@@ -1,0 +1,22 @@
+# Copyright (c) 2022 Acme CPU
+# BQ25890 Single cell I2C Battery Charger configurations
+
+menuconfig BQ25890
+	bool "BQ25890 I2C Battery Charger"
+	depends on I2C
+	help
+	  Enable driver for BQ25890 Single cell I2C Battery Charger
+
+if BQ25890
+
+module = BQ25890
+module-str = bq25890
+source "subsys/logging/Kconfig.template.log_config"
+
+config BQ25890_INIT_PRIORITY
+	int "Init Priority"
+	default APPLICATION_INIT_PRIORITY
+	help
+	    Device driver initialization priority.
+
+endif # BQ25890

@@ -1,0 +1,18 @@
+# PCA95XX GPIO configuration options
+
+# Copyright (c) 2016 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
+
+config GPIO_PCA95XX_INT_EXT
+	bool "Extension to the PCA95XX I2C-based GPIO chip driver"
+	depends on I2C
+	help
+	  Enable interrupt extension driver for PCA95XX I2C-based GPIO chip.
+
+config GPIO_PCA95XX_INT_EXT_INIT_PRIORITY
+	int "Init priority"
+	default 71
+	depends on GPIO_PCA95XX_INT_EXT
+	help
+	  Device driver initialization priority.
+	  

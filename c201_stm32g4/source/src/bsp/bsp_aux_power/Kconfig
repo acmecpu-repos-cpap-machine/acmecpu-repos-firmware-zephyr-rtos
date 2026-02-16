@@ -1,0 +1,14 @@
+# Copyright (c) 2021 Acme CPU
+# Load Switch configuration options
+
+config C201_AUXILIARY_POWER
+	bool "Enable Auxiliary power for sensor circuit"
+	default y
+	help
+	  Enable or disable auxiliary power for sensor circuit through a load switch
+
+if C201_AUXILIARY_POWER
+
+rsource "Kconfig.part"
+
+endif # C201_AUXILIARY_POWER

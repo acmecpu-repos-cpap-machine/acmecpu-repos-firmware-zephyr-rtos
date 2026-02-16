@@ -1,0 +1,13 @@
+Removed Member From Class: ClassName=DISP_PS Member=D3
+Removed Member From Class: ClassName=P103 Member=D3
+Removed Member From Class: ClassName=P109 Member=D3
+Removed Member From Class: ClassName=DISP_PS Member=D6
+Removed Member From Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=D6
+Removed Member From Class: ClassName=BG95_PWR Member=NetC25_1
+Added Member To Class: ClassName=P109 Member=Component D4 (D5) MM3Z5V1C
+Added Member To Class: ClassName=P109 Member=Component D5 (D6) ESDA7P120-1U1M
+Added Member To Class: ClassName=P103 Member=Component D7 (D1) PMEG4050EP,115
+Added Member To Class: ClassName=U_DRV10975 3-ph Sensorless BLDC Motor Driver Member=Component D8 (D1) Zener Diode 6.2V 2.5W ±5% Surface Mount SOD-123FL
+Added Member To Class: ClassName=DISP_PS Member=Component D9 (D1) STPS120MF
+Added Member To Class: ClassName=DISP_PS Member=Component D10 (D2) MMSZ5226B-7-F
+Added Member To Class: ClassName=BG95_PWR Member=Wire NetC19_1

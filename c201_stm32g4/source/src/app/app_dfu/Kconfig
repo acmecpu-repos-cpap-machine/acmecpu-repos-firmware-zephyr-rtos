@@ -1,0 +1,28 @@
+# Copyright (c) 2024 Acme CPU
+# Author: Rohan Dey (rohan@acmecpu.com)
+# Device Firmware Upgrade 
+
+menuconfig APP_DFU
+	bool "Application level DFU configs"
+	default n
+	help
+	  Enable / disable Application level DFU configs
+
+if APP_DFU
+
+config FW_DIR_NAME
+	string "Firmware download directory name" 
+	default "fw"
+	help
+	  Firmware download directory name 
+
+config FW_FILE_MAX_FILE_COUNT
+	int "File count for each firmware (this should be set to 1 only, don't change)"
+	default 1
+	help
+	  File count for each firmware (this should be set to 1 only, don't change)
+
+rsource "Kconfig.fwinfo"
+rsource "Kconfig.stm32bl"
+
+endif # APP_DFU

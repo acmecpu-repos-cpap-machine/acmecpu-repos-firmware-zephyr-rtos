@@ -1,0 +1,13 @@
+# Copyright (c) 2021 Acme CPU
+# ACPU STM32 USART Bootloader Host Library Configurations
+
+menu "ACPU STM32 USART Bootloader Host Library Configurations"
+
+config STM32_USART_BL_HOST_ENABLE
+	int "STM32 USAR bootloader host enable / disable"
+	default 1
+	help
+	    STM32 USAR bootloader host enable / disable
+	    
+endmenu
+

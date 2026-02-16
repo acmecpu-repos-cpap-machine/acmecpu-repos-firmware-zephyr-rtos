@@ -1,0 +1,5 @@
+# Copyright (c) 2023 Acme CPU
+
+rsource "app_shellcmd/Kconfig"
+rsource "app_storage/Kconfig"
+rsource "app_uart/Kconfig"

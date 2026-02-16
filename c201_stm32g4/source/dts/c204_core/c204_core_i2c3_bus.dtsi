@@ -1,0 +1,99 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ * C204 I2C3 bus has
+ *		- CMX655D Control Interface
+ *		- STSPIN32F0A
+ *		- BQ25890
+ *		- BMI270
+ *		- TS3USBCA410
+ *		- PCA9632
+ *		- LTC2942
+ */
+
+
+&i2c3 {
+	status = "okay";
+	pinctrl-0 = <&i2c3_scl_pc8 &i2c3_sda_pc9>;
+	pinctrl-names = "default";
+	clock-frequency = <I2C_BITRATE_STANDARD>;
+	
+/*
+  compatible = "st,stm32-i2c-dma-v2";
+  dmas = <&dma1 0 0 0x0 0x0>,
+	 <&dma1 0 0 0x0 0x0>;
+  dma-names = "tx","rx";
+  dma-label-tx = "DMA_TX_I2C_3";
+  dma-label-rx = "DMA_RX_I2C_3";
+*/
+
+	audio_codec_ctrl: cmx655d@54 {
+		compatible = "cml,cmx655d";
+    	reg = <0x54>;
+    	label = "AUDIO_CODEC_CTRL";
+    	classd-oc-reset-attempts = <5>;
+    	reset-gpios = <&gpioe 9 (GPIO_ACTIVE_LOW)>;
+    	interrupt-gpios = <&gpioe 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	};
+	
+/*	
+	bldc_driver: stspin32f0a@10 {
+		compatible = "st,stspin32f0a";
+		reg = <0x10>
+		label = "BLDC_DRIVER"
+	}
+*/
+
+	batt_chrg: bq25890d@6a {
+    	compatible = "ti,bq25890";
+    	reg = <0x6a>;
+    	
+    	label = "BATT_CHRG";
+    	
+    	status-gpios = <&gpiof 11 (GPIO_PUSH_PULL)>;
+    	dsel-gpios = <&gpiof 7 (GPIO_PUSH_PULL)>;
+    	interrupt-gpios = <&gpiof 12 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    	otg-gpios = <&gpiof 13 (GPIO_PUSH_PULL | GPIO_ACTIVE_HIGH)>;
+    	charge-enable-gpios = <&gpiof 4 (GPIO_ACTIVE_LOW)>;
+    	
+    	battery-regulation-voltage = <4200000>;
+        charge-current = <2000000>;
+        termination-current = <50000>;
+        precharge-current = <128000>;
+        minimum-sys-voltage = <3600000>;
+        boost-voltage = <5000000>;
+        boost-max-current = <1000000>;
+
+        use-ilim-pin;
+        thermal-regulation-threshold = <120>;
+	};
+
+	imu_sens: bmi270@68 {
+		compatible = "bosch,bmi270";
+		reg = <0x68>;
+		label = "IMU_1";
+	};
+	
+ 	usbc_sbu_mux: ts3usbca4@5d {
+    	compatible = "ti,ts3usbca4";
+    	reg = <0x5d>;
+    	label = "USBC_SBU_MUX";
+    	oe-gpios = <&gpiof 15 (GPIO_ACTIVE_HIGH)>;
+	};
+	
+	ui_leds: pca9632@62 {
+    	compatible = "nxp,pca9632";
+    	reg = <0x62>;
+    	label = "UI_LEDS";
+    	#pwm-cells = <1>;
+  	};
+  	
+  	fuelgauge: ltc2942@64 {
+		compatible = "lltc,ltc294x";
+		reg = <0x64>;
+		resistor-sense = <10>;
+		prescaler-exponent = <4>; 	/* for Qbat=5000 mAh, Rsense=10 mOhm [(128 * 5000 * 10)/(2^16 * 0.085 * 50)] */
+		device-id = <2>;			/* LTC2941 = 1, LTC2942 = 2, LTC2943 = 3, LTC2944 = 4 */
+		label = "FG";
+	};
+};

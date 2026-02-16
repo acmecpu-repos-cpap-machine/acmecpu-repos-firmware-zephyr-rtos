@@ -1,0 +1,7 @@
+# STM32G473 board configuration
+# Copyright (c) 2021 Acme CPU
+
+config BOARD_STM32G473_ACME_CPU_C201
+	bool "Acme CPU C201 TFT Board"
+	depends on SOC_STM32G474XX
+	select BSP_ACME_CPU_C201_DRIVER

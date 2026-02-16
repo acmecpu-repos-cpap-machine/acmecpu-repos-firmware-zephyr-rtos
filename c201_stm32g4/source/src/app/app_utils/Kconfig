@@ -1,0 +1,17 @@
+# Copyright (c) 2023 Acme CPU
+
+menuconfig APP_UTILS
+	bool "Utils for the application"
+	default y
+	help
+	  Utils for the application
+
+if APP_UTILS
+
+config APP_MENU_SORT_UTIL
+	bool "Enable / disable utils for settings menu"
+	default n
+	help
+		Enable / disable utils for settings menu		
+
+endif # APP_UTILS

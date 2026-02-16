@@ -1,0 +1,48 @@
+Removed Member From Class: ClassName=BC Member=D7
+Removed Member From Class: ClassName=P02 Member=D7
+Removed Member From Class: ClassName=P012 Member=D7
+Removed Member From Class: ClassName=+3V3_PS Member=D17
+Removed Member From Class: ClassName=DISP_PS Member=D17
+Removed Member From Class: ClassName=P109 Member=D17
+Removed Member From Class: ClassName=TCPC Member=D19
+Removed Member From Class: ClassName=USB_SW Member=D19
+Removed Member From Class: ClassName=BC Member=R8
+Removed Member From Class: ClassName=STM32G473CETx Member=R12
+Removed Member From Class: ClassName=U_ESP32-WROOM32D_Module Member=R67
+Removed Member From Class: ClassName=P110 Member=R92
+Removed Member From Class: ClassName=TCPP Member=R102
+Removed Member From Class: ClassName=USB_SW Member=R111
+Removed Member From Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=R112
+Removed Member From Class: ClassName=STM32G473CETx Member=R122
+Removed Member From Class: ClassName=P26 Member=R125
+Removed Member From Class: ClassName=P103 Member=R131
+Removed Member From Class: ClassName=+3V3_PS Member=R138
+Removed Member From Class: ClassName=CODEC Member=R141
+Removed Member From Class: ClassName=MIC1 Member=R147
+Removed Member From Class: ClassName=MIC2 Member=R147
+Removed Member From Class: ClassName=STM32G473QETx Member=R151
+Removed Member From Class: ClassName=U_TPS22810 2 Member=R151
+Added Member To Class: ClassName=BC Member=Component D1 (D3) "CHG"
+Added Member To Class: ClassName=P012 Member=Component D5 (D1) SMF05CT1G
+Added Member To Class: ClassName=P02 Member=Component D6 (D1) SMF05CT1G
+Added Member To Class: ClassName=P109 Member=Component D13 ESDA7P120-1U1M
+Added Member To Class: ClassName=+3V3_PS Member=Component D14 (D1) +3V3
+Added Member To Class: ClassName=DISP_PS Member=Component D16 (D2) MMSZ5226B-7-F
+Added Member To Class: ClassName=TCPC Member=Component D18 (D2) NSR0140P2T5G
+Added Member To Class: ClassName=USB_SW Member=Component D18 (D2) NSR0140P2T5G
+Added Member To Class: ClassName=BC Member=Component R1 (R19) RC0402FR-071KL
+Added Member To Class: ClassName=STM32G473CETx Member=Component R11 (R29) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_ESP32-WROOM32D_Module Member=Component R66 (R81) RES SMD 2.7K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P110 Member=Component R89 (R13) RES SMD 2.2 OHM 5% 1W 2512
+Added Member To Class: ClassName=TCPP Member=Component R98 (R4) RES SMD 100K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=USB_SW Member=Component R110 (R16) RES SMD 2.2 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_TS3USBCA410_USB_C_SBU_Multiplexer Member=Component R111 (R17) DNP*
+Added Member To Class: ClassName=STM32G473CETx Member=Component R120 (R52) RES SMD 75K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P26 Member=Component R123 (R3) RES SMD 10K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=P103 Member=Component R130 (R7) RES SMD 11K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=+3V3_PS Member=Component R136 (R2) RES SMD 0 OHM JUMPER 1/16W 0402
+Added Member To Class: ClassName=CODEC Member=Component R140 (R70) RES SMD 100K OHM 1% 1/16W 0402
+Added Member To Class: ClassName=MIC1 Member=Component R143 (R71) RES SMD 100 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=MIC2 Member=Component R144 (R71) RES SMD 100 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=STM32G473QETx Member=Component R148 (R1) RES SMD 100 OHM 1% 1/16W 0402
+Added Member To Class: ClassName=U_TPS22810 2 Member=Component R150 (R2) RES SMD 100 OHM 1% 1/2W 0805

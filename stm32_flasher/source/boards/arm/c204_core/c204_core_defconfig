@@ -1,0 +1,52 @@
+# Copyright (c) 2021 Acme CPU
+
+CONFIG_SOC_SERIES_STM32G4X=y
+CONFIG_SOC_STM32G474XX=y
+
+# 170MHz system clock
+#CONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC=170000000
+
+# LSE Crystal Resonator Oscillator
+#CONFIG_CLOCK_STM32_LSE=n
+
+# enable pinmux
+#CONFIG_PINMUX=y
+
+# Enable UART
+CONFIG_SERIAL=y
+
+# Console
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=y
+
+# enable GPIO
+CONFIG_GPIO=y
+
+# clock configuration
+CONFIG_CLOCK_CONTROL=y
+
+# enable pin controller
+CONFIG_PINCTRL=y
+
+# Enable MPU
+CONFIG_ARM_MPU=y
+
+# Enable HW stack protection
+CONFIG_HW_STACK_PROTECTION=y
+
+# SYSCLK selection
+#CONFIG_CLOCK_STM32_SYSCLK_SRC_PLL=y
+# PLL configuration
+#CONFIG_CLOCK_STM32_PLL_SRC_HSI=y
+# produce 80MHz clock at PLL output
+#CONFIG_CLOCK_STM32_PLL_M_DIVISOR=4
+#CONFIG_CLOCK_STM32_PLL_N_MULTIPLIER=85
+#CONFIG_CLOCK_STM32_PLL_P_DIVISOR=7
+#CONFIG_CLOCK_STM32_PLL_Q_DIVISOR=2
+#CONFIG_CLOCK_STM32_PLL_R_DIVISOR=2
+#CONFIG_CLOCK_STM32_AHB_PRESCALER=1
+
+# APBn_PRESCALER has been made 2 to support SDHC_SPI frequency of 4MHz as it cannot be configured to higher speeds in Zephyr presently
+# May have impact on timer prescalers (need to test)
+#CONFIG_CLOCK_STM32_APB1_PRESCALER=2
+#CONFIG_CLOCK_STM32_APB2_PRESCALER=2

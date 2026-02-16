@@ -1,0 +1,38 @@
+/*
+ * Copyright (c) 2021 Acme CPU
+ *
+ */
+
+
+/*
+ *	This was commented out
+ *	
+ *	It originally was implemented in a wrong way
+&pinctrl {
+  tim17_ch1: gpiob_9 {
+    pinmux = <STM32_PINMUX('B', 9, (STM32_PINMUX_ALT_FUNC_1 | STM32_PUSHPULL_PULLUP | STM32_OSPEEDR_HIGH_SPEED))>;
+  };
+ *
+ *	And now it has been replaced with the following configuration
+ *	(the next three lines were copied from the stm32g473r(b-c-e)tx-pinctrl.dtsi file)
+  tim17_ch1_pb9: tim17_ch1_pb9 {
+    pinmux = <STM32_PINMUX('B', 9, AF1)>;
+  };
+};
+ *	We may need to change this configuration in the future
+ *	So it's good to have a reference here
+ *
+ *	End of the comment
+ */
+
+
+&timers17 {
+  status = "okay";
+  st,prescaler = <8000>;
+  tim_17_pwm: pwm {
+    status = "okay";
+    pinctrl-0 = <&tim17_ch1_pb9>;
+    pinctrl-names = "default";
+    #pwm-cells = <3>;
+  };
+};

@@ -1,0 +1,13 @@
+# Copyright (c) 2021 Acme CPU
+# Choice of load switch for the application
+
+choice
+	prompt "ACPU C201 Load Switch Selection"
+	default LOAD_SWITCH_TPS22810
+
+config LOAD_SWITCH_TPS22810
+	bool "Load Switch TPS22810"
+	help
+		TPS22810 2.7 to 18 V 3Amp load switch
+		
+endchoice

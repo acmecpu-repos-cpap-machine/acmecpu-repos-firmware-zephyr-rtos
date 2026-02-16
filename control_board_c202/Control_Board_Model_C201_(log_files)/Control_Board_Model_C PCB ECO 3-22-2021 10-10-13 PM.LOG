@@ -1,0 +1,44 @@
+Added Component: Designator=P20(CONN_5019510530)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://datasheet.octopart.com/5019510530-Molex-datasheet-148149034.pdf?src-supplier=Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://datasheet.octopart.com/5019510530-Molex-datasheet-148149034.pdf?src-supplier=Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "5019510530"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_1"; Value = "SCL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_2"; Value = "SDA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_3"; Value = "VDD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_4"; Value = "GPIO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_5"; Value = "GND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_MP1"; Value = "MP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_MP2"; Value = "MP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "2000=0.32 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "23-5019510530TR-ND"; VariantName = "[No Variations]"
+Added Component: Designator=P28(CONN_5019510530)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://datasheet.octopart.com/5019510530-Molex-datasheet-148149034.pdf?src-supplier=Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://datasheet.octopart.com/5019510530-Molex-datasheet-148149034.pdf?src-supplier=Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "5019510530"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_1"; Value = "SCL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_2"; Value = "SDA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_3"; Value = "VDD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_4"; Value = "GPIO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_5"; Value = "GND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_MP1"; Value = "MP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "pin_MP2"; Value = "MP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "2000=0.32 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "23-5019510530TR-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=P20_SCL Pin=P20-1
+Added Pin To Net: NetName=P20_SDA Pin=P20-2
+Added Pin To Net: NetName=+3V3_AUX Pin=P20-3
+Added Pin To Net: NetName=P20_GPIO Pin=P20-4
+Added Pin To Net: NetName=GND Pin=P20-5
+Added Pin To Net: NetName=P28_SCL Pin=P28-1
+Added Pin To Net: NetName=P28_SDA Pin=P28-2
+Added Pin To Net: NetName=+3V3_AUX Pin=P28-3
+Added Pin To Net: NetName=P28_GPIO Pin=P28-4
+Added Pin To Net: NetName=GND Pin=P28-5

@@ -1,0 +1,26 @@
+/*
+ * Copyright (c) 2022 Acme CPU
+ *
+ */
+
+&pinctrl {
+	tim4_ch1_pd12: tim4_ch1_pd12 {
+		pinmux = <STM32_PINMUX('D', 12, AF2)>;
+	};
+
+	tim4_ch2_pd13: tim4_ch2_pd13 {
+		pinmux = <STM32_PINMUX('D', 13, AF2)>;
+	};
+};
+
+&timers4 {
+	status = "okay";
+   	st,prescaler = <0>;
+  
+	tim_4_pwm: pwm {
+    	status = "okay";
+    	pinctrl-0 = <&tim4_ch1_pd12 &tim4_ch2_pd13>;
+    	pinctrl-names = "default";
+    	#pwm-cells = <3>;
+  	};
+};

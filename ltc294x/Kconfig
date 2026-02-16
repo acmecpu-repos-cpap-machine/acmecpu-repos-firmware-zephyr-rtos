@@ -1,0 +1,22 @@
+# Copyright (c) 2022 Acme CPU
+# LTC294x I2C Battery Gauge configurations
+
+menuconfig LTC294X
+	bool "LTC294X I2C Battery Gauge"
+	depends on I2C
+	help
+	  Enable driver for LTC294X (LTC2941, LTC2942, LTC2943, LTC2944) I2C Battery Gauge
+
+if LTC294X
+
+module = LTC294X
+module-str = ltc294x
+source "subsys/logging/Kconfig.template.log_config"
+
+config LTC294X_INIT_PRIORITY
+	int "Init Priority"
+	default APPLICATION_INIT_PRIORITY
+	help
+	    Device driver initialization priority.
+
+endif # LTC294X

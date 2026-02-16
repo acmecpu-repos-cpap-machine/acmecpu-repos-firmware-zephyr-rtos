@@ -1,0 +1,24 @@
+# Copyright (c) 2021 Acme CPU
+# BSP File System configuration options
+
+menuconfig BSP_FILE_SYSTEM
+	bool "BSP File System Configurations"
+	default y
+	help
+	  Do not disable 
+
+if BSP_FILE_SYSTEM
+
+config BSP_FS_SD_CARD_FAT_MOUNT_POINT
+	string "SD Card FAT file system mount point path"
+	default "/SD:"
+	help
+	    SD Card mount point path
+
+config BSP_FS_FLASH_FAT_MOUNT_POINT
+	string "Flash FAT file system mount point path"
+	default "/NAND:"
+	help
+	    SD Card mount point path
+
+endif # BSP_FILE_SYSTEM

@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 12:20:22 PM On 12/22/2020
+
+Output: BOM_Supplier_MType_BG95-M3_Global_OLED
+Type  : BOM
+From  : Variant [BG95-M1_US_TFT_SCREEN] of Project [Control_Board_Model_C201.PrjPcb]
+   Generated File[20201215-SGU-Acme_CPU_Control_Board_C201_001_BG95-M1_US_TFT_SCREEN_DFM_BOM.xlsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 12:20:33 PM On 12/22/2020
